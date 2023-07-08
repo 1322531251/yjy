@@ -1,0 +1,41 @@
+<!-- 
+空间转换 transform:
+在空间内的位移 旋转 缩放
+
+3D转换
+
+空间位移translate
+
+transform：translate3d（x，y，z）
+取值：像素单位数值  百分比-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>空间位移</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .box:hover{
+            /* transform: translate3d(50px,100px,200px); */
+            transform: translateX(100px);
+            transform: translateY(100px);
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>
