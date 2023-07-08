@@ -1,0 +1,30 @@
+<!-- 旋转 rotate：
+
+transform：rotate（角度）；
+角度单位是deg
+
+取值为正顺时针，取值为负逆时针-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转效果</title>
+    <style>
+        img{
+            width: 250px;
+            /* 要有过渡 */
+            transition: all 2s;
+        }
+
+        img:hover{
+            transform: rotate(720deg);
+        }
+    </style> 
+</head>
+<body>
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>
