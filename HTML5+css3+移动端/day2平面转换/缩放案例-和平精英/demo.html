@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        img{
+            width: 100%;
+        }
+
+        .box{
+            width: 249px;
+            height: 210px;
+            margin: 50px auto;
+            /* 超出父级的要隐藏 */
+            overflow: hidden;
+
+        }
+
+        .box p{
+            color: #3b3b3b;
+            padding: 10px 10px 0 10px;
+        }
+
+        .box .pic{
+            position: relative;
+        }
+
+
+        /* 1.播放按钮盒子压在img标签上面
+        2.hover时缩放效果
+        默认 看不见 大的
+        hover 看的见 小的 */
+        .box .pic::after{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            /* margin或者变化前后都加上translate */
+            /* margin-left: -29px;
+            margin-top: -29px; */
+
+            content: '';
+            width: 58px;
+            height: 58px;
+            background-image: url(./images/play.png);
+            transform: translate(-50%,-50%) scale(5);
+            
+            /* 透明度 */
+            opacity: 0;
+
+            /* 过渡 */
+            transition: all .5s;
+        }
+
+        /* 移入li 让按钮有变化 */
+        .box li:hover .pic::after{
+            opacity: 1;
+            transform: translate(-50%,-50%) scale(1);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div class="pic">
+                    <img src="./images/party.jpeg" alt="">
+                </div>
+                <p>【和平精英】“初火”音乐概念片：四圣觉醒......</p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
