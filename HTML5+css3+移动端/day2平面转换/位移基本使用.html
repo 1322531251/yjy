@@ -1,0 +1,49 @@
+<!-- 平面转换 transform:
+实现元素位移、旋转、缩放等效果
+2D转换
+
+transform:translate(水平移动距离,垂直移动距离)；
+取值：像素单位或百分比（参照物为盒子尺寸）
+
+translate()如果只给一个值，表示x轴方向移动距离
+单独设置某个方向的移动距离：translateX()&translateY()-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>位移-基本使用</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 300px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+
+        .son{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .father:hover .son{
+            transform: translate(50px,100px);
+            /* 百分比：参考盒子自身尺寸计算结果 */
+            /* css层叠性：最后一行命令生效 */
+            transform: translate(-50%,-100%);
+            /* 水平方向 */
+            transform: translate(50px);
+
+            transform: translateY(50px);
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>
