@@ -1,0 +1,35 @@
+<!-- 渐变background-image：
+渐变背景效果 
+
+backgroung-image:linear-gradient(
+    颜色1，
+    颜色2
+)；
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变背景</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 200px;
+            background-color: pink ;
+            /* background-image: linear-gradient(pink,#333); */
+
+            /* 半透明渐变：透明-rgba() */
+            background-image: linear-gradient(
+                transparent,
+                rgba(0,0,0,.5)
+            );
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
