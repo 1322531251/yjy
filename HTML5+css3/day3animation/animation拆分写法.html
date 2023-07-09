@@ -1,0 +1,43 @@
+<!-- 暂停动画animation-play-state ：
+    
+    paused 暂停  
+    通常配合 ：hover 使用
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>animation 拆分写法</title>
+   <style>
+       .box{
+           width: 200px;
+           height: 100px;
+           background-color: pink;
+
+           animation-name: change;
+           animation-duration: 2s;
+           animation-iteration-count: infinite;
+           animation-direction: alternate;
+       }
+
+       .box:hover{
+        animation-play-state: paused;
+       }
+
+       @keyframes change{
+           from{
+               width: 200px;
+           }
+           to{
+               width: 600px;
+           }
+       }
+   </style>
+</head>
+<body>
+   <div class="box"></div>
+</body>
+</html>
