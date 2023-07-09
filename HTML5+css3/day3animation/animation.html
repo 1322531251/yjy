@@ -1,0 +1,66 @@
+<!-- 动画 animation：
+    实现多个状态变化的过程  过程可控
+
+    animation:动画名称 动画花费时长； 
+
+    帧或动画帧
+
+    定义动画：
+    1 @keyframes 动画名称{
+        from{}
+        to{}
+    }
+    
+    2 @keyframes 动画名称{
+        0%{}
+        10%{}
+        15%{}
+        100
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            animation: change 2s;
+        }
+
+        /* @keyframes change{
+            from{
+                width: 200px;
+            }
+            to{
+                width: 600px;
+            }
+        } */
+
+        @keyframes change{
+            0%{
+                width: 200px;
+            }
+            50%{
+                width: 500px;
+                height: 300px;
+            }
+            100%{
+                width: 800px;
+                height: 500px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
