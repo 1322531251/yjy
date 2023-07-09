@@ -1,0 +1,44 @@
+<!-- 字体图标 iconfont：
+简洁图标（本质是字体）
+处理简单的、颜色单一的图片
+
+优点：
+1.灵活性：灵活的修改样式，例如尺寸颜色
+2.轻量级：体积小，渲染快，降低服务器请求次数
+3.兼容性
+4.使用方便：1）下载字体包 2）使用字体图标
+
+使用方法：
+1.引入字体图标样式表
+<link rel="stylesheet" href="./iconfont.css">
+2.调用图标对应的类名，必须调用2个类名
+iconfont类：基本样式，包含字体的使用
+icon-xxx：图标对应的类名
+
+没有矢量图时，先上传SVG矢量图再下载使用-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.引入样式表 2.调用类名 -->
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        .iconfont{
+            font-size: 200px;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- iconfont是固定的 icon-xxx调用 -->
+    <span class="iconfont icon-xihuan"></span>
+</body>
+</html>
+
+
+
+<!-- 图面转换 -->
+<!-- 渐变 -->
