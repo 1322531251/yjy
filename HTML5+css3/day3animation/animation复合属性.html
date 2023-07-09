@@ -1,0 +1,44 @@
+<!-- 动画animation：
+        
+    animation:动画名称 动画时长 速度曲线 延迟时间
+              重复次数 动画方向 执行完毕时状态；
+    (取值不分前后
+    两个时间值 第一个表示动画时长 第二个表示延迟时间) -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 复合属性</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+
+            /* infinite 表示无限循环  */
+            /* alternate 表示反方向 */
+            /* animation: change 2s infinite alternate; */
+
+            /* backwards 默认值 表示执行完毕回归最初状态 */
+            /* forwards 表示动画停留在结束状态*/ 
+            animation: change 2s forwards;
+        }
+
+        @keyframes change{
+            from{
+                width: 200px;
+            }
+            to{
+                width: 600px;
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box"></div>
+ </body>
+ </html>
