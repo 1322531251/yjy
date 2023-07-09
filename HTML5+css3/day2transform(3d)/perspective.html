@@ -1,0 +1,35 @@
+<!-- 透视 perspective
+放大或缩小的视觉效果
+
+属性加给父级
+取值：像素单位 数值一般在800-1200-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透视</title>
+    <style>
+        body{
+            perspective: 900px;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: pink;
+            transition: all .5s;
+        }
+
+        .box:hover{
+            transform: translateZ(200px);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
