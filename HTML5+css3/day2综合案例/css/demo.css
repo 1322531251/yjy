@@ -45,7 +45,7 @@ img {
     height: auto;
     padding: 20px 30px;
 
-    /* 这个地方是什么意思呢 */
+    /* 层叠效果 数值越大越靠前 */
     z-index: 1;
     color: #fff;
     transition: transform .5s;
