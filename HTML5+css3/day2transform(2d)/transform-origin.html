@@ -1,0 +1,34 @@
+<!-- 转换原点transform-origin
+默认原点是盒子中心点
+
+transform-origin:原点水平位置 原点垂直位置；
+
+取值：
+方位名词（left top right bottom center）
+像素单位数值
+百分比（参照盒子尺寸计算）-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换原点</title>
+    <style>
+        img{
+            width: 250px;
+            border: 1px solid #000;
+            transition: all 2s;
+            /* 属性添加到标签本身 不要加到hover */
+            transform-origin: right bottom;
+        }
+
+        img:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="./images/rotate.png" alt="">
+</body>
+</html>
