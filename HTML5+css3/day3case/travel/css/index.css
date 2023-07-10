@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    height: 100%;
+    background: url(../images/f1_1.jpg) no-repeat center 0;
+    
+    /* 图片等比缩放 完全覆盖整个盒子 可能会导致图片显示不全*/
+    background-size: cover;
+}
+
+
+/* 
+    1.img引入图片 定位
+    2.定义动画 使用动画
+*/
+.cloud img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.cloud img:nth-child(1){
+    margin-left: -300px;
+    top: 20px;
+
+    animation: cloud 2s infinite alternate linear;
+}
+
+.cloud img:nth-child(2){
+    margin-left: 400px;
+    top: 100px;
+
+    animation: cloud 2s 1s infinite alternate linear;
+}
+
+.cloud img:nth-child(3){
+    margin-left: -550px;
+    top: 200px;
+
+    animation: cloud 2s 0.5s infinite alternate linear;
+}
+
+/* 云彩动画 */
+@keyframes cloud{
+    to{
+        transform: translate(20px);
+    }
+}
+
+.ball img{
+    position: absolute;
+    right: 50%;
+    margin-right: 200px;
+    top: 100px;
+    animation: ball 1s infinite alternate linear;
+}
+
+/* 气球动画 */
+@keyframes ball{
+    to{
+        transform: translateY(-20px);
+    }
+}
+
+.lu img{
+    width: 160px;
+    position: absolute;
+    left: 50%;
+    margin-left: 120px;
+    top: 90px;
+}
+
+.font img{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 230px;
+    
+    transition: all .2s;
+}
+
+.font img:hover{
+    transform: scale(1.1);
+}
+
+.point img{
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.point img:nth-child(1){
+    margin-left: -300px;
+    top: 550px;
+
+    animation: point 2s infinite alternate linear;
+}
+
+.point img:nth-child(2){
+    margin-left: -100px;
+    top: 550px;
+    
+    animation: point 2s 1s infinite alternate linear;
+}
+
+.point img:nth-child(3){
+    margin-left: 100px;
+    top: 550px;
+    
+    animation: point 2s 2s infinite alternate linear;
+}
+
+.point img:nth-child(4){
+    margin-left: 300px;
+    top: 550px;
+    
+    animation: point 2s 3s infinite alternate linear;
+}
+
+@keyframes point{
+    to{
+        transform: translateY(20px);
+    }
+}
