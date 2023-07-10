@@ -1,0 +1,59 @@
+<!-- 侧轴对齐align-items：
+
+    对齐属性：
+    align-items(添加到弹性容器)
+    align-self 控制某个弹性盒子在侧轴的对齐方式(添加到弹性盒子)
+ 
+    属性值：
+    flex-start 默认值，起点开始依次排列
+    flex-end 终点开始依次排列
+    center 沿侧轴居中排列
+    stretch 默认值，弹性盒子沿着主轴线被拉伸至铺满容器
+-->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cross-axis</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: flex;
+
+            /* 垂直方向居中 */
+            align-items: center;
+
+            /* 拉伸，默认值（测试时需子级无高度） */
+            align-items: stretch;
+
+            height: 300px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box div:nth-child(2){
+            align-self: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
