@@ -1,0 +1,59 @@
+<!-- 主轴对齐main axis:
+
+    justify-content
+    1.flex-start 默认值，起点开始依次排列
+    2.flex-end 终点开始依次排列
+    3.center 沿主轴居中排列
+    4.space-around 沿主轴均匀排列，空白间距均分在弹性盒子两侧
+    5.space-between 沿主轴均匀排列，空白间距均分在相邻盒子之间
+    6.space-evenly 沿主轴均匀排列，弹性盒子与容器之间间距相等
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main-axis</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+
+            display: flex;
+            /* 居中 */
+            justify-content: center;
+
+            /* 间距在弹性盒子之间 */
+            justify-content: space-between;
+
+            /* 兼具加载子级两侧 
+            视觉效果：子级之间距离是父级两头距离的2倍 */
+            justify-content: space-around;
+
+            /* 所有地方间距相等 */
+            justify-content: space-evenly;
+            height: 200px;
+            margin: auto;
+            border: 1px solid #000;
+        }
+
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
