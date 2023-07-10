@@ -1,0 +1,74 @@
+<!-- 走马灯：
+显示区域不能漏空 需重复显示的内容的数目 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走马灯</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        li{
+            list-style: none;
+        }
+
+        img{
+            width: 200px;
+        }
+
+        .box{
+            width: 600px;
+            height: 112px;
+            border: 5px solid #000;
+            margin: 100px auto;
+
+            overflow: hidden;
+        }
+
+        @keyframes move{
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(-1400px);
+            }
+
+        }
+        .box ul{
+            width: 2000px;
+            animation: move 3s infinite linear;
+        }
+
+        .box li{
+            float: left;
+        }
+
+        .box:hover ul{
+            animation-play-state: paused;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+            <li><img src="./images/4.jpg" alt=""></li>
+            <li><img src="./images/5.jpg" alt=""></li>
+            <li><img src="./images/6.jpg" alt=""></li>
+            <li><img src="./images/7.jpg" alt=""></li>
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.jpg" alt=""></li>
+            <li><img src="./images/3.jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
