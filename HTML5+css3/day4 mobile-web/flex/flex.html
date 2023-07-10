@@ -1,0 +1,50 @@
+<!-- flex布局/弹性布局
+
+    1.避免浮动脱标
+    2.浏览器提倡的布局模型
+    3.更简单灵活 
+
+    在最近的父元素（弹性容器）添加 display：flex  
+    子元素（弹性盒子）可以自动挤压或拉伸
+
+    组成部分：
+    弹性容器 弹性盒子 主轴（默认在水平） 侧轴/交叉轴（默认在垂直）
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .box div{
+            /* float: left;
+            margin: 10px; */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>
