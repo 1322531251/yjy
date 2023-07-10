@@ -1,0 +1,53 @@
+<!-- 弹性盒子换行flex-wrap 
+    
+    flex-wrap:wrap;
+
+    调整行对齐方式：align-content(添加到父级)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-wrap</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 500px;
+            border: 1px solid #000;
+
+            display: flex;
+            /* 默认值不换行 nowrap */
+            /* 换行wrap */
+            flex-wrap: wrap;
+
+            /* 调节行的对齐方式 */
+            align-content:space-between;
+        }
+
+        .box div{
+
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>
