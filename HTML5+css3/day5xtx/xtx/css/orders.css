@@ -1,0 +1,230 @@
+body{
+    background-color: #f7f7f8;
+}
+
+/* 公共样式 */
+.red{
+    color: #cf4444;
+}
+
+.pannel{
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+
+
+/* 主体内容 */
+.main{
+    padding: 12px 11px 80px;
+}
+
+/* 用户信息 */
+.main .user_msg{
+    display: flex;
+    /* 侧轴垂直居中 */
+    align-items: center;
+    padding: 15px 0px 15px 11px;
+}
+
+.main .user_msg .location{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        90deg,
+        #6fc2aa 5%,
+        #54b196 100%
+    );
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    
+}
+
+.main .user_msg .user{
+    flex: 1;
+}
+
+.main .user_msg .user .top{
+    display: flex;
+    font-size: 13px;
+      
+}
+
+.user_msg .user .top h5{
+    width: 55px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.user_msg .user .bottom{
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.main .user_msg .more{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: #808080;
+
+}
+
+/* 商品信息 */
+.main .goods{
+    display: flex;
+    padding: 11px 0px 11px 11px;
+}
+
+.main .goods .pic{
+    width: 85px;
+    height: 85px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.main .goods .info{
+    flex: 1;
+}
+
+.main .goods .info h5{
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+.main .goods .info p{
+    width: 96px;
+    height: 20px;
+    background-color: #f7f7f8;
+
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.main .goods .info p span:first-child{
+    margin-right: 5px;
+}
+
+.main .goods .info .price{
+    font-size: 9px;
+}
+
+.main .goods .info .price .before i{
+    font-size: 16px;
+    
+}
+
+.main .goods .info .price .after{
+    margin-left: 5px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.main .goods .count{
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+}
+
+
+/* 其他信息 */
+.rest,
+.money{
+    padding: 15px;
+}
+
+.rest div,
+.money div{
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.rest div:last-child,
+.money div:last-child{
+    margin-bottom: 0;
+}
+
+.rest div:nth-child(2n+1),
+.money div{
+    justify-content: space-between;
+}
+
+.rest div:nth-child(2) h5{
+    margin-right: 20px;
+}
+
+.rest div:nth-child(2) p{
+    font-size: 12px;
+    color: #989898;
+}
+
+.rest div h5,
+.rest div p,
+.money div h5,
+.money div:nth-child(1) p,
+.money div:nth-child(2) p{
+    font-size: 13px;
+    color: #262626;
+    font-weight: 400;
+}
+
+
+/* 价格信息 */
+.money div:nth-child(3) p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+
+
+
+/* 底部支付 */
+.pay{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    /* 主轴对齐 */
+    justify-content: space-between;
+    /* 侧轴对齐 */
+    align-items: center;
+
+    padding: 0 11px;
+    height: 80px;
+    width: 100%;
+    border-top: 1px solid #ededed;
+}
+
+.pay .left{
+    font-size: 12px;
+}
+
+.pay .left i{
+    font-size: 20px;
+}
+
+.pay .right a{
+    display: block;
+    width: 90px;
+    height: 35px;
+    background-image: linear-gradient(
+        90deg,
+        #6fc2aa 5%,
+        #54b196 100%
+    );
+    border-radius: 3px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+    color: #fff;
+}
