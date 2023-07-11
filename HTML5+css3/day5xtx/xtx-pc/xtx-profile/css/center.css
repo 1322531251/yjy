@@ -1,0 +1,255 @@
+
+.xtx_body{
+    padding: 30px 0px 85px;
+
+    background-color: #f6f6f6;
+
+}
+
+.xtx_body .wrapper{
+    display: flex;
+}
+
+/* 侧边栏 */
+.xtx_body .wrapper .aside{
+    width: 227px;
+    min-height: 500px;
+    margin-right: 18px;
+    background-color: #fff;
+}
+
+
+/* 图片 */
+.xtx_body .wrapper .aside .information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 47px 0px 32px 0px;
+}
+
+.xtx_body .wrapper .aside .information .pic{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+} 
+
+.xtx_body .wrapper .aside .information span{
+    font-size: 18px;
+    color: #333;
+    padding: 12px 0px 10px 0px;
+}
+
+.xtx_body .wrapper .aside .information p{
+    width: 93px;
+    height: 26px;
+    border-radius: 13px;
+    background-image: 
+    linear-gradient(264deg, 
+    #e05e2f 0%, 
+    #ea745e 95%);
+    font-size: 14px;
+    color: #f9f9f9;
+    text-align: center;
+    line-height: 26px;
+
+
+}
+
+.xtx_body .wrapper .aside p img{
+    width: 15px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+
+
+/* 主体内容 */
+.xtx_body .wrapper .main{
+    flex: 1;
+
+    min-height: 500px;
+}
+
+/* 账户概览 */
+.xtx_body .wrapper .overview{
+    height: 132px;
+    background-color: #fff;
+    margin-bottom: 18px;
+    padding: 20px;
+
+    display: flex;
+}
+
+.xtx_body .wrapper .overview div{
+    flex: 1;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.xtx_body .wrapper .overview .left{
+    border-right: 1px solid #f4f4f4;
+}
+
+.xtx_body .wrapper .overview .left img{
+    width: 25px;
+    margin-bottom: 10px;
+}
+
+.xtx_body .wrapper .overview .left a:nth-child(3) img{
+    width: 18px;
+}
+
+
+.xtx_body .main .overview .right span{
+    font-size: 25px;
+    color: #e05e30;
+}
+
+.overview div p{
+    font-size: 16px;
+}
+
+
+/* 公共样式 */
+.pannel{
+    padding: 28px 20px;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.pannel_title{
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.pannel_title h4{
+    font-size: 24px;
+    font-weight: 400;
+    color: #333;
+}
+
+.pannel_title a{
+    margin-top: 8px;
+    font-size: 16px;
+    color: #999;
+}
+
+.common{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* 我的订单 */
+.main .orders .content li{
+    height: 137px;
+    margin-top: -1px;
+    margin-bottom: 20px;
+    border: 1px solid #f4f4f4;
+
+    display: flex;
+}
+
+.main .orders .content li:last-child{
+    margin-bottom: 0;
+}
+
+.orders .content .goods{
+    flex:1;
+    margin-right: 120px;
+    display: flex;
+    align-items: center;
+    padding: 17px 0px 14px 12px;
+}
+
+.orders .content .goods .pic{
+    width: 107px;
+    height: 107px;
+
+}
+
+.orders .content .goods .txt{
+    /* 文字溢出显示省略号
+        弹性盒子的尺寸可以被内容撑开 */
+    flex: 1;
+    width: 0;
+}
+
+.orders .content .goods .txt h5{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.orders .content .status{
+    width: 120px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #e05e30;
+ 
+}
+
+.orders .content .pay{
+    width: 200px;
+    border-right: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+
+}
+
+.orders .content .pay p:first-child{
+    color: #9a2e1f;
+}
+
+.orders .content .action{
+    width: 180px;
+}
+
+.orders .content .action a:first-child{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+
+    background-color: #5eb69c;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* 收藏商品、我的足迹 */
+
+
+.main .collect .content ul,
+.main .history .content ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.main .collect .content li,
+.main .history .content li{
+    width: 160px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.main .collect .content li div p,
+.main .history .content li div p{
+    font-size: 17px;
+    color: #9a2e1f;
+}
+
+.main .collect .content li div i,
+.main .history .content li div i{
+    font-size: 22px;
+}
