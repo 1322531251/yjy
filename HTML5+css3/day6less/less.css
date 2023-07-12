@@ -1,0 +1,37 @@
+.father {
+  color: red;
+  width: 1.81333333rem;
+  height: 4.34782609rem;
+}
+.father .son {
+  background-color: pink;
+}
+.father {
+  color: red;
+  width: 1.81333333rem;
+  height: 4.34782609rem;
+}
+.father .son {
+  background-color: pink;
+}
+.father .son:hover {
+  color: skyblue;
+}
+.father:hover {
+  color: green;
+}
+.box {
+  color: pink;
+}
+.father {
+  background-color: pink;
+}
+.aa {
+  color: pink;
+}
+.aa .bb {
+  color: pink;
+}
+.box {
+  color: red;
+}
