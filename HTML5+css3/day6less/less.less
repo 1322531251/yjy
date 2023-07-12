@@ -1,0 +1,111 @@
+// less:快速编译生成CSS代码
+// less是css预处理器
+// 扩充css语言 使css具备一定的逻辑性、计算机能力
+// 注：浏览器不识别less代码，网页要引入对应的css文件
+
+
+
+// easy less：less文件保存自动生成css文件
+
+
+
+// 注释：单行注释和块注释
+
+// 单行注释：  //注释内容  ctrl+/
+// 块注释：/*注释内容*/  shift+alt+A
+
+
+
+
+// 运算：
+// 加、减、乘直接书写计算
+// 除法需要添加小括号或.   
+
+
+
+
+
+// 语法：
+// 使less嵌套写法 快速生成后代选择器
+
+.father{
+    color: red;
+    width: (68/37.5rem);
+    height: 29./6.67rem;
+
+    .son{
+        background-color:pink;
+    }
+}
+
+// 注：&不生成后代选择器 ，表示当前选择器，通常配合伪类或为元素使用。
+
+.father{
+    color: red;
+    width: (68/37.5rem);
+    height: 29./6.67rem;
+
+    .son{
+        background-color:pink;
+        &:hover{
+            color: skyblue;
+        }
+    }
+    &:hover{
+        color: green;
+    }
+}
+
+
+
+
+// 变量：把颜色提前存储到一个容器，设置属性值为这个容器名
+// 存储数据，方便使用和修改
+
+// 定义变量：@变量名：值；
+// 使用变量：CSS属性：@变量名；
+@color:pink;
+
+.box{
+    color: @color;
+}
+
+.father{
+    background-color: @color;
+}
+
+.aa{
+    color: @color;
+    .bb{
+        color: @color;
+    }
+}
+
+ 
+// 使用less导入引用其他less文件
+// 注：引入多个less文件 换行重新写 
+// @import'';
+// @import'';
+
+// 注：如果是less文件，可省略后缀.less
+
+
+// @import'文件路径'；
+
+@import './out.less';
+
+
+
+
+// less导出
+// 1.配置easyless插件
+// 设置——>搜索easyless——>在setting.json中编辑——>添加代码（必须是双引号）
+
+// 2.  
+// out: ./abc/
+
+
+
+// less禁止导出css
+// 在less文件第一行添加：
+// out：false
