@@ -1,0 +1,78 @@
+<!-- 
+    媒体查询：根据设备宽度变化，设置差异化样式
+
+    @media(媒体特性){
+        选择器{
+            样式
+        }
+    }
+
+    max-width(从大到小写)
+    min-width(从小到大写)
+
+    完整写法：
+    @media 关键词 媒体类型 and（媒体特性）{CSS代码}
+
+    关键词：
+    and only not
+    媒体类型：
+    屏幕screen  打印预览print  阅读器speech  不区分类型all
+    媒体特性
+    width,height  max-width,max-height  min-width,min-height  
+    屏幕方向orientation：竖屏portrait  横屏landscape
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+
+        /* 视口宽度小于等于768px，网页背景色是粉色 */
+        /* @media(max-width:768px){
+            body{
+                background-color: pink;
+            }
+        } */
+
+
+        /* 视口宽度大于等于1200px，网页背景色是skyblue */
+        /* @media(min-width:1200px){
+            body{
+                background-color: skyblue;
+            }
+        } */
+
+
+
+        /* 
+        视口宽度大于等于768px，网页背景色是粉色
+        视口宽度大于等于992px，网页背景色是绿色
+        视口宽度大于等于1200px，网页背景色是skyblue
+         */
+
+         @media(min-width:768px){
+            body{
+                background-color: pink;
+            }
+         }
+         @media(min-width:992px){
+            body{
+                background-color: green;
+            }
+         }
+         @media(min-width:1200px){
+            body{
+                background-color: skyblue;
+            }
+         }
+    </style>
+ </head>
+ <body>
+
+ </body>
+ </html>
