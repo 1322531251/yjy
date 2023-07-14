@@ -1,0 +1,66 @@
+<!-- 
+    栅格系统：
+    等分成12份
+    列间隙30px
+
+               宽度    类前缀     响应断点
+    超小屏 xs  100%   col-xs-*    <768px
+    小屏幕 sm  750px  col-sm-*    >=768px
+    中等屏 md  970px  col-md-*    >=992px
+    大屏幕 lg  1170px col-lg-*    >=1200px
+
+
+    .container默认指定宽度且居中（自带间距15px
+    .container-fluid 宽度均为100%
+
+    分别使用.row和.col定义行和列
+    row自带间距-15px
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <title>栅格系统</title>
+    <style>
+        /* .container div{
+            height: 50px;
+            background-color: pink;
+        } */
+
+
+        div{
+            height: 50px;
+            background-color: pink;
+            margin-bottom: 50px;
+        }
+    </style>
+ </head>
+ <body>
+    <!-- 大屏 一行排列4个内容 
+         中屏 一行排列两个内容 -->
+
+         <!-- <div class="container">
+            <div class="col-lg-3 col-md-6">1</div>
+            <div class="col-lg-3 col-md-6">1</div>
+            <div class="col-lg-3 col-md-6">1</div>
+            <div class="col-lg-3 col-md-6">1</div>
+         </div> -->
+
+
+
+         <!-- 版心样式：自带左右各15px的padding -->
+
+         <div class="container">1</div>
+         <div class="container">
+            <div class="row">1</div>
+         </div>
+
+         <!-- 宽度100%：自带左右各15px的padding -->
+
+         <div class="container-fluid">1</div>
+ </body>
+ </html>
