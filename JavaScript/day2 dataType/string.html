@@ -1,0 +1,41 @@
+<!-- 
+    string:
+    单引号 双引号 反引号包裹的数据都叫字符串
+
+    引号必须成对使用
+    单引号/双引号可以互相嵌套
+    必要时可以使用转义符\，输出单引号或双引号
+
+    字符串拼接：
+    + 可以实现字符串的拼接
+
+
+    模板字符串：
+    反引号 ``(英文状态下tab键上方)
+    内容拼接变量时，用${}包裹变量
+    `${}`
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串类型</title>
+</head>
+<body>
+    <script>
+        let str = 'pink'
+        let str1 = "pink"
+        console.log(str);
+
+        console.log('hello'+'world');
+
+        let age = 13
+        // document.write('我今年' + age + '岁了')
+
+        // 注意用反引号
+        document.write(`我今年${age}`)
+    </script>
+</body>
+</html>
