@@ -1,0 +1,40 @@
+<!-- 
+    显式转换：
+    Number(数据)
+        1.转成数字类型
+        2.如果字符串内容里面有非数字，转换失败时结果为NaN
+        3.NaN也是number类型的数据，代表非数字
+    
+    parseInt(数据)
+        只保留整数
+    
+    parseFloat(数据)
+        可以保留小数
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+    <script>
+        let str = '123'
+        console.log(Number(str));
+
+        // let num = prompt('请输入年龄')
+        // console.log(Number(num));
+
+        console.log(parseInt('12.11'));
+        console.log(parseInt('12.11px'));
+
+        console.log(parseFloat('12.11'));
+        console.log(parseFloat('12.11px'));
+
+    </script>
+ </body>
+ </html>
