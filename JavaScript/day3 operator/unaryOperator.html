@@ -1,0 +1,59 @@
+<!-- 
+    一元运算符：正负号
+    经常用于计数
+
+    自增：++
+         让变量值+1
+
+    前置自增和后置自增单独使用无区别
+
+    运算区别：
+    前置自增先自加，后置自增后自加
+
+    自减：--
+         让变量值-1
+
+
+
+    二元运算符：let num = 10 + 20
+    三元运算符
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一元运算符</title>
+ </head>
+ <body>
+    
+    <script>
+        let num = 10
+        // num = num + 1
+        // num += 1
+
+        // // 前置自增
+        // let i = 1
+        // ++i
+        // console.log(i);
+
+        let num2 = 1
+        console.log(++num2 + 1);
+
+
+        // // 后置自增
+        // let i = 1 
+        // i++
+        // console.log(i);
+
+        let num1 = 1
+        console.log(num1++ + 1);
+
+
+        // test
+        let i = 1
+        console.log(i++ + ++i + i);
+    </script>
+ </body>
+ </html>
