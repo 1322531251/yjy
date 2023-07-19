@@ -1,0 +1,43 @@
+<!-- 
+    switch语法：
+
+    switch(数据){
+        case 值1:
+            代码1
+            break
+        case 值2:
+            代码2
+            break
+        default:
+            代码n
+            break 
+    }
+
+    找到和数据全等的case值，并执行代码
+    若没有===全等，则执行default
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+ </head>
+ <body>
+    
+    <script>
+        switch(1){
+            case 1:
+                console.log('执行1');
+                break
+            case 3:
+                console.log('执行3');
+                break
+            default:
+                console.log('不执行');
+                break
+        }
+    </script>
+ </body>
+ </html>
