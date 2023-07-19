@@ -1,0 +1,35 @@
+<!-- 
+    if单分支语句：
+    语法：
+    if(条件){
+        满足条件要执行的代码
+    }
+
+    括号里条件为true时，进入大括号里执行代码
+    小括号里结果若不是布尔类型，会发生隐式转换为布尔类型
+
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if单分支语句</title>
+ </head>
+ <body>
+    <script>
+        // 除了0 以外数字都为true
+        // 除了空字符串 所有字符串都为true
+        if(true){
+            console.log('执行语句');
+        }
+
+        let score = +prompt('请输入高考成绩：')
+        if(score >= 700){
+            alert('恭喜考入黑马程序员')
+        }
+    </script>
+ </body>
+ </html>
