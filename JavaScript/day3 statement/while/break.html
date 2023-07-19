@@ -1,0 +1,45 @@
+<!-- 
+    循环退出：
+
+    break：退出循环
+    continue：结束本次循环，继续下次循环
+
+    continue 退出本次循环 一般用于排除或跳过某一选项的时候
+    break 退出整个循环 一般用于结果已经得到，后续的循环不需要的时候使用
+ -->
+
+
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环退出</title>
+ </head>
+ <body>
+    <script>
+
+        // // break
+        // let i = 1
+        // while(i <= 6){
+        //     if(i === 3){
+        //         break
+        //     }
+        //     document.write(`这是第${i}个<br>`)
+        //     i++
+        // }
+
+        // continue
+        let i = 1
+        while(i <= 6){
+            if(i === 3){
+                i++
+                continue
+            }
+            document.write(`这是第${i}个<br>`)
+            i++
+        }
+    </script>
+ </body>
+ </html>
