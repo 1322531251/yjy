@@ -1,0 +1,32 @@
+<!-- 
+    双分支语句：
+
+    语法：
+    if(条件){
+        满足条件要执行的代码
+    }else{
+        不满足条件执行的代码
+    }
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if双分支语句</title>
+ </head>
+ <body>
+    <script>
+        let uname = prompt('请输入用户名：')
+        let password = prompt('请输入密码：')
+        // 需要用=== 左右两边类型要相同
+        if(uname === 'pink' && password === '123456'){
+            alert('登陆成功')
+        }else{
+            alert('登陆失败')
+        }
+    </script>
+ </body>
+ </html>
