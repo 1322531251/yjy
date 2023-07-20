@@ -1,0 +1,38 @@
+<!-- 
+
+    循环嵌套
+
+    for(外部声明记录循环次数的变量；循环条件；变量){
+        for(内部声明记录循环次数的变量；循环条件；变量){
+            循环体
+        }
+    }
+
+    外部循环再进行内部循环
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>循环嵌套</title>
+ </head>
+ <body>
+    
+    <script>
+        let sum = 0
+        let num1 = 0
+        for(let day = 1; day <= 3; day++){
+              
+            document.write(day+'<br>')
+            for(let num =1; num<= 5; num++){
+                document.write(num+'<br>') 
+            }   
+      
+        }
+
+
+    </script>
+ </body>
+ </html>
