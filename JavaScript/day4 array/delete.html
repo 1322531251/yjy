@@ -1,0 +1,37 @@
+<!-- 
+    删除：
+    删除数组元素
+
+    语法：
+    1.数组.pop()
+      从数组中删除最后一个元素，并返回该元素的值
+
+    2.数组.shift()
+      从数组中删除第一个元素，并返回该元素的值
+
+    3.数组.splice(起始位置，删除几个元素（起始位置后的元素）)
+      删除指定元素
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    
+    <script>
+        let arr =[1,2,3,6,5,9,8]
+        arr.pop()
+        console.log(arr);
+
+        arr.shift()
+        console.log(arr);
+
+        arr.splice(3, 2)
+        console.log(arr);
+    </script>
+ </body>
+ </html>
