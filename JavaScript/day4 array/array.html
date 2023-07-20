@@ -1,0 +1,56 @@
+<!-- 
+    数组：
+    可以按顺序保存数据的数据类型
+    能够声明数据并且能够获取里面的数据
+
+    使用场景：如果有多个数据可以用数组保存起来，然后放到一个变量中，管理方便
+
+    语法：
+    let 数组名 = [数据1，数据2，...，数据n]
+    或
+    let arr = new Array(数据1，数据2，...，数据n)
+
+    取值语法：
+    数组名[下标]
+
+
+    遍历数组：
+    一般用for循环遍历
+    let 数组名 = []
+    for（）{
+
+    }
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+ </head>
+ <body>
+    <script>
+
+        // // 字面量声明
+        // let arr = [1,2,'pink']
+        // console.log(arr);
+
+        // // 使用new Array构造函数声明
+        // let arr1 = new Array(1,2,3,'PINKs')
+        // console.log(arr1);
+
+
+
+        // 数组求和
+        let sum = 0
+        let arr = [2,6,1,7,4]
+        for(let i = 0; i < arr.length; i++){
+            sum += arr[i]
+        }
+        sum = sum / arr.length
+        document.write(sum)
+    </script>
+ </body>
+ </html>
