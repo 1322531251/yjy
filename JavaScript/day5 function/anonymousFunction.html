@@ -1,0 +1,56 @@
+<!-- 
+    函数表达式：
+    将匿名函数赋值给一个变量，并通过变量名进行调用
+
+    语法：
+    let fn = function(){
+        
+    }
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        // // 函数表达式
+        // let fn = function(x, y){
+        //     console.log(x + y);
+        // }
+        // fn(1, 2)
+
+
+        // // 具名函数
+        // // 调用可以写到任何位置
+        // fun()
+        // function fun(){
+        //     console.log(1);
+        // }
+
+
+
+        // 立即执行函数
+
+        // (function (){
+        //     let num =1
+
+        //     console.log(num);
+        // })();
+        // (function (){
+        //     let num =2
+        // })()
+
+        (function(x , y){console.log(x + y);})(1,2);
+        
+        (function(x , y){
+            console.log(x + y);
+        }
+        (1,3));
+    </script>
+ </body>
+ </html>
