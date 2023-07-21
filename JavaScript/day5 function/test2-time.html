@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间转换</title>
+</head>
+<body>
+    <script>
+
+        let second = +prompt('请输入秒数：')
+        function getTime(t){
+            h = parseInt(t / 60 / 60 % 24)
+            m = parseInt(t / 60 % 60)
+            s = parseInt(t % 60)
+            if(h < 10){
+                h = '0' + h
+            }
+            if(m < 10){
+                m = '0' + m
+            }
+            if(s < 10){
+                s = '0' + s
+            }
+           return `还剩${h}小时${m}分${s}秒`
+        }
+        let time = getTime(second)
+        document.write(time)
+    </script>
+</body>
+</html>
