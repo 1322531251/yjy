@@ -1,0 +1,55 @@
+<!-- 
+    函数传参
+
+    语法：function 函数名(参数列表){
+        函数体
+    }
+
+    调用：
+    函数名(传递的参数列表)
+
+    参数列表：
+    传入数据列表
+    声明这个函数需要传入几个数据
+    多个数据用逗号隔开
+
+
+    参数默认值附0
+    function sum(x=0, y=0){
+        
+    }
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        
+        function sum1(start, end)/* 形参  形式上的参数 */{
+            let sum1 = 0
+            for(let num = start; num <= end; num++ ){
+                sum1 = num + sum1
+            }
+             
+            document.write(`${sum1}<br>`)
+        }
+
+        sum1(1,50)  /*  实参  实际上的参数  */
+        sum1(100,101)
+
+
+        function sum(num1, num2){
+            document.write(`${num1 + num2}<br>`)
+        }
+
+        sum(1,2)
+        sum(1,6)
+    </script>
+ </body>
+ </html>
