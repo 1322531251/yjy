@@ -1,0 +1,80 @@
+<!-- 
+    函数：
+    是被设计为执行特定任务的代码块
+    有利于代码复用
+
+
+    语法：
+    声明：
+    function 函数名(){
+        函数体
+    }
+
+    调用：
+    函数名()
+
+
+
+    命名规范：
+    和变量命名基本一致
+    尽量小驼峰式命名法
+    前缀应该为动词
+    命名：常用动词  :    can  判断是否可执行某个动作
+                        has  判断是否含义某个值
+                        is   判断是否为某个值
+                        get  获取某个值
+                        set  设置某个值
+                        load 加载某些数据
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+ </head>
+ <body>
+    
+    <script>
+        function sayHi (){
+
+            document.write('hi~~~~~~~~~~<br>')
+        }
+        sayHi()
+        sayHi()
+
+
+        function sheet99 (){
+            for (let i = 0; i <= 9; i++){
+                for (let j = 1; j <= i; j++){
+                    document.write(`${j}*${i}=${i*j}`)
+                }
+                document.write('<br>')
+            }
+        }
+        sheet99()
+        
+
+        function sum(){
+            let i = +prompt('请输入一个数：')
+            let j = +prompt('请输入第二个数：') 
+            document.write(`${sum = i + j}<br>`)
+        }
+
+        sum()
+
+        function sum1(){
+            let sum1 = 0
+            for(let num = 1; num <= 100; num++ ){
+                sum1 = num + sum1
+            }
+             
+            document.write(sum1)
+        }
+
+        sum1()
+
+    </script>
+ </body>
+ </html>
