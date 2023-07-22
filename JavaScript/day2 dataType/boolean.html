@@ -1,6 +1,16 @@
 <!-- 
     布尔类型：
     值：true false
+
+
+    显示转换：
+    " 0 undefined null false NaN转换为布尔值后都是false，其余则为true
+
+    隐式转换：
+    null经过数字转换成0
+    undefined经过数字转换是NaN
+
+
  -->
 
  
@@ -17,6 +27,9 @@
     <script>
         let isCool = true
         console.log(isCool)
+
+        console.log(Boolean('NaN'));
+        console.log(null + 0);
     </script>
  </body>
  </html>
