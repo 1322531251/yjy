@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名</title>
+</head>
+<body>
+    <script>
+        let arr = ['赵云','黄忠','关羽','张飞','马超','刘备','曹操']
+        let random = Math.floor(Math.random() * arr.length)
+        document.write(arr[random]);   
+        // 删除 
+        arr.splice(random, 1)
+    </script>
+</body>
+</html>
