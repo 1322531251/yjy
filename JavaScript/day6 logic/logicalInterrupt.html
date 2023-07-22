@@ -1,0 +1,39 @@
+<!-- 
+    逻辑运算符：
+
+    短路：
+    只存在于&&和||中，当满足一定条件会让右边代码不执行
+
+    &&    左边为flase就短路
+    ||    左边为true就短路
+
+    原因： 通过左边能得到整个式子的结果，因此没必要在判断右边
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逻辑中断</title>
+</head>
+<body>
+    <script>
+        function fn (x , y){
+            x = x || 0
+            y = y || 0
+            console.log(x + y)
+        }
+        // fn(1 , 2)
+        fn()
+
+
+
+
+        console.log(11 && 22);/* 都是真，则返回最后一个真值 */
+        console.log(11 || 22);/* 逻辑或输出第一个真值 */
+    </script>
+</body>
+</html>
