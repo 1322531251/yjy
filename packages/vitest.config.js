@@ -1,11 +1,7 @@
-import { defineConfig, mergeConfig } from 'vitest/config'
-import viteConfig from './vite.config'
+import { describe, expect, it } from "vitest";
 
-export default mergeConfig(
-  viteConfig,
-  defineConfig({
-    test: {
-      exclude: ['packages/template/*'],
-    },
-  })
-)
+describe("two plus two is four", () => {
+    it("should be 4", () => {
+        expect(2 + 2).toBe(4)
+    })
+})
