@@ -1,0 +1,24 @@
+<!-- 
+    对象.innerText属性
+
+    不解析标签
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText</title>
+ </head>
+ <body>
+    <div class="box">一个盒子</div>
+
+    <script>
+        const box = document.querySelector('.box')
+        console.log(box.innerText);
+
+        box.innerText = '一个个体'
+    </script>
+ </body>
+ </html>
