@@ -1,0 +1,45 @@
+<!-- 
+
+    操作表单元素
+     获取：DOM对象.属性名
+     设置：DOM对象.属性名 = 新值
+
+     表单属性中添加就有效果，移除则无，使用布尔值表示
+     disabled checked
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改表单属性</title>
+ </head>
+ <body>
+    <!-- <input type="text"  value="ll"> -->
+    <input type="checkbox" name="" id="" checked>
+    <button >点击</button>
+
+    <script>
+        // // 获取元素
+        // const uname = document.querySelector('input')
+        // console.log(uname.value);
+        // // 修改
+        // uname.value = '123'
+
+        // console.log(uname.type);
+        // uname.type = 'password'
+
+        // 获取选择框
+        const ipt = document.querySelector('input')
+        ipt.checked = true
+
+        const button = document.querySelector('button')
+        // console.log(button.disabled);  //默认false 不禁用
+        button.disabled = true
+
+
+
+    </script>
+ </body>
+ </html>
