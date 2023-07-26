@@ -1,0 +1,29 @@
+<!-- 
+    DOM对象：
+    浏览器根据html标签生成的JS对象
+
+    document对象：
+    DOM里提供的一个对象
+    用来访问和操作网页内容的  document.write()
+
+ -->
+
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM对象</title>
+ </head>
+ <body>
+    <div>
+        123
+    </div>
+    <script>
+        const div = document.querySelector('div')
+        // 打印对象
+        console.dir(div)
+    </script>
+ </body>
+ </html>
