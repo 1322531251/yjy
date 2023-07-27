@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关闭广告</title>
+    <style>
+        .box{
+            position: relative;
+            width: 500px;
+            height: 200px;
+            background-color: pink;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            line-height: 200px;
+            font-size: 30px;
+        }
+        .close{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            height: 20px;
+            width: 20px;
+            background-color: gray;
+            font-size: 13px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">我是广告
+        <div class="close">X</div>
+    </div>
+    
+    <script>
+        // 事件源
+        const close = document.querySelector('.close')
+        // 获取盒子
+        const box = document.querySelector('.box')
+
+        // 事件类型
+        close.addEventListener('click' , function(){
+        // 关闭广告
+            box.style.display = 'none'
+        })
+    </script>
+</body>
+</html>
