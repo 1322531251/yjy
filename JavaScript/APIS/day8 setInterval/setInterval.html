@@ -1,0 +1,44 @@
+<!-- 
+    间歇函数:
+    可根据时间自动重复执行某些代码
+
+    1.开启定时器：
+    setInterval(函数，间隔时间)
+    间隔时间单位是毫秒
+    注：
+    函数名不加小括号
+    定时器返回的是一个id数字
+
+
+    2.关闭定时器
+    let 变量名 = setInterval(函数，间隙时间)
+    clearInterval(变量名)
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>间歇函数</title>
+ </head>
+ <body>
+    
+    <script>
+        // 1.setInterval(函数，间隔时间)
+        // setInterval(function () {
+        //     console.log('每秒执行一次');
+        // },1000)
+
+
+        // 2.setInterval(函数名，间隔时间)  
+        //   函数名不加小括号
+        function fn(){
+            console.log('每秒执行一次');
+        }
+        let n = setInterval(fn,1000)
+        console.log(n);
+        clearInterval(n)
+    </script>
+ </body>
+ </html>
