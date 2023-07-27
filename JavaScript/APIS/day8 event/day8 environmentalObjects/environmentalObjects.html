@@ -1,0 +1,31 @@
+<!-- 
+    环境对象：
+    函数内部特殊的变量this，代表当前函数运行时所处的环境
+
+    谁调用，this就是谁
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环境对象</title>
+ </head>
+ <body>
+    <button>点击</button>
+    <script>
+        // function fn(){
+        //     // 普通函数里this指向的是window
+        //     console.log(this);
+        // }
+
+        const btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            // console.log(this);
+            this.style.color = 'red'
+        })
+    </script>
+ </body>
+ </html>
