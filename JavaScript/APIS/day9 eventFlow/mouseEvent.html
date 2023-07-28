@@ -1,0 +1,43 @@
+<!-- 
+    鼠标经过事件
+    mouseover 和 mouseout 会有冒泡效果
+    mouseenter 和 mouseleave 没有冒泡效果
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标经过事件</title>
+    <style>
+        .dad{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="dad">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        const dad = document.querySelector('.dad')
+        const son = document.querySelector('.son')
+        dad.addEventListener('mouseenter',function () {
+            console.log('123');
+          })
+        dad.addEventListener('mouseleave',function () {
+            console.log('321');
+          })
+    </script>
+ </body>
+ </html>
