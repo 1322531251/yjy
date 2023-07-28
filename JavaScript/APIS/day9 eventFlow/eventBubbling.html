@@ -1,0 +1,46 @@
+<!-- 
+    事件冒泡
+
+    当一个元素触发事件后，会一次向上调用所有父级元素的同名事件
+
+    第三参数默认false 冒泡
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件冒泡</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        const father = document.querySelector('.father')
+        const son = document.querySelector('.son')
+        document.addEventListener('click',function(){
+            alert('grandfather')
+        })
+        father.addEventListener('click',function(){
+            alert('father')
+        })
+        son.addEventListener('click',function(){
+            alert('son')
+        })
+    </script>
+ </body>
+ </html>
