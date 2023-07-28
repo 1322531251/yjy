@@ -1,0 +1,52 @@
+<!-- 
+    阻止冒泡
+
+    阻止事件流动传播
+
+    语法：
+    事件对象.stopPropagation()
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件冒泡</title>
+    <style>
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+        }
+        .son{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        const father = document.querySelector('.father')
+        const son = document.querySelector('.son')
+        document.addEventListener('click',function(){
+            alert('grandfather')
+        })
+        father.addEventListener('click',function(){
+            alert('father')
+        })
+        son.addEventListener('click',function(e){
+            alert('son')
+
+            // 阻止流动传播
+            e.stopPropagation()
+        })
+    </script>
+ </body>
+ </html>
