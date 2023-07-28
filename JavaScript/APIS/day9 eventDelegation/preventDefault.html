@@ -1,0 +1,28 @@
+<!-- 
+    
+    阻止冒泡
+    e.preventDefault()
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <form action="https://www.baidu.com/">
+        <input type="submit" value="点击">
+    </form>
+
+
+    <script>
+        const form = document.querySelector('form')
+        form.addEventListener('click', function(e){
+
+            e.preventDefault()
+        })
+    </script>
+ </body>
+ </html>
