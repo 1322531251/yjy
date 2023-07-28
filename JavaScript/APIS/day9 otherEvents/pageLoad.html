@@ -1,0 +1,52 @@
+<!-- 
+    页面加载事件
+
+    加载外部资源（如图片、外联CSS和JavaScript等
+    加载完毕时触发的事件
+
+    事件名：load
+
+    监听页面所有资源加载完毕
+        给window加load事件
+    元素.addEventListener('load',function(){})
+
+    -------------------------------------------
+
+    当初始的HTML文档被完全加载和解析完之后，
+    DOMContentLoaded事件被触发，而无需等待样式表、图像等完全加载
+
+    事件名：DOMContentLoaded
+
+    监听页面DOM加载完毕
+        给document加DOMContentLoaded事件
+     document.addEventListener('DOMContentLoaded',function(){})
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面加载事件</title>
+    <script>
+        // window.addEventListener('load',function(){
+        //     const btn = document.querySelector('button')
+        //     btn.addEventListener('click', function () {
+        //         alert('12')
+        //       })
+        // })
+
+
+        document.addEventListener('DOMContentLoaded',function(){
+            const btn = document.querySelector('button')
+            btn.addEventListener('click', function () {
+                alert('12')
+              })
+        })
+    </script>
+ </head>
+ <body>
+    <button>按钮1</button>
+ </body>
+ </html>
