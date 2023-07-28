@@ -1,0 +1,54 @@
+<!-- 
+    事件委托
+    利用事件流的特征解决一些开发需求的知识技巧
+
+    优点：
+    减少注册次数，可以提高程序性能
+
+
+    原理：
+    利用事件冒泡的特点
+    给父元素注册事件，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件
+
+    真正触发的元素：
+    事件对象.target.tagName
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件委托</title>
+ </head>
+ <body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <p>no</p>
+    </ul>
+
+    <script>
+        // const lis = document.querySelectorAll('li')
+        // for(let i = 0; i < lis.length; i++){
+        //     lis[i].addEventListener('mouseenter' , function(){
+        //         lis[i].style.color = 'red'
+        //     })
+        // } 
+
+
+        const ul =document.querySelector('ul')
+        ul.addEventListener('click' , function(e){
+            // console.log(e.target);
+            // e.target.style.color = 'red'
+
+            if(e.target.tagName === 'LI') {
+                e.target.style.color = 'red'
+            }
+        })
+    </script>
+ </body>
+ </html>
