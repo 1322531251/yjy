@@ -1219,6 +1219,8 @@
   <script>
 
     const elevator = document.querySelector('.xtx-elevator')
+    const entry = document.querySelector('.xtx_entry')
+    // console.log(entry.offsetTop);
     //页面大于等于300显示导航
     
     window.addEventListener('scroll' , function () {
@@ -1228,8 +1230,7 @@
       // }else{
       //   elevator.style.opacity = 0
       // }
-      elevator.style.opacity = n >= 300 ? 1 : 0
-
+      elevator.style.opacity = n >= entry.offsetTop ? 1 : 0
       const top = document.querySelector('#backTop')
       top.addEventListener('click' , function(){
       document.documentElement.scrollTop = 0
