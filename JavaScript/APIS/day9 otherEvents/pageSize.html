@@ -2,7 +2,40 @@
     页面尺寸
 
     resize
-
+    window.addEventListener('resize' ,function(){})
+--------------------------------------------------------
     检测屏幕尺寸
     clientWidth  clientHeight
+    获取元素可见的部分宽高（不包含边框，margin，滚动条等
  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面尺寸</title>
+    <style>
+        div{
+            display: inline-block;
+            /* width: 200px; */
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+        }
+    </style>
+ </head>
+ <body>
+    <div>11111111111111111111111111111</div>
+    <script>
+        // // resize
+        // window.addEventListener('resize' , function(){
+        //     console.log(1);
+        // })
+
+        // clientwidth
+        // 没有宽度时 通过内容看
+        const div =document.querySelector('div')
+        console.log(div.clientWidth);
+    </script>
+ </body>
+ </html>
