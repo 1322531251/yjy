@@ -1,0 +1,38 @@
+<!-- 
+    增加节点
+
+    1.创建节点
+    document.createElement('标签名')
+
+    2.追加节点
+
+    //插入到父元素的最后一个子元素
+    父元素.appendChild(要插入的元素)
+
+    //插入到父元素的最后一个子元素
+    父元素.insertBefore(要插入的元素，在哪个元素前面)
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>增加节点</title>
+ </head>
+ <body>
+    <ul>
+        <li>11</li>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul')
+        const li = document.createElement('li')
+        li.innerHTML = '222'
+
+        // ul.children
+        ul.insertBefore(li , ul.children[0])
+    </script>
+ </body>
+ </html>
