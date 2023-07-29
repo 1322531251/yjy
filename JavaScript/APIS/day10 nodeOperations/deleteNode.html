@@ -1,0 +1,33 @@
+<!-- 
+    删除节点
+    删除元素必须通过父元素删除
+
+    语法：
+    父元素.removeChild(要删除的元素)
+
+    注：
+    如不存在父子关系则删除不成功
+    删除节点和隐藏节点（display：none）有区别
+    隐藏节点还是存在，删除则是从html中删除节点
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除节点</title>
+ </head>
+ <body>
+    <ul>
+        <li>111</li>
+    </ul>
+
+    <script>
+        // 获取父级
+        const ul = document.querySelector('ul')
+        // 删除子节点
+        ul.removeChild(ul.children[0])
+    </script>
+ </body>
+ </html>
