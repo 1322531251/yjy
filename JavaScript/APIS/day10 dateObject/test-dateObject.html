@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示时间</title>
+    <style>
+        div{
+            width: 250px;
+            height: 40px;
+            line-height: 40px;
+            border: 1px solid #000;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+    <script>
+        
+        const div = document.querySelector('div')
+        // 1.
+        // function getDate() { 
+        //     const date = new Date()
+        //     let h = date.getHours()
+        //     h = h < 10 ? '0' + h : h
+        //     let m = date.getMinutes()
+        //     m = m < 10 ? '0' + m : m
+        //     let s = date.getSeconds()
+        //     s = s < 10 ? '0' + s : s
+        //     return `今天是${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日${h}:${m}:${s}`
+
+        //  }
+        // div.innerHTML = getDate()
+
+        // // 定时器
+        // setInterval(function () { 
+        //     div.innerHTML = getDate()
+        //  }, 1000);
+
+        // 2.
+        const date = new Date()
+        div.innerHTML = date.toDateString() //Sat Jul 29 2023
+        div.innerHTML = date.toLocaleDateString()  //2023/7/29
+        div.innerHTML = date.toLocaleTimeString()  //15:23:14
+        div.innerHTML = date.toLocaleString()  //2023/7/29 15:23:45
+
+
+        setInterval(function () { 
+            const date = new Date()
+            div.innerHTML = date.toLocaleString()
+         }, 1000);
+    </script>
+</body>
+</html>
