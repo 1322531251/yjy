@@ -1,0 +1,55 @@
+<!-- 
+    元素尺寸与位置
+
+    获取宽高：
+        获取元素的自身宽高，包含元素自身设置的宽高、padding、border
+        offsetWidth  offsetHeight
+        获取出来的是数值
+        注： 获取的是可视宽高，如果盒子是隐藏的，获取结果为0
+    
+
+    获取位置：
+        获取元素距离自己定位父级元素的左、上距离
+        offsetLeft  offsetTop
+        只读属性
+
+        注：有父级定位，相对父亲位置
+
+        element.getBoundingClientRect()
+        方法返回元素的大小及其相对于视口的位置
+
+    
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素尺寸与宽度</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 300px;
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+    <script>
+     
+        const div = document.querySelector('div')
+        // // 1.
+        // console.log(div.offsetLeft);
+
+        // 2.
+        console.log(div.getBoundingClientRect());
+
+    </script>
+ </body>
+ </html>
