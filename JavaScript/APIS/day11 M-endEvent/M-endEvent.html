@@ -1,0 +1,43 @@
+<!-- 
+    移动端事件
+
+    触屏事件touch
+    touchstart 手指触摸
+    touchmove  手指滑动
+    touchend   手指移开 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>触屏事件</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        const div = document.querySelector('div')
+        div.addEventListener('touchstart',function(){
+            console.log('aaaa');
+        })
+
+        div.addEventListener('touchmove',function(){
+            console.log('1111');
+        })
+
+        div.addEventListener('touchend',function(){
+            console.log('....');
+        })
+         
+    </script>
+</body>
+</html>
