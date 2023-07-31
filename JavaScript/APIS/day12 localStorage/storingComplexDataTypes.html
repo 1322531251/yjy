@@ -1,0 +1,38 @@
+<!-- 
+    存储复杂数据类型
+
+    解决方法：
+    需要将复杂数据类型转换成JSON字符串再存储
+
+    语法：
+    JSON.stringify(复杂数据类型)
+
+    转换成对象形式
+    JSON.parse(JSON字符串)
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>存储复杂数据类型</title>
+ </head>
+ <body>
+    
+    <script>
+        const obj = {
+            uname:'金鱼',
+            age:18,
+            gender:'男',
+            city:'上海',
+        }
+        // 1.先转换成字符串再存储
+        localStorage.setItem('obj',JSON.stringify(obj))
+        // 2.再转换成对象使用
+        console.log(JSON.parse(localStorage.getItem('obj')));
+
+
+    </script>
+ </body>
+ </html>
