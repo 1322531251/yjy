@@ -1,0 +1,42 @@
+<!-- 
+    事件循环***
+    由于主线程不断的重复获取任务、执行任务、再获取任务、
+    在执行，所以这种机制被称为事件循环
+
+-----------------------------------------------------------
+
+    JS执行机制
+
+    分为同步和异步
+    同步任务都在主线程上，形成一个执行栈
+    异步任务是通过回调函数实现的
+    三种类型：
+    1.普通事件，如click，resize等
+    2.资源加载，如load，error等
+    3.定时器，包括setinterval，setTimeout等
+    异步任务相关添加到任务队列中（任务队列也称为消息队列
+
+    执行步骤
+    1.先执行执行栈中的同步任务
+    2.异步任务放入任务队列中
+    3.执行栈中的所有同步任务执行完毕，系统就会按次序读取任务队列中的异步任务，于是被读取的异步任务等待状态，进入执行栈，开始执行
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件循环</title>
+</head>
+<body>
+    <script>
+        console.log(1);
+        setTimeout(function () { 
+            console.log(2);
+         },0)
+         console.log(3);
+    </script>
+</body>
+</html>
