@@ -1,0 +1,40 @@
+<!-- 
+    利用map()、join()数组方法实现字符串拼接
+
+    map()
+    可以遍历数组处理数据，并返回新的数组
+    （foreach没有返回值
+--------------------------------------------
+    join()
+    把数组中的所有元素转换成一个字符串
+
+    参数：
+    数组元素是通过参数里面指定的分隔符进行分隔的，
+    如果是空字符串('')，则所有元素之间都没有任何字符
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串拼接</title>
+ </head>
+ <body>
+    
+    <script>
+        const arr = ['red','blue','green']
+        // 遍历数组
+        let newArr = arr.map(function(ele , index){
+            // console.log(ele);//数组元素
+            // console.log(index);//索引号
+            return ele+'颜色'
+        })
+        console.log(newArr);
+        console.log(arr.join('')); //redbluegreen
+        console.log(arr.join()) //red,blue,green
+        console.log(arr.join(',')) //red,blue,green
+
+    </script>
+ </body>
+ </html>
