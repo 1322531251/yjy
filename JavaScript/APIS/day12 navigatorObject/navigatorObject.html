@@ -1,0 +1,35 @@
+<!-- 
+    navigator对象
+    数据类型是对象，该对象记录了浏览器自身的相关信息
+
+    常用的属性和方法：
+    通过userAgent检测浏览器的版本及平台 
+
+    立即执行函数
+    (function(){})();
+    !function(){}()
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator对象</title>    
+    <script>
+        // 检测 userAgent（浏览器信息）
+        !(function () {
+            const userAgent = navigator.userAgent
+            // 验证是否为Android或iPhone
+            const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+            const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+            // 如果是Android或iPhone，则跳转至移动站点
+            if (android || iphone) {
+            location.href = 'http://m.itcast.cn' }
+        })()
+    </script>
+ </head>
+ <body>
+   这是pc端
+ </body>
+ </html>
