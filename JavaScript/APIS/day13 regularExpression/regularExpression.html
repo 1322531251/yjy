@@ -1,0 +1,38 @@
+<!-- 
+    正则表达式
+
+    语法：
+    1.定义规则
+    const 变量名 = /表达式/    
+    注：里面不需要学引号
+
+    2.判断是否有符合规则的字符串
+    test()  用来查看正则表达式与指定的字符串是否匹配 
+    
+    regObj.test(被检测的字符串)
+    （匹配成功是true，没匹配是false
+
+    3.检索（查找）符号规则的字符串
+    exec()  在一个指定字符串中执行一个搜索匹配
+
+    regObj.exec(被检测字符串)
+    （匹配成功返回一个数组，没匹配返回null
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式</title>
+ </head>
+ <body>
+    <script>
+        const str = '我爱学习，学习爱我'
+        const reg = /学习/
+        console.log(reg.test(reg));
+        console.log(reg.exec(reg));
+    </script>
+ </body>
+ </html>
