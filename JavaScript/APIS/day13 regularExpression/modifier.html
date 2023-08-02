@@ -1,0 +1,41 @@
+<!-- 
+    修饰符
+    约束正则执行的某些细节行为，如是否区分大小写，是否支持多行匹配等
+    
+    语法
+    /表达式/修饰符
+
+    i是单词ignore的缩写，正则匹配时字母不区分大小写
+    g是单词global的缩写，匹配所有满足正则表达式的结果
+
+
+-------------------------------------------------
+
+
+    replace 替换
+
+    语法：
+    字符串.replace(/正则表达式/,'替换的文本')
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修饰符</title>
+ </head>
+ <body>
+    
+    <script>
+        console.log(/java/.test('java')); //true
+        console.log(/java/.test('JAVA')); //false
+        console.log(/java/i.test('java')); //true
+
+        const reg = 'java是一门编程语言，学好JAVA工作不愁'
+        const re = reg.replace(/java/ig,'前端')
+        // const re = reg.replace(/java|JAVA/g,'前端')
+        console.log(re);
+    </script>
+ </body>
+ </html>
