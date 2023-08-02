@@ -1,0 +1,146 @@
+<!-- 
+    元字符
+
+    普通字符
+    元字符（特殊字符：
+    具有特殊含义的字符，可以极大提高灵活性和强大的匹配功能
+---------------------------------------------------------
+    边界符(表示位置，开头和结尾，必须用什么开头，用什么结尾)
+    用来提示字符所处的位置
+
+    ^  表示匹配行首的文本（以谁开始
+    $  表示匹配行尾的文本（以谁结束
+    注：^和$一起使用表示精确匹配
+---------------------------------------------------------
+    量词(表示重复次数)
+    设定某个模式出现的次数
+    *  重复零次或更多次  类似于>=0
+    +  重复一次或更多次   类似于>=1
+    ？ 重复零次或一次   类似于0||1
+    {n}  重复n次
+    {n,}  重复n次或更多次
+    {n,m}  重复n到m次
+---------------------------------------------------------
+    字符类(比如 \d表示0-9)
+
+    1.[]匹配字符集合
+    （后面的字符串只要包括其中的任意一个字符，都返回true
+      []里面加上-连字符  使用连字符表示一个范围
+      []里面加上^取反符号
+    
+    2. .匹配除换行符之外的任何单个字符
+
+    3.预定义类
+    指某些常见模式的简写方式
+
+    \d  匹配0-9之间的任一数字，相当于[0-9]
+    \D  匹配所有0-9以外的字符，相当于[^0-9]
+    \w  匹配任意的字母、数字和下划线，相当于[A-Za-z0-9_]
+    \W  除所有字母、数字和下划线以外的字符，相当于[^A-Za-z0-9_]
+    \s  匹配空格(包括换行符、制表符、空格符等)，相当于[\t\r\n\v\f]
+    \S  匹配非空格的字符，相当于[^\t\r\n\v\f]
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元字符</title>
+ </head>
+ <body>
+    <script>
+        console.log(/哈/.test('哈')); //true
+        console.log(/哈/.test('哈哈')); //true
+        console.log(/哈/.test('二哈')); //true
+        console.log('--------------------------');
+
+        console.log(/^哈/.test('哈')); //true
+        console.log(/^哈/.test('哈哈')); //true
+        console.log(/^哈/.test('二哈')); //false
+        console.log('-----------------------------');
+
+        console.log(/^哈$/.test('哈')); //true
+        console.log(/^哈$/.test('哈哈')); //false
+        console.log('-----------------------------');
+
+        // * 量词  
+        console.log(/^哈*$/.test('哈')); //true
+        console.log(/^哈*$/.test('')); //true
+        console.log(/^哈*$/.test('哈哈哈')); //true
+        console.log(/^哈*$/.test('二哈是你')); //false
+        console.log(/^哈*$/.test('二哈哈')); //false
+        console.log(/^哈*$/.test('哈很傻')); //false
+        console.log(/^哈*$/.test('哈很哈')); //false
+        console.log('-----------------------------');
+
+        // + 量词
+        console.log(/^哈+$/.test('哈')); //true
+        console.log(/^哈+$/.test('')); //false
+        console.log(/^哈+$/.test('哈哈哈')); //true
+        console.log(/^哈+$/.test('二哈是你')); //false
+        console.log(/^哈+$/.test('二哈哈')); //false
+        console.log(/^哈+$/.test('哈很傻')); //false
+        console.log(/^哈+$/.test('哈很哈')); //false
+        console.log('-----------------------------');
+
+        // ? 量词
+        console.log(/^哈?$/.test('哈')); //true
+        console.log(/^哈?$/.test('')); //true
+        console.log(/^哈?$/.test('哈哈哈')); //false
+        console.log(/^哈?$/.test('二哈是你')); //false
+        console.log(/^哈?$/.test('二哈哈')); //false
+        console.log(/^哈?$/.test('哈很傻')); //false
+        console.log(/^哈?$/.test('哈很哈')); //false
+        console.log('-----------------------------');
+
+        // {n}
+        console.log(/^哈{2}$/.test('哈')); //false
+        console.log(/^哈{2}$/.test('')); //false
+        console.log(/^哈{2}$/.test('哈哈')); //true
+        console.log(/^哈{2}$/.test('二哈哈')); //false
+        console.log(/^哈{2}$/.test('哈很哈')); //false
+        console.log('-----------------------------');
+        
+        // {n,}
+        console.log(/^哈{2,}$/.test('哈哈哈哈')); //true
+        console.log(/^哈{2,}$/.test('')); //false
+        console.log(/^哈{2,}$/.test('哈哈')); //true
+        console.log(/^哈{2,}$/.test('二哈哈')); //false
+        console.log(/^哈{2,}$/.test('哈很哈')); //false
+        console.log('-----------------------------');
+
+        // {n,m}  逗号左右两侧没空格
+        console.log(/^哈{2,4}$/.test('哈哈哈哈')); //true
+        console.log(/^哈{2,4}$/.test('哈哈哈哈哈哈哈哈哈')); //false
+        console.log(/^哈{2,4}$/.test('')); //false
+        console.log(/^哈{2,4}$/.test('哈哈')); //true
+        console.log(/^哈{2,4}$/.test('二哈哈')); //false
+        console.log(/^哈{2,4}$/.test('哈很哈')); //false
+        console.log('-----------------------------');       
+        
+        // 字符类 []
+        console.log(/[abc]/.test('ab')); //true
+        console.log(/^[abc]$/.test('ab')); //false
+        console.log(/^[abc](2)$/.test('ab')); //true
+        console.log(/^[abc]$/.test('')); //false
+        console.log(/^[abc]$/.test('a')); //true
+        console.log(/^[abc]$/.test('b')); //true
+        console.log(/^[abc]$/.test('c')); //true
+        console.log('-----------------------------');      
+
+        // 字符类 [a-z]  [A-Z]  [0-9]
+        console.log(/[a-z]/.test('ab')); //true
+        console.log(/^[a-z]$/.test('ab')); //false
+        console.log(/^[a-z]$/.test('a')); //true
+        console.log(/^[A-Z]$/.test('a')); //false
+        console.log(/^[A-Z]$/.test('B')); //true
+        console.log(/^[0-9]$/.test('5')); //true
+        console.log(/^[a-zA-Z0-9]$/.test('c')); //true
+        console.log(/^[a-zA-Z0-9]$/.test('C')); //true
+        console.log(/^[a-zA-Z0-9]$/.test('1')); //true
+        console.log('-----------------------------');      
+    </script>
+ </body>
+ </html>
