@@ -1,0 +1,30 @@
+<!-- 
+    函数提升
+
+    1.会把所有函数声明提升到当前作用域的最前面
+    2.只提升函数声明变量，不提升函数调用
+    3.函数表达式必须先声明和赋值，后调用否则报错
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数提升</title>
+ </head>
+ <body>
+    
+    <script>
+        fn()
+        function fn(){
+            console.log(5);
+        }
+
+        var fun = function(){
+            console.log(2);
+        }
+        fun() //不能提前
+    </script>
+ </body>
+ </html>
