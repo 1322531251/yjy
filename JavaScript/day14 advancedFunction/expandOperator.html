@@ -1,0 +1,32 @@
+<!-- 
+        展开运算符（...）
+
+        典型运用场景：求数组最大值(最小值)、合并数组等
+
+        1.不会修改原数组
+
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展开运算符</title>
+ </head>
+ <body>
+    
+    <script>
+        const arr1 = [11,2,3]
+        console.log(...arr1); //11 2 3
+
+        console.log(Math.max(...arr1)); //11
+        console.log(Math.min(...arr1)); //2
+
+        const arr2 = [5,9,8,6]
+        const arr = [...arr1, ...arr2]
+        console.log(arr);
+    </script>
+ </body>
+ </html>
