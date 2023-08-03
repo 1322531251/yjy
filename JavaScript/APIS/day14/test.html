@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国内手机号</title>
+    <style>
+        div{
+            margin: 0 auto;
+            width: 300px;
+            height: 100px;
+        }
+
+        input{
+            padding: 0;
+            width: 150px;
+            height: 30px;
+
+        }
+        span{
+            display: block;
+        }
+
+        .error{
+            color:red;
+        }
+        .right{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text">        
+        <button>发送验证码</button>
+        <span></span>
+
+    </div>
+   <script>
+    // 检验手机号
+    // 前三位130，
+    const reg = /^1(3\d|4[0-15-9]|5[0-35-9]|6[5-7]|7[35-8]|8\d|9[18-9])(\d{8})$/ 
+    const input = document.querySelector('input')
+    const span = document.querySelector('span')
+    // 注册事件
+    input.addEventListener('blur',function(){
+        // console.log(reg.test(input.value));
+        // span.innerHTML = reg.test(input.value)
+        if(reg.test(input.value)){
+            span.innerHTML = '输入正确'
+            span.className = 'right'
+        }else{
+            span.innerHTML = '格式错误，请输入11位数字'
+            span.className = 'error'
+        }
+    })
+    
+    
+    
+    // 发送验证码
+
+
+   </script>
+</body>
+</html>
