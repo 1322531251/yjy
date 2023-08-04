@@ -1,0 +1,33 @@
+<!-- 
+    forEach()遍历数组
+    用于调用数组的每个元素，并将元素传递给回调函数
+
+    主要使用场景：遍历数组的每个元素
+
+    语法：
+    被遍历的数组.forEach(function(当前数组元素，当前元素索引号){
+
+    })
+
+    只遍历不返回的数组
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+ </head>
+ <body>
+    
+    <script>
+        // 参数当前数组元素是必写的，索引号可选
+        const arr = ['red','blue','green']
+        arr.forEach(function(item , index){
+            console.log(item);
+            console.log(index);
+        })
+    </script>
+ </body>
+ </html>
