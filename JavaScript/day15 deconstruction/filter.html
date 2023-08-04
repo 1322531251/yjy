@@ -1,0 +1,29 @@
+<!-- 
+    筛选数组filter
+    filter()方法创建一个新的数组，新数组中的元素时通过检查指定数组中符合条件的所有元素
+
+    主要使用场景：筛选数组符合条件的元素，并返回筛选后元素的新数组
+
+    返回值：返回数组，包含了符合条件的所有元素。若没有符合则返回空数组
+
+    参数：item必须写，index可选
+
+    返回新数组，不会影响原数组
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>筛选数组</title>
+ </head>
+ <body>
+    
+    <script>
+        const arr = [10, 20, 30]
+        const newArr = arr.filter(item => {item >=20})
+        console.log(newArr);
+    </script>
+ </body>
+ </html>
