@@ -1,0 +1,57 @@
+<!-- 
+    数组解构
+    将数组的单元值快速批量赋值给一系列变量的简介语法
+
+    基本语法：
+    1.赋值运算符 = 左侧的[]用于批量声明变量，右侧数组的单元值将被赋值给左侧的变量
+    2.变量的顺序对应数组单元值的位置依次进行赋值操作
+
+    js前面有哪两种情况需要加分号
+    1.立即执行函数
+    2.数组解构
+
+
+    利用剩余参数解决变量少，单元值多的情况  返回一个真数组
+    设置默认值防止有undefined传递单元值的情况
+
+    按需导入赋值
+
+    支持多维数组结构
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组解构</title>
+ </head>
+ <body>
+    
+
+    <script>
+      //   const arr = [100 , 60 , 80]
+      //   const [max, min, avg] = arr
+      //   console.log(max); //100
+      //   console.log(min); //60
+      //   console.log(avg); //80
+
+      //   let a = 1
+      //   //必须加分号   重新赋值用let
+      //   let b = 3;
+      //   [b, a] = [a, b]
+      //   console.log(a,b);
+
+      // //   按需导入赋值
+      // const [x,y, , z] = [1,2,3,4]
+      // console.log(x,y,z);
+
+      // 支持多维数组结构
+      // const arr = [1,2,[3,4]]
+      // console.log(arr[2][0]);
+
+      const [a,b,[c,d]] = [1,2,[3,4]]
+      console.log(c);
+    </script>
+ </body>
+ </html>
