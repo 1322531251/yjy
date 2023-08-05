@@ -1,0 +1,30 @@
+<!-- 
+    实例成员
+    实例对象中的属性和方法实例成员（实例属性和实例方法）
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实例成员</title>
+ </head>
+ <body>
+    
+    <script>
+        function Pig(name) {  
+            this.name = name
+        }
+        const peiqi = new Pig('佩奇')
+        const qiaozhi = new Pig('乔治')
+        peiqi.name = '小猪佩奇'   //实例属性
+        peiqi.sayHi = ()=>{     //实例方法
+            console.log('hi~~');
+        }
+        console.log(peiqi);
+        console.log(qiaozhi);
+
+    </script>
+ </body>
+ </html>
