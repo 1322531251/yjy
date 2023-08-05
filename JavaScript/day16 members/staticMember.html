@@ -1,0 +1,32 @@
+<!-- 
+    静态成员
+    构造函数中的属性和方法称为静态成员（静态属性和静态方法）
+
+    静态成员只能构造函数来访问
+    静态方法中的this指向构造函数
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静态成员</title>
+ </head>
+ <body>
+    
+    <script>
+        function Pig(name){
+            this.name = name
+
+        }
+        Pig.eyes = 2  //静态属性
+        Pig.sayHi = function(){   //静态方法
+            console.log(this);
+        }
+        Pig.sayHi()
+        console.log(Pig.eyes);
+    </script>
+ </body>
+ </html>
