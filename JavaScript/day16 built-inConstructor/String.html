@@ -1,0 +1,41 @@
+<!-- 
+    length 用来获取字符串的度长
+    split('分隔符')  用来将字符串拆分成数组
+    substring(需要截取的第一个字符的索引[,结束的索引号]) 用于字符串截取
+    startsWith(检测字符串[,检测位置索引号]) 检测是否以某字符开头
+    includes(搜索字符串[,检测位置索引号]) 判断一个字符串是都包含在另一个字符串中，根据情况返回true或false
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+ </head>
+ <body>
+    
+    <script>
+        // split 将字符串转换成数组
+        // const str = 'blue,yellow'
+        // const arr = str.split(',')
+        // console.log(arr);
+
+        // const str1 = '2023-4-1'
+        // const arr1 = str1.split('-')
+        // console.log(arr1);
+
+        // 字符串的截取 substring(开始的索引号[,结束的索引号])
+        const str = '今天天气真好'
+        console.log(str.substring(2,4));  //天气
+
+        // startsWith(检测字符串[,检测位置索引号])
+        console.log(str.startsWith('今')); //true
+        console.log(str.startsWith('天')); //false
+
+        // includes(搜索字符串[,检测位置索引号])
+        console.log(str.includes('天')); //true
+        console.log(str.includes('天今')); //false
+    </script>
+ </body>
+ </html>
