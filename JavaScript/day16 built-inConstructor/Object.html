@@ -1,0 +1,43 @@
+<!-- 
+    内置构造函数，用于创建普通对象
+
+    推荐使用字面量方式声明对象，而不是Object构造函数
+
+    静态方法只有构造函数Object可以调用的
+
+    作用：
+    Object.keys静态方法获取对象中所有属性名（键）
+    Object.values静态方法获取对象中所有属性值
+
+
+    Object.assign（空对象，要拷贝的对象）静态方法常用于对象拷贝
+    使用场景：给对象添加属性
+
+    注：返回的是一个数组
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object静态方法</title>
+ </head>
+ <body>
+    <script>
+        const o = {
+            uname:'小明',
+            age:18
+        }
+        // 获得所有的属性名
+        console.log(Object.keys(o));  //['uname', 'age']
+        // 获得所有的属性值
+        console.log(Object.values(o)); //['小明', 18]
+        // 对象的拷贝
+        const a = {}
+        Object.assign(a,o)
+        Object.assign(a,{gender: '女'})
+        console.log(a);
+    </script>
+ </body>
+ </html>
