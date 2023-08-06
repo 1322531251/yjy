@@ -1,0 +1,47 @@
+<!-- 
+    原型继承
+    继承是面向对象编程的另一个特征，通过继承进一步提升代码封装的程度
+
+    1.封装-抽取公共部分
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原型继承</title>
+ </head>
+ <body>
+    <script>
+        // 构造函数，new对象 结构一样 但对象不一样
+        function Person(){
+            this.eyes=2,
+            this.head=1
+        }
+        function Woman(){}
+
+        // woman通过原型来继承person
+        // 父构造函数（父类）   子构造函数（子类）
+        Woman.prototype = new Person()
+        Woman.prototype.boby = function () {  
+            console.log('baby');
+        } 
+        //指回woman
+        Woman.prototype.constructor = Woman
+        console.log(Woman.prototype.constructor);
+        const red = new Woman()
+        console.log(red);
+
+
+        function Man(){}
+        Man.prototype = new Person
+        Man.prototype.constructor = Man
+        const blue = new Man()
+        console.log(Man.prototype.constructor);
+        console.log(blue);
+
+
+    </script>
+ </body>
+ </html>
