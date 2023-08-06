@@ -1,0 +1,36 @@
+<!-- 
+    原型对象中都有constructor属性（constructor构造函数
+
+    作用：
+    该属性指向该原型对象的构造函数
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+ </head>
+ <body>
+    
+    <script>
+        function Star() { 
+
+         }
+        const zxy = new Star()
+        console.log(Star.prototype.constructor === Star);
+
+        Star.prototype = {
+            constructor:Star,
+            sing: function(){
+                console.log('唱歌');
+            },
+            dance: function(){
+                console.log('跳舞');
+            }
+        }
+        console.log(Star.prototype);
+    </script>
+ </body>
+ </html>
