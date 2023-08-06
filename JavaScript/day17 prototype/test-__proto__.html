@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>__proto__练习</title>
+</head>
+<body>
+    
+    <script>
+        function Person() {  
+            this.name=name
+        }
+        const peppa = new Person('佩奇')
+        console.log(peppa.__proto__ === Person.prototype);
+        console.log(peppa.__proto__.constructor === Person);
+
+    </script>
+</body>
+</html>
