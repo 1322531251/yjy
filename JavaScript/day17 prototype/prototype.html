@@ -1,0 +1,46 @@
+<!-- 
+    原型
+
+    构造函数通过原型分配函数是所有对象所共享的
+    每个构造函数都有一个prototype属性，指向另一个对象，称为原型对象
+    这个对象可以挂载函数，对象实例化不会多次创建原型上函数，节约内存
+
+    作用：
+    1.共享方法
+    2.将不变的方法直接定义在prototype上
+
+
+    构造函数和原型对象中的this都指向 实例化的对象
+
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+ </head>
+ <body>
+    <script>
+        let that
+        function Star(name , age){
+            this.name = name
+            this.age = age 
+        }
+        Star.prototype.sing = function(){
+            that = this
+            console.log('唱歌');
+        }
+        const zxy = new Star('张学友', 55)
+        const fyq = new Star('费玉清', 59)
+        console.log(fyq.sing);
+        zxy.sing()
+        console.log(that === zxy);
+        console.log(fyq.sing === zxy.sing);
+
+    </script>
+ </body>
+ </html>
