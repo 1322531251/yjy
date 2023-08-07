@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            uname:'red',
+            age:18,
+            hobby:['篮球','足球'],
+            family:{
+                baby:'blue'
+            }
+        }
+        const o = JSON.parse(JSON.stringify(obj))
+        o.hobby[0] = '羽毛球'
+        console.log(o);
+        console.log(obj);
+    </script>
+</body>
+</html>
