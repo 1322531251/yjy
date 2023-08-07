@@ -1,0 +1,58 @@
+<!-- 
+    this指向
+
+    普通函数没有明确调用者时this值为window，严格模式('use strict')下没有调用者时this的值为undefined
+
+
+    箭头函数：
+    不受调用方式的影响，事实上箭头函数中并不存在this
+    1.默认绑定外层this的值，所以在箭头函数中this的值和外层的this是一样的
+    2.箭头函数中的this引用的就是最近作用域中的this
+    3.向外层作用域中，一层一层查找this，，直到有this的定义
+
+
+    如果里面需要DOM对象的this，则不推荐使用箭头函数
+    基于原型的面向对象也不推荐使用箭头函数
+
+******************************************
+    1.函数内不存在this，沿用上一级的
+    2.不适用：
+    构造函数，原型函数，dom事件函数等等
+    3.适用：
+    需要使用上层this的地方
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this指向</title>
+ </head>
+ <body>
+
+    <button></button>
+    <script>
+        console.log(this);   //window
+        function fn(){
+            console.log(this);   //window
+        }
+        fn()
+        setTimeout(function(){
+            console.log(this);   //window
+        },1000)
+
+        document.querySelector('button').addEventListener('click',function(){
+            console.log(this);  //button
+        })
+
+        const obj = {
+            sayHi: function(){
+                console.log(this); //obj
+            }
+        }
+        obj.sayHi()
+    </script>
+ </body>
+ </html>
