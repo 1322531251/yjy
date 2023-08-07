@@ -1,0 +1,45 @@
+<!-- 
+    浅拷贝：
+    只针对引用地址
+
+    简单数据类型拷贝的是值
+    引用类型拷贝的是地址
+
+
+
+    常见方法：
+    1.拷贝对象：Object.assgin(新对象,拷贝对象) / {...obj}
+    2.拷贝数组：Array.prototype.concat()或者[...arr]
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浅拷贝</title>
+ </head>
+ <body>
+    
+    <script>
+        const obj = {
+            name:'pink',
+            age:12
+        }
+        // 浅拷贝
+        // {...obj}
+        // const o = {...obj}
+        // o.age = 18
+        // console.log(o);
+        // console.log(obj);
+
+
+        // Object.assgin(新对象,拷贝对象)
+        const o = {}
+        Object.assign(o,obj)
+        o.age = 20
+        console.log(o);
+        console.log(obj);
+    </script>
+ </body>
+ </html>
