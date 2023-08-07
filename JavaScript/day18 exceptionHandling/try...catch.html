@@ -1,0 +1,40 @@
+<!-- 
+    try/catch捕获错误信息
+
+    try...catch用于捕获错误信息
+    将预估可能发生错误的代码卸载try代码段中
+    如果try代码段中出现错误后，会执行catch代码段，并截获到错误信息
+    finally不管是否有错误，都会执行
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try/catch</title>
+ </head>
+ <body>
+    <p>123</p>
+    <script>
+        function fn(){
+            try{
+            const p = document.querySelector('p')
+            p.style.color = 'red'
+            }catch(err){
+                console.log(err.message);
+
+                throw new Error('错误')
+
+                // 中断程序
+                // return
+            }finally{
+                // 不管程序是否对，程序一定执行
+                alert('11')
+            }
+            console.log(11);
+        }
+        fn()
+    </script>
+ </body>
+ </html>
