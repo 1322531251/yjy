@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lodash</title>
+</head>
+<body>
+    <script src="./js/lodash.min.js"></script>
+    <script>
+        const obj = {
+            uname:'red',
+            age:18,
+            hobby:['篮球','足球'],
+            family:{
+                baby:'blue'
+            }
+        }
+        const o = _.cloneDeep(obj)
+        console.log(o);
+        o.family.baby = 'white'
+        console.log(obj);
+
+    </script>
+</body>
+</html>
