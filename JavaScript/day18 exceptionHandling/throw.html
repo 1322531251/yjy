@@ -1,0 +1,30 @@
+<!-- 
+    throw抛异常
+    异常处理是指预估代码执行过程中可能发生的错误，然后最大程度的避免错误的发生导致整个程序无法继续运行
+
+    throw抛出异常信号，程序也会终止执行
+    throw后面跟的是错误提示信号
+    Error对象配合throw使用，能够设置更详细的错误信号
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>throw抛异常</title>
+ </head>
+ <body>
+    
+    <script>
+        function fn(x,y){
+            if(!x || !y){
+                throw new Error('没有参数传进来')
+            }
+            return x+y
+        }
+        console.log(fn());
+    </script>
+ </body>
+ </html>
