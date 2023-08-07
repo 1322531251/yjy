@@ -1,0 +1,61 @@
+<!-- 
+    类似于断点  用于调试
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debugger</title>
+ </head>
+ <body>
+    <script>
+        // let i = 1
+        // function fn(){
+        //     console.log(`第${i}次打印`);
+        //     if(i >=6){
+        //         return
+        //     }
+        //     i++
+        //     fn()
+        // }
+        // fn()
+
+        const obj = {
+            uname:'red',
+            age:18,
+            hobby:['篮球','足球'],
+            family:{
+                baby:'blue'
+            }
+        }
+        const o ={}
+        function deepCopy(newObj,oldObj) {  
+            debugger
+            // 遍历
+            // k是属性名 oldObj[k]属性值
+            for(let k in oldObj){
+                // 判断对象中的属性值
+                if(oldObj[k] instanceof Array){
+                    newObj[k] = []
+                    deepCopy(newObj[k],oldObj[k])
+                }else if(oldObj[k] instanceof Object){
+                    newObj[k] = {}
+                    deepCopy(newObj[k],oldObj[k])
+                }else{
+                // newObj[k] === o.uname 给新对象添加属性
+                newObj[k] = oldObj[k]
+                }
+            }
+        }
+        deepCopy(o,obj)
+        console.log(o);
+        o.age = 10
+        o.hobby[0] = '羽毛球'
+        o.family.baby = 'yellow'
+        console.log(obj);
+        // console.log(o);
+    </script>
+ </body>
+ </html>
