@@ -1,0 +1,70 @@
+<!-- 
+    节流：
+    单位时间内，频繁触发事件，只执行一次
+
+    实现方式：
+    1.lodash提供的节流函数来处理
+    2.手写一个节流函数来处理
+
+    使用场景：
+    高频事件：鼠标移动：mousemove
+              页面尺寸缩放：resize
+              滚动条滚动：scroll
+
+
+
+    核心思路：
+    节流的核心就是利用定时器setTimeout来实现
+    1.声明一个定时器变量
+    2.当鼠标每次滑动都先判断是否有定时器了，如果有定时器则不开启新的定时器
+    3.如果没有定时器则开启定时器，记得存到变量里面
+        定时器里面调用执行的函数
+        定时器里面要把定时器清空
+
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box"></div>
+
+    <script src="../day18 deepAndLightCopies/deepCopy-lodash/js/lodash.min.js"></script>
+    <script>
+
+        // 1.lodash节流
+        const box = document.querySelector('.box')
+        let i = 1
+        function mouseMove(){
+            box.innerHTML = i++
+        }
+        // box.addEventListener('mousemove',_.throttle(mouseMove,3000))
+
+
+        // 2.throttle
+        function throttle(fn,t) {  
+            let timer = null
+            return function(){
+                if(!timer){
+                    timer = setTimeout(function () {  
+                        fn()
+                        // 清除定时器
+                        timer = null
+                    },t)
+                }
+            }
+        }
+        box.addEventListener('mousemove',throttle(mouseMove,3000))
+    </script>
+ </body>
+ </html>
