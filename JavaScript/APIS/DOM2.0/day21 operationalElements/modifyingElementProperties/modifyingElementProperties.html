@@ -1,0 +1,38 @@
+<!-- 
+    修改元素属性
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改元素属性</title>
+    <style>
+        img{
+
+            width: 300px;
+        }
+    </style>
+ </head>
+ <body>
+    <button id="ldh">刘德华</button>
+    <button id="blibli">blibli</button><br>
+    <img src="./img/ldh.webp" alt="">
+
+
+    <script>
+        var ldh = document.getElementById('ldh')
+        var blibli = document.getElementById('blibli')
+        var img = document.querySelector('img')
+        ldh.onclick = function(){
+            img.src = './img/ldh.webp'
+            img.title = '刘德华'
+        }
+        blibli.onclick = function(){
+            img.src = './img/blibli.jpg'
+            img.title = 'blibli'
+        }
+    </script>
+ </body>
+ </html>
