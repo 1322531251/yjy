@@ -1,0 +1,30 @@
+<!-- 
+    修改样式属性
+
+    JS修改style样式操作，产生的是行内样式，css权重比较高
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改样式属性</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        div.onclick = function(){
+            div.style.backgroundColor = 'purple'
+        }
+    </script>
+</body>
+</html>
