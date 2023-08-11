@@ -1,0 +1,40 @@
+<!-- 
+    1.如果样式修改较多，可以采取操作类名方式更改元素样式
+    2.class因为是个保留字，因此使用className来操作元素类名属性
+    3.className会直接更改元素的类名，会覆盖原先的类名
+ -->
+
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>修改样式属性</title>
+     <style>
+         .first{
+             width: 200px;
+             height: 200px;
+             background-color: pink;
+         }
+         .change{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="first"></div>
+     <script>
+         var div = document.querySelector('div')
+         div.onclick = function(){
+            //  div.style.backgroundColor = 'purple'
+            // div.className = 'change'
+            // 可以保留之前的属性
+            div.className = 'first change'
+
+         }
+     </script>
+ </body>
+ </html>
