@@ -1,0 +1,28 @@
+<!-- 
+    表单元素属性
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单元素属性</title>
+ </head>
+ <body>
+    <button>按钮</button>
+    <input type="text" value="输入内容">
+
+    <script>
+        var btn = document.querySelector('button')
+        var input = document.querySelector('input')
+        btn.onclick = function () {  
+            input.value = '被点击了'
+            // 点击之后被禁用
+            // btn.disabled = true
+            // this是事件函数的调用者
+            this.disabled = true
+        }
+    </script>
+ </body>
+ </html>
