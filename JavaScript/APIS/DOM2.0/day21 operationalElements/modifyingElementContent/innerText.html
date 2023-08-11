@@ -1,0 +1,66 @@
+<!-- 
+    改变元素内容
+
+    element.innerText
+    从起始位置到终止位置的内容，但它不识别html标签，也会去掉空格和换行
+    element.innerHTML
+    起始位置到终止位置的全部内容，包括html标签，保留空格和换行
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改变元素内容</title>
+    <style>
+        div,p{
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            color: #fff;
+            background-color: pink;
+        }
+    </style>
+ </head>
+ <body>
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <p>    123
+        <span>123</span>
+    </p>
+    
+    <script>
+
+        // 1.innerText 不识别html标签 去除空格和换行
+        var btn = document.querySelector('button')
+        var div = document.querySelector('div')
+        btn.onclick = function(){
+            // div.innerText = '2023-8-11'
+            div.innerHTML = getDate()
+        }
+
+        function getDate(){
+            var date = new Date()
+            var year = date.getFullYear()
+            var month = date.getMonth()
+            var dates = date.getDate()
+            var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+            var day = date.getDay()
+            return '今天是：' + year + '年' + month + '月' + dates + '日' + arr[day];
+        }
+
+        div.innerText = '今天是<strong>晴天</strong>'
+
+
+
+        // 2.innerHTML 识别html标签，保留空格和标签
+        var p = document.querySelector('p')
+        // p.innerHTML = '今天是<strong>晴天</strong>'
+        console.log(p.innerText);
+        console.log(p.innerHTML);
+
+
+    </script>
+ </body>
+ </html>
