@@ -1,0 +1,32 @@
+<!-- 
+    目的： 
+    为了保存并使用数据，有些数据可以保存到页面而不用保存到数据库中
+
+    自定义属性：
+    data- 开头
+
+    获取：
+    1.兼容性获取：
+    element.getAttribute('data-自定义属性')
+
+    2.element.dataset.自定义属性 或者 element.dataset['自定义属性']
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5_customAttributes</title>
+ </head>
+ <body>
+    <div data-id="1"></div>
+
+
+    <script>
+        var div = document.querySelector('div')
+        console.log(div.getAttribute('data-id'));
+        console.log(div.dataset.id);
+    </script>
+ </body>
+ </html>
