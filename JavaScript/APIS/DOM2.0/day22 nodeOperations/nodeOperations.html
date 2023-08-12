@@ -1,0 +1,52 @@
+<!-- 
+    节点操作
+
+    获取元素两种方式：
+
+    1.利用DOM提供的方法获取元素
+    document.getElemnetById()
+    document.getElemnetsByTagName()
+    document.querySelector等
+    注：逻辑性不强、繁琐
+
+    2.利用节点层级关系获取元素
+    利用父子兄弟节点关系获取元素
+    逻辑性强，兼容性稍差
+
+
+    一般地，节点至少拥有nodeType(节点类型)、nodeName(节点类型)、nodeValue(节点值)三个基本属性
+
+    元素节点 nodeType为 1
+    属性节点 nodeType为 2
+    文本节点 nodeType为 3 （文本节点包含文字、空格、换行等）
+
+    实际开发中，节点操作主要操作的是元素节点
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节点</title>
+ </head>
+ <body>
+    <div>div</div>
+    <span>span</span>
+    <ul>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+        <li>li</li>
+    </ul>
+    <div class="box">
+        <span class="erweima"></span>
+    </div>
+
+    <script>
+        var box = document.querySelector('.box')
+        console.dir(box)
+    </script>
+ </body>
+ </html>
