@@ -1,0 +1,47 @@
+<!-- 
+    兄弟节点
+    1.nextSibling
+    返回当前的元素的下一兄弟节点，找不到则返回null，包含所有节点
+
+    2.previousSibling
+    返回当前的元素的上一兄弟节点，找不到则返回null，包含所有节点
+--------------------------------------------------
+    3.nextElementSibling
+    返回当前的元素的下一兄弟元素节点，找不到则返回null
+
+    4.previousElementSibling
+    返回当前的元素的上一兄弟元素节点，找不到则返回null
+
+    注：以上两种有兼容性问题，IE9以上才支持
+--------------------------------------------------
+    5.封装一个兼容性的函数
+ -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兄弟节点</title>
+</head>
+<body>
+    <div>div</div>
+    <span>span</span>
+
+    <script>
+        var div = document.querySelector('div')
+
+        // 1.
+        console.log(div.nextSibling); 
+        // 2.
+        console.log(div.previousSibling); 
+// --------------------------------------------------
+        // 3.
+        console.log(div.nextElementSibling);
+        // 4.
+        console.log(div.previousElementSibling);
+    </script>
+</body>
+</html>
