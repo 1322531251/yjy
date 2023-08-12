@@ -1,0 +1,82 @@
+<!-- 
+    子节点
+    1.childNodes
+
+    返回包含指定节点的子节点的集合，该集合为即时更新的集合
+   
+    注：返回值里面的所有节点，包含元素节点，文本节点等
+        如果只想获得里面的元素节点，一般不提倡使用childNodes
+    
+    2.children (实际开发常用)
+
+    只读属性，返回所有的子元素节点，只返回子元素节点
+----------------------------------------------------
+----------------------------------------------------
+    3.firstChild
+    返回第一个子节点，找不到则返回null，同样包括所有节点
+    4.lastChild
+    返回最后一个子节点，找不到则返回null，同样包括所有节点
+----------------------------------------------------
+    5.firstElementChild
+    返回第一个子节点，找不到则返回null
+    6.lastElementChild
+    返回最后一个子节点，找不到则返回null
+
+    注：以上两种有兼容性问题，IE9以上才支持
+----------------------------------------------------
+----------------------------------------------------
+    7.想要第一个子元素节点，可以使用parentNode.children[0]
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子节点</title>
+ </head>
+ <body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+
+    <script>
+        var ul = document.querySelector('ul')
+        // 1.
+        console.log(ul.childNodes);
+        // 文本节点
+        console.log(ul.childNodes[0].nodeType);
+        // 元素节点
+        console.log(ul.childNodes[1].nodeType);
+// ----------------------------------------------------
+        // 2.
+        console.log(ul.children);
+
+// ----------------------------------------------------
+        // 3.
+        console.log(ul.firstChild);
+        // 4.
+        console.log(ul.lastChild);
+// ----------------------------------------------------
+        // 5.
+        console.log(ul.firstElementChild);
+        // 6.
+        console.log(ul.lastElementChild);
+
+// ----------------------------------------------------
+        // 7.
+        console.log(ul.children[0]);
+        console.log(ul.children[ul.children.length - 1]);
+
+    </script>
+ </body>
+ </html>
