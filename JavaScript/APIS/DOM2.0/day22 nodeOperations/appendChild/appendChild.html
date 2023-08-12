@@ -1,0 +1,43 @@
+<!-- 
+    添加节点
+    
+    1.node.appendChild(child)
+    (追加元素)
+
+    将一个节点添加到指定父节点的子节点列表末尾
+    类似于after伪元素
+
+    2.node.insertBefore(child，指定元素)
+
+    将一个节点添加到指定父节点的子节点前面
+    类似于before伪元素
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>创建节点</title>
+ </head>
+ <body>
+     <ul>
+        <li>12</li>
+     </ul>
+ 
+     <script>
+         var li = document.createElement('li')
+         var ul = document.querySelector('ul')
+        //  1.
+         ul.appendChild(li)
+
+        // 2.
+        // 先创建
+         var p = document.createElement('p')
+        // 再添加
+         ul.insertBefore(p,ul.children[0])
+         
+     </script>
+ </body>
+ </html>
