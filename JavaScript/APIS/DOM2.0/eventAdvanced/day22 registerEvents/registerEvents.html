@@ -1,0 +1,47 @@
+<!-- 
+    注册事件（绑定事件）
+
+    1.传统方式
+    利用on开头的事件 onclick
+
+    特点：注册事件的唯一性
+    同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数
+
+    2.监听注册方式
+    addEventListener()
+
+    IE9之前的IE不支持，可使用attachEvent()代替
+    
+    特点：同一个元素同一事件可以注册多个监听器
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册事件</title>
+ </head>
+ <body>
+    <button>传统</button>
+    <button>监听注册</button>
+    <script>
+        // 1.传统
+        var btns = document.querySelectorAll('button')
+        btns[0].onclick = function(){
+            alert('hi')
+        }
+        btns[0].onclick = function(){
+            alert('stop')
+        }
+        // 2.监听注册
+        btns[1].addEventListener('click',function(){
+            alert('12')
+        })
+        btns[1].addEventListener('click',function(){
+            alert('44')
+        })
+    </script>
+ </body>
+ </html>
