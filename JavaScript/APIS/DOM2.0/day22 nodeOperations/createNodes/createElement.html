@@ -1,0 +1,55 @@
+<!-- 
+    创建节点
+
+    1.document.write()
+
+    直接将内容写入页面的内容流，但是页面文档流执行完毕，再调用，它会导致页面全部重绘
+
+    -------------------------------------------------
+    2.document.innerHTML()
+
+    将内容写入某个DOM节点，不会导致页面全部重绘
+
+    创建多个元素效率更高（不拼接字符串，采取数组形式拼接），结构较复杂
+
+    -------------------------------------------------
+    3.document.createElement('tagName')
+
+    方法创建由tagName指定的HTML元素，因为这些元素原先不存在，是根据需求动态生成的，所以也称为动态创建元素节点
+
+    创建多个元素效率更高（拼接字符串），结构更清晰
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建节点</title>
+</head>
+<body>
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+
+    <script>
+        // 1.document.write()
+        var btn = document.querySelector('button')
+        btn.onclick = function(){
+            document.write('<div>123</div>')
+        }
+// -----------------------------------------------------
+        // 2.document.innerHTML()
+        var inner = document.querySelector('.inner')
+        inner.innerHTML = "<a href='javascript:;'>百度</a>"
+// -----------------------------------------------------
+        // 3.document.createElement()
+        var create = document.querySelector('.create')
+        var a = document.createElement('a')
+        create.appendChild(a)
+    </script>
+</body>
+</html>
