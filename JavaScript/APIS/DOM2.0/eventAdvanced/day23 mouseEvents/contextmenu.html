@@ -1,0 +1,31 @@
+<!-- 
+    1.禁止鼠标右键菜单
+    contextmenu主要控制应该何时显示上下文菜单，主要用于程序员取消默认的上下文菜单
+
+    2.禁止鼠标选中（selectstart 开始选中
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>禁止鼠标右键菜单</title>
+</head>
+<body>
+    不允许复制
+
+    <script>
+        // 1.
+        document.addEventListener('contextmenu',function(e){
+            e.preventDefault()
+        })
+
+        // 2.
+        document.addEventListener('selectstart',function(e){
+            e.preventDefault()
+        })
+    </script>
+</body>
+</html>
