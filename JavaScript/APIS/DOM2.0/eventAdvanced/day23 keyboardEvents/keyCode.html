@@ -1,0 +1,23 @@
+<!-- 
+    键盘事件对象
+
+    keyCode返回ASCII值
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyCode</title>
+ </head>
+ <body>
+    <script>
+      // keyup 和 keydown 不区分字母大小写
+      document.addEventListener('keypress',function(e){
+         console.log(e);
+         console.log(e.keyCode);
+      })
+    </script>
+ </body>
+ </html>
