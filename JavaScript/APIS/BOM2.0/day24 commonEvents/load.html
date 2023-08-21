@@ -1,0 +1,56 @@
+<!-- 
+    窗口加载事件
+
+    window.onload = function()
+    或
+    window.addEventListener('load',function())
+
+
+    注：
+    1.有了window.onload就可以把JS代码写到页面元素的上方，因为onload是等页面内容全部加载完毕，再去执行处理函数
+    2.window.onload传统注册事件方式只能写一次，如果有多次，执行最后一个
+    3.如果使用addEventListener则没有限制
+
+    ------------------------------------------------
+    document.addEventListener('DOMContentloaded',function (){})
+    （IE9以上才支持
+
+    使用场景：
+    页面图片较多，从用户访问到onload触发可能需要较长时间，交互效果不能实现，会影响用户体验
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>窗口加载事件</title>
+
+    <script>
+        // window.onload = function () {  
+        //     var btn = document.querySelector('button')
+        //     btn.addEventListener('click',function(){
+        //         alert('点击')
+        //     })
+        // }
+        window.addEventListener('load',function () {  
+            var btn = document.querySelector('button')
+            btn.addEventListener('click',function(){
+                alert('点击')
+            })
+        })
+        window.addEventListener('load',function(){
+            alert(22)
+        })
+        document.addEventListener('DOMContentLoaded',function () {  
+            alert(33)
+        })
+
+        // load等页面内容完全加载完成会触发该事件（包括dom元素、图像、脚本文件、CSS文件等）
+        // DOMContentloaded 事件触发时，仅当DOM加载完毕，不包括样式表，图片，flash等等，加载速度比load更快
+    </script>
+ </head>
+ <body>
+    <button>点击</button>
+ </body>
+ </html>
