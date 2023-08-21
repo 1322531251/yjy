@@ -1,0 +1,36 @@
+<!-- 
+    setTimeout()定时器
+    用于设置一个定时器，该定时器到期后执行调用函数
+
+    window.setTimeout(调用函数，延迟的毫秒数)
+    毫秒数省略默认为0
+
+    setTimeout()这个调用函数也称为回调函数callback
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+ </head>
+ <body>
+    <script>
+        // 1.
+        // setTimeout(function(){
+        //     console.log('2秒到了');
+        // },2000)
+
+        // 2.
+        function callback(){
+            console.log('3秒到了');
+        }
+        setTimeout(callback,3000)
+
+        // 3.不提倡
+        // setTimeout('callback()',3000)
+        
+    </script>
+ </body>
+ </html>
