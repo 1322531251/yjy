@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <style>
+        span{
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            color: #ccc;
+            text-align: center;
+            float: left;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <span class="hour">1</span>
+    <span class="minute">1</span>
+    <span class="second">1</span>
+
+    <script>
+        var hour = document.querySelector('.hour')
+        var minute = document.querySelector('.minute')
+        var second = document.querySelector('.second')
+        var inputTime = +new Date('2023-10-1 18:00:00')
+
+        countDown()
+        setInterval(countDown, 1000)
+        function countDown(){
+            var nowTime = +new Date()
+            var times = (inputTime - nowTime) / 1000
+            var h = parseInt(times / 60 / 60 % 24)
+            h = h < 10 ? '0' + h : h
+            hour.innerHTML = h
+            var m = parseInt(times / 60 % 60)
+            m = m < 10 ? '0' + m : m
+            minute.innerHTML = m
+            var s = parseInt(times % 60)
+            s = s < 10 ? '0' + s : s
+            second.innerHTML = s
+        }
+    </script>
+</body>
+</html>
