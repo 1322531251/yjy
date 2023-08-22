@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动跳转</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        var timer = 5
+        time()
+        setInterval(time,1000)
+        function time(){
+            if(timer == 0){
+                location.href = 'http://www.baidu.com'
+            }else{
+                div.innerHTML = '还剩'+timer+'秒自动跳转'
+                timer--
+            }
+        }
+    </script>
+</body>
+</html>
