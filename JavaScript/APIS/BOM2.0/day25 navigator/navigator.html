@@ -1,0 +1,21 @@
+<!-- 
+   navigator对象包含有关浏览器的信息，最常用的是userAgent，该属性可返回由客户机发送服务器的user-agent头部的值 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator</title>
+ </head>
+ <body>
+    
+    <script>
+        if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMoblie|MQQBrowser|JUC|Fennec|WQSBrower|BrowserNG|WebOS|Symbian|Windows Phonne)/i))){
+            window.location.href = ""  //手机
+        }else{
+            window.location.href = ""  //电脑
+        }
+    </script>
+ </body>
+ </html>
