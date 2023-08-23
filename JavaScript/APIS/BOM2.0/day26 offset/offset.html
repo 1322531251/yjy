@@ -1,0 +1,63 @@
+<!-- 
+    使用offset系列相关属性可以动态得到该元素的位置（位移），大小等
+
+    获得元素距离带有定位父元素的位置
+    获得元素自身的大小（宽度高度）
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            margin: 0 50px;
+        }
+        .w{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            border: 15px solid #000;
+            background-color: skyblue;
+            margin: 0 auto 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <div class="w"></div>
+    <script>
+        var father = document.querySelector('.father')
+        console.log(father.offsetTop);
+        var son = document.querySelector('.son')
+        console.log(son.offsetLeft);
+        var w = document.querySelector('.w')
+        console.log(w.offsetWidth);
+        console.log(w.offsetHeight);
+
+        // 返回带定位的父亲，否则返回的是body
+        console.log(son.offsetParent);
+
+        // 返回最近一级的父亲，不管父亲有没有定位
+        console.log(son.parentNode);
+    </script>
+</body>
+</html>
