@@ -233,3 +233,33 @@ history对象方法|作用
 back()|可以后退功能
 forward()|前进功能
 go(参数)|前进后退功能 参数如果是1 前进1个页面 如果是-1 后退1个页面
+
+
+# offset
+offset系列属性|作用
+| ----------- | ------ | ------------------------- |
+element.offsetParent|返回作为该元素带有定位的父级元素 如果父级都没有定位则返回body
+element.offsetTop|返回元素相对带有父元素上方的偏移
+element.offsetLeft|返回元素相对带有定位父元素左边框的偏移
+element.offsetWidth|返回自身包括padding、边框、内容区的宽度，返回数值不带单位
+element.offsetHeight|返回自身包括padding、边框、内容区的高度，返回数值不带单位
+
+## offset与style区别
+
+### offset
+    offset可以得到任意样式表中的样式值
+    offset系列获得的数值是没有单位的
+    offsetWidth包含padding+border+width
+    offsetWidth等属性，只能获取不能赋值
+
+    注：所以，我们想要获取元素大小位置，用offset更合适
+
+
+### style
+    style只能得到行内样式表中的样式值
+    style.width获得的是带有单位的字符串
+    style.width获得不包含padding和border的值
+    style.width的可读写属性，可以获取也可以赋值
+
+    注：所以，我们想要给元素更改值，则需要用style改变
+
