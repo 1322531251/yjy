@@ -263,3 +263,29 @@ element.offsetHeight|返回自身包括padding、边框、内容区的高度，�
 
     注：所以，我们想要给元素更改值，则需要用style改变
 
+
+# client
+
+client系列属性|作用
+| ----------- | ------ | ------------------------- |
+element.clientTop|返回元素上边框的大小
+element.clientLeft|返回元素左边框的大小
+element.clientWidth|返回自身包括padding、不含边框、内容区的宽度，返回数值不带单位
+element.clientHeight|返回自身包括padding、不含边框、内容区的高度，返回数值不带单位
+
+# scroll
+
+scroll系列属性|作用
+| ----------- | ------ | ------------------------- |
+element.scrollTop|返回被卷去的上侧距离，返回数值不带单位
+element.scrollLeft|返回被卷去的左侧距离，返回数值不带单位
+element.scrollWidth|返回自身实际的宽度，不含边框、返回数值不带单位
+element.scrollHeight|返回自身实际的高度，不含边框、返回数值不带单位
+
+# offset client scroll 区别
+
+    offset系列经常用于获取元素位置 offsetTop、offsetLeft
+    client经常用于获取元素大小 clientWidth、clientHeight
+    scroll经常用于获取滚动距离 scrollTop、scrollLeft
+
+    注：页面滚动距离通过window.pageXOffset获得
