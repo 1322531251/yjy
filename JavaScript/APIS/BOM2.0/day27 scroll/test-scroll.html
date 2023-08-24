@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>侧边栏</title>
+    <style>
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+        div{
+           
+            margin: 10px 80px;
+        }
+        .head{
+            height: 100px;
+            background-color: pink;
+        }
+
+        .banner{
+            height: 300px;
+            background-color: purple;
+        }
+
+        .main{
+            height: 1000px;
+            background-color: green;
+        }
+
+        .side{
+            position: absolute;
+            top: 450px;
+            right: -50px;
+            width: 50px;
+            height: 100px;
+            background-color: blue;
+            font-size: 10px;
+            line-height: 100px;
+        }
+        span{
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="banner"></div>
+    <div class="main"></div>
+
+    <div class="side"><span class="goBack">返回</span></div>
+</body>
+<script>
+    var side = document.querySelector('.side')
+
+    var banner = document.querySelector('.banner')
+    var bannerTop = banner.offsetTop
+    var sideTop = side.offsetTop - bannerTop
+
+    var main = document.querySelector('.main')
+    var goBack = document.querySelector('.side .goBack')
+    var mainTop = main.offsetTop
+    // 页面滚动事件
+    document.addEventListener('scroll',function(){
+        // console.log(window.pageYOffset);
+        if(window.pageYOffset >= bannerTop){
+            side.style.position = 'fixed'
+            side.style.top = sideTop + 'px'
+        }else{
+            side.style.position = 'absolute'
+            side.style.top = 450 + 'px'
+        }
+        if(window.pageYOffset >= mainTop){
+            goBack.style.display = 'block'
+        }else{
+            goBack.style.display = 'none'
+        }
+    })
+</script>
+</html>
