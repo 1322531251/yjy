@@ -1,0 +1,37 @@
+<!-- 
+    使用scroll系列的相关属性可以动态的得到该元素的大小，滚动距离等
+    
+    新方法：window.pageYOffset和window.pageXOffset，IE9开始支持
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            margin: 10px;
+            border: 10px solid #000;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+ </head>
+ <body>
+    <div>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</div>
+    <script>
+        var div = document.querySelector('div')
+        console.log(div.scrollHeight);
+        console.log(div.clientHeight);
+
+        div.addEventListener('scroll',function(){
+            console.log(div.scrollTop);
+        })
+    </script>
+ </body>
+ </html>
