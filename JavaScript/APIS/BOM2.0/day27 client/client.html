@@ -1,0 +1,31 @@
+<!-- 
+    通过client系列的相关属性可以动态得到该元素的边框大小，元素大小等
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            border: 20px solid #000;
+            background-color: pink;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box')
+        console.log(box.clientWidth);
+    </script>
+ </body>
+ </html>
