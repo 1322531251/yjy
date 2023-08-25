@@ -1,0 +1,60 @@
+<!-- 
+    动画函数封装
+
+    需要传递两个参数：动画对象和移动到距离
+------------------------------------------------------
+    如果多个元素都使用这个动画函数，每次都要var声明定时器，可以给不同元素使用不同的定时器
+    核心原理：利用JS是一门动态语言，可以很方便的给当前对象添加属性
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画原理</title>
+    <style>
+        div{
+            position: absolute;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        span{
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+ </head>
+ <body>
+    <button>点击</button>
+    <div></div>
+    <span>33</span>
+    <script>
+        function animate(obj,target){
+
+            // 先清除以前的定时器，只保留当前的一个定时器执行
+            clearInterval(obj.timer)
+            obj.timer = setInterval(function () {  
+                if(obj.offsetLeft >= target){
+                    clearInterval(timer)
+                }
+                obj.style.left = obj.offsetLeft + 1 + 'px'
+            },10)
+        }
+        var div = document.querySelector('div')
+        var span = document.querySelector('span')
+        var btn = document.querySelector('button')
+        animate(div,300)
+        btn.addEventListener('click',function(){
+            animate(span,100)
+        })
+    </script>
+ </body>
+ </html>
