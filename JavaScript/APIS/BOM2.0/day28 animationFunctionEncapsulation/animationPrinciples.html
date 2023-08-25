@@ -1,0 +1,43 @@
+<!-- 
+    动画原理
+
+    核心原理：通过定时器setInterval()不断移动盒子位置
+
+    实验步骤：
+    1.获得盒子当前位置
+    2.让盒子在当前位置加上1个移动距离
+    3.利用定时器不断重复
+    4.加一个结束定时器的条件
+    5.注意此元素需要添加定位，才能使用element.style.left
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画原理</title>
+    <style>
+        div{
+            position: absolute;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+ </head>
+ <body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div')
+        var timer = setInterval(function () {  
+            if(div.offsetLeft >= 400){
+                clearInterval(timer)
+            }
+            div.style.left = div.offsetLeft + 1 + 'px'
+        },30)
+    </script>
+ </body>
+ </html>
