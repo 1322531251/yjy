@@ -1,0 +1,65 @@
+<!-- 
+    缓动动画
+    
+    思路：
+    1.让盒子每次移动距离慢慢变小，速度 慢慢落下来
+    2.核心算法：（目标值 - 现在的位置）/10  作为每次移动的距离步长
+    3.停止条件：让当前盒子位置等于目标位置就停止定时器
+    4.步长值需要取整
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画原理</title>
+    <style>
+        span{
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+ </head>
+ <body>
+    <button class="btn300">前进300</button>
+    <button class="btn500">前进500</button>
+
+    <div></div>
+    <span>33</span>
+    <script>
+        function animate(obj,target){
+
+            // 先清除以前的定时器，只保留当前的一个定时器执行
+            clearInterval(obj.timer)
+            obj.timer = setInterval(function () {  
+                // var step = Math.ceil(target - obj.offsetLeft) / 10
+                var step = (target - obj.offsetLeft) / 10
+                // 点击按钮时，判断步长是正值还是负值
+                // 1.如果是正值，则步长往大取整
+                // 2.如果是负值，则步长往小取整
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                if(obj.offsetLeft == target){
+                    clearInterval(timer)
+                }
+                obj.style.left = obj.offsetLeft + step + 'px'
+            },15)
+        }
+        var span = document.querySelector('span')
+        var btn300 = document.querySelector('.btn300')
+        var btn500 = document.querySelector('.btn500')
+
+        btn300.addEventListener('click',function(){
+            animate(span,300)
+        })
+        btn500.addEventListener('click',function(){
+            animate(span,500)
+        })
+    </script>
+ </body>
+ </html>
