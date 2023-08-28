@@ -1,0 +1,44 @@
+<!-- 
+    返回元素的类名
+    
+    添加类：
+    element.classList.add('类名')
+
+    移除类：
+    element.classList.remove('类名')
+
+    切换类：
+    element.classList.toggle('类名')
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .bg{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="one two"></div>
+    <button>开关</button>
+    <script>
+        var div = document.querySelector('div')
+        // console.log(div.classList[0]);
+        // 追加一个类名
+        div.classList.add('three')
+        console.log(div.classList);
+
+        div.classList.remove('two')
+        console.log(div.classList);
+
+        var btn = document.querySelector('button')
+        btn.addEventListener('click',function(){
+            document.body.classList.toggle('bg')
+        })
+    </script>
+</body>
+</html>
