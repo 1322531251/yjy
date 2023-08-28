@@ -299,3 +299,20 @@ element.scrollHeight|返回自身实际的高度，不含边框、返回数值�
     1.mouseover鼠标经过自身盒子会触发，经过子盒子还会触发，mouseenter只会经过自身盒子触发
     2.mouseenter不会冒泡
     3.mouseenter搭配鼠标离开mouseleave同样不会冒泡
+
+
+
+# touch触屏事件
+touch事件|说明
+| ----------- | ------ | ------------------------- |
+touchstart|手指触摸到一个DOM元素时触发
+touchmove|手指在一个DOM元素上滑动时触发
+touchend|手指从一个DOM元素上移开时触发
+
+
+# touchEvent触摸事件对象
+触摸列表|说明
+| ----------- | ------ | ------------------------- |
+touches|正在触摸屏幕的所有手指的一个列表
+targetTouches（常用|正在触摸当前DOM元素上的手指的一个列表
+changedTouches|手指状态发生了改变的列表，从无到有，从有到无变化
