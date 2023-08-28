@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>touchEvent</title>
+   <style>
+       div{
+           width: 100px;
+           height: 100px;
+           background-color: pink;
+       }
+   </style>
+</head>
+<body>
+   <div></div>
+
+   <script>
+       var div = document.querySelector('div')
+       div.addEventListener('touchstart',function (e) {  
+        //    console.log(e);
+           console.log(e.targetTouches[0]);
+       })
+       div.addEventListener('touchmove',function () {  
+           
+       })
+       div.addEventListener('touchend',function (e) {  
+        //    console.log(e);
+        // 离开屏幕时没有touches和targetTouches
+        // 但是会有changedTouches
+
+       })
+   </script>
+</body>
+</html>
