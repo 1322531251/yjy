@@ -316,3 +316,10 @@ touchend|手指从一个DOM元素上移开时触发
 touches|正在触摸屏幕的所有手指的一个列表
 targetTouches（常用|正在触摸当前DOM元素上的手指的一个列表
 changedTouches|手指状态发生了改变的列表，从无到有，从有到无变化
+
+
+# click延时解决方案
+
+解决方案：
+1.禁用缩放。浏览器禁用默认的双击缩放行为并去掉300ms的点击延迟
+    <meta name = "viewport" content = "user-scalable = no">
