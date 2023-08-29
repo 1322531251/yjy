@@ -1,0 +1,47 @@
+<!-- 
+    移动端click会有300ms延时
+
+    原因：移动端屏幕双击会缩放页面
+
+    解决方案：
+    1.禁用缩放。浏览器禁用默认的双击缩放行为并去掉300ms的点击延迟
+    <meta name = "viewport" content = "user-scalable = no">
+    2.利用touch事件自己封装这个事件解决300ms延迟
+        原理：
+        1.当我们手指触摸屏幕，记录当前触摸时间
+        2.当我们手指离开屏幕，用离开的时间减去触摸的时间
+        3.如果时间小于150ms，并且没有滑动过屏幕，就定义为点击
+    3.使用插件。fastclick插件解决300ms延迟
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>延时解决方法</title>
+ </head>
+ <body>
+    <script>
+        function tap(obj,callback){
+            var isMove = false
+            var startTime = 0 //记录触摸时的时间变量
+            obj.addEventLister('touchstart',function(e){
+                startTime = Date.now() //记录触摸时间
+            })
+            obj.addEventLister('touchmove',function (e) {
+                isMove = true //是否有滑动，有滑动算拖拽，不算点击
+            })
+            obj.addEventLister('touchend',function(e){
+                // 如果手指触摸和离开时间小于150ms算点击
+                if(!isMove && (Date.now() - startTime) < 150){  
+                    callback && callback()  //执行回调函数
+                }
+                isMove = false //取反 重置
+                startTime = 0
+            })
+        }
+        // 调用
+        tap(div, function(){执行代码})
+    </script>
+ </body>
+ </html>
