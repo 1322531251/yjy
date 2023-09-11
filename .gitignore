@@ -2,3 +2,5 @@
 /node_modules
 /poppy-js-util-master
 *.txt
+/vitest
+/ECharts
