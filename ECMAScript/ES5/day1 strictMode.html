@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strictMode</title>
+</head>
+<body>
+    
+
+
+    <script type="text/javascript">
+        // 1.
+        'use strict'
+        var username = '12'
+        console.log(username);
+
+        // 2.
+        function Person(name,age) { 
+            this.name = name 
+            this.age = age
+         }
+        console.log(new Person('lili',12));
+
+        // 3.
+        var str = '12'
+        eval('var str = "33";alert(str)')
+        alert(str)
+
+        // 4.
+        var obj = {
+            username:name
+
+        }
+    </script>
+</body>
+</html>
