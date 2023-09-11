@@ -1,0 +1,38 @@
+<!-- 
+    Array扩展：
+    1.Array.prototype.indexOf(value):得到值在数组中的第一个下标
+    2.Array.prototype.lastIndexOf(value):得到值在数组中的最后一个下标
+    3.Array.prototype.forEach(function(item,index){})：遍历数组
+    4.Array.prototype.map(function(item,index){})：遍历数组返回一个新的数组，返回加工之后的值
+    5.Array.prototype.filter(function(item,index){})：遍历过滤出一个新的子数组，返回条件为true的值
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayExtension</title>
+</head>
+<body>
+   <script type="text/javascript">
+    var arr = [2,4,3,12,6,7,9,4]
+    console.log(arr.indexOf(4));
+    console.log(arr.lastIndexOf(4));
+    arr.forEach(function (item,index) {
+        console.log(item,index);
+    })
+
+    var arr1 = arr.map(function(item,index){
+        return item + 10
+    })
+    console.log(arr1);
+    var arr2 = arr.filter(function(item,index){
+        return item > 3
+    })
+    console.log(arr2);
+   </script> 
+</body>
+</html>
