@@ -1,0 +1,38 @@
+<!-- 
+    对象的简写方式：
+    
+    省略同名的属性值
+    省略方法的function
+    例如：
+    let x= 1
+    let y = 2
+    let point = {
+        x,
+        y,
+        setX(x){this.x = x}
+    }
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的简写方式</title>
+ </head>
+ <body>
+    <script type="text/javascript">
+        let uname = 'lili'
+        let age = 15
+        let obj = {
+            uname,
+            age,
+            getname(){  //可以省略函数的function
+                this.uname = uname
+            }
+        }
+        console.log(obj);
+        console.log(obj.getname);
+    </script>
+ </body>
+ </html>
