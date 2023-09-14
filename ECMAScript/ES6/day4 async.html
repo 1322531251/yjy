@@ -1,0 +1,57 @@
+<!-- 
+    async函数
+    概念：真正意义上去解决异步回调的问题，同步流程表达异步操作
+    本质：Generator的语法糖（在原有的基础上更好
+    语法：
+        async function foo(){
+            await 异步操作
+            await 异步操作
+        }
+    特点：
+    1.不需要像Generator去调用next方法，遇到await等待，当前的异步操作完成就往下执行
+    2.返回的总是Promise对象，可以用then方法进行下一步操作
+    3.async取代Generator函数的星号*，await取代Generator的yield
+    4.语意上更为明确，使用简单
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async函数</title>
+ </head>
+ <body>
+    <script type="text/javascript">
+        async function foo(){
+            return new Promise(resolve=>{
+                // setTimeout(function(){
+                //     resolve()
+                // },2000)
+                setTimeout(resolve,2000)
+            })
+        }
+        // async function test() {
+        //     console.log('开始',new Date().toTimeString());  
+        //     await foo()
+        //     console.log('结束',new Date().toTimeString());
+
+        // }
+        // test()
+
+        // async里面await返回值
+        function test2() {  
+            return 'xxxx'
+        }
+        async function asyncPrint() {  
+            let result = await Promise.resolve('成功')
+            console.log(result);
+            result = await Promise.reject('失败')
+            console.log(result);
+
+        }
+        asyncPrint()
+
+    </script>
+ </body>
+ </html>
