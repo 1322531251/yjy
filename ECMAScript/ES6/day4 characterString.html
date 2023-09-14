@@ -1,0 +1,39 @@
+<!-- 
+    字符串：
+    1.includes(str):判断是否包含指定的字符串
+    2.startsWith(str):判断是否以指定字符串开头
+    3.endWith(str):判断是否以指定字符串结尾
+    4.repeat(count)：重复指定次数
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script type="text/javascript">
+        // 1.
+        let str = 'abc'
+        console.log(str.includes('a'));
+        console.log(str.includes('q'));
+
+        // 2.
+        console.log('-----------------');
+        console.log(str.startsWith('b'));
+        console.log(str.startsWith('a'));
+
+        // 3.
+        console.log('-----------------');
+        console.log(str.endsWith('a'));
+        console.log(str.endsWith('c'));
+
+        // 3.
+        console.log('-----------------');
+        console.log(str.repeat(55));
+    </script>
+</body>
+</html>
