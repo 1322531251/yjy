@@ -1,0 +1,42 @@
+<!-- 
+    
+    数组：
+    1.二进制与八进制数值表示法：二进制用0b，八进制用0o
+    2.Number.isFinite(i):判断是否是有限大的数
+    3.Number.isNaN(i)：判断是否是NaN
+    4.Number.isInteger(i):判断是否是整数
+    5.Number.parseInt(str)：将字符串转换为对应的数值
+    6.Math.trunc(i)：直接去除小数部分
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+ </head>
+ <body>
+    
+
+    <script type="text/javascript">
+        console.log(0b1010);
+        console.log(0o56);
+
+        console.log(Number.isFinite(Infinity));
+
+        console.log(Number.isNaN(NaN));
+
+        console.log(Number.isInteger(12.33));
+        console.log(Number.isInteger(12.00));
+
+        console.log(Number.parseInt('123abc123'));
+        console.log(Number.parseInt('a123abc123'));
+
+        console.log(Math.trunc(12.33));
+
+
+    </script>
+ </body>
+ </html>
