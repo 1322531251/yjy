@@ -1,0 +1,31 @@
+<!-- 
+    for(let value of target){}循环遍历
+    1.遍历数组
+    2.遍历Set
+    3.遍历Map
+    4.遍历字符串
+    5.遍历伪数组
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+ </head>
+ <body>
+    
+
+    <script type="text/javascript">
+        let arr = [1,3,3,3,5,5]
+        let arr1 = arr
+        arr = []
+        let set = new Set(arr1)
+        for(let i of set){
+            arr.push(i)
+        }
+        console.log(arr);
+    </script>
+ </body>
+ </html>
