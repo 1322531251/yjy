@@ -1,0 +1,51 @@
+<!-- 
+    Set容器：无序不可重复的多个value的集合体
+    Set()
+    Set(array)
+    add(value)
+    delete(value)
+    has(value)
+    clear()
+    size
+
+    Map容器：无序的key不重复的多个key-value的集合体
+    Map()
+    Map(array)
+    set(key,value) //添加
+    get(key)
+    delete(key)
+    has(key)
+    clear()
+    size
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set容器,Map容器</title>
+ </head>
+ <body>
+    
+
+    <script type="text/javascript">
+        let set = new Set([1,2,3,4,5,4,6])
+        console.log(set);
+        set.add(7)
+        console.log(set);
+        console.log(set.has(8));
+        console.log(set.has(2));
+        set.clear()
+        console.log(set);
+
+        console.log('---------------------------');
+        let map = new Map([['aaa','uname'],[36,'age']])
+        console.log(map);
+        map.set(3000,'salary')
+        console.log(map);
+        map.delete(36)
+        console.log(map);
+    </script>
+ </body>
+ </html>
