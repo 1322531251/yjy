@@ -1,0 +1,44 @@
+<!-- 
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.defineProperty</title>
+ </head>
+ <body>
+    
+
+    <script type="text/javascript">
+        let number = 15
+        let person = {
+            name:'lili',
+            sex:'女'
+        }
+        Object.defineProperty(person,'age',{
+            // value:15,
+            // enumerable:true, //控制属性是否可枚举（遍历），默认值为false
+            // writable:true, //控制属性是否可被修改，默认值为false
+            // configurable:true //控制属性是否可被删除，默认值为false
+        
+            // get:function(){
+            get(){
+                console.log('有人读取了属性');
+                return number
+            },
+
+            set(value){
+                console.log('有人修改了值');
+                number = value
+            }
+        
+        })
+        // console.log(Object.keys(person));
+        console.log(person);
+
+    </script>
+ </body>
+ </html>
