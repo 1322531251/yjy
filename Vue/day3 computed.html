@@ -1,0 +1,66 @@
+<!-- 
+    计算属性 
+        1.定义：要用的属性不存在，要通过已有的属性计算得来
+        2.原理：底层借助Object.defineProperty方法提供的getter和setter
+        3.get函数何时执行：
+            1）.初次读取fullName时，
+            2）.所依赖的数据发生变化时
+        4.优势：与methods实践相比，内部有缓存机制（复用），效率更高，调试方便
+        5.ps：
+            1)计算属性最终会出现在vm上，直接读取使用
+            2）如果计算属性要被修改，必须写set函数去响应修改，且set中要引起计算时依赖的数据发生改变
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算属性</title>
+    <script src="./page/vue.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        姓：<input type="text" v-model="firstName"><br/><br/>
+        名：<input type="text" v-model="lastName"><br/><br/>
+        全名：<span>{{fullName}}</span>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                firstName:'张',
+                lastName:'三'
+            },
+            computed:{
+                // fullName:{
+                    // // get作用：当有人读取fullName时，get就会被调用，且返回值就作为fullName的值
+                    // // get何时调用：1.初次读取fullName时，2.所依赖的数据发生变化时
+                    // get(){
+                    //     return this.firstName + '-' + this.lastName
+                    // },
+                    // // set何时调用：当fullName被修改时
+                    // set(value){
+                    //     console.log(set,value);
+                    //     const arr = value.split('-')
+                    //     this.firstName = arr[0]
+                    //     this.lastName = arr[1]
+                    // }
+
+
+
+                    // 简写
+                    fullName(){
+                        return this.firstName + '-' + this.lastName
+                        
+                    }
+                    
+                // }
+            }
+
+        })
+    </script>
+ </body>
+ </html>
