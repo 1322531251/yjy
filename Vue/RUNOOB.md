@@ -9,3 +9,11 @@
     M：模型（Model）：对应data中的数据
     V：视图（View）：模板
     VM：视图模型（ViewModel）：Vue实例对象
+
+# watch对比computed
+    1.computed能完成的功能，watch都可以完成
+    2.watch能完成的功能，computed不一定能完成，例如：watch可以进行异步操作
+
+    ps：
+    1.所被vue管理的函数，最好写成普通函数，这样this的指向才是vm 或 组件实例对象
+    2.所有不被vue所管理的函数（定时器的回调函数、ajax的回调函数、promise的回调函数等），最好写成箭头函数，这样this的指向才是vm 或 组件实例对象
