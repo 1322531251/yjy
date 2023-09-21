@@ -1,0 +1,74 @@
+<!-- 
+    收集表单数据
+        若<input type="text"/>，则v-model收集的是value的，用户输入的就是value值
+        若<input type="radio"/>，则v-model收集的是value的，且要给标签配置value值
+        若<input type="checkbox"/>，
+            1.没有配置input的value属性，那么收集的就是checked（勾选或未勾选，是布尔值
+            2.配置input的value属性：
+                1）v-model的初始值为非数组，那么收集的就是checke（勾选或未勾选，是布尔值
+                2）v-model的初始值为数组，那么收集的就是value组成的数组
+        ps：v-model的三大修饰符：
+            lazy：失去焦点再收集数据
+            number：输入字符串转为有效的数字
+            trim：输入首尾空格过滤
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收集表单数据</title>
+    <script src="./page/vue.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        <form @submit.prevent="demo">
+            账号：<input type="text" v-model.trim="account"><br>
+            密码：<input type="current-password" v-model="password"><br>
+            年龄：<input type="number" v-model.number="age"><br>
+            性别：
+            男<input type="radio" name="sex" value="male" v-model="sex">
+            女<input type="radio" name="sex" value="female" v-model="sex"><br>
+            爱好：
+            唱歌<input type="checkbox" value="sing" v-model="hobby">
+            学习<input type="checkbox" value="study" v-model="hobby">
+            吃饭<input type="checkbox" value="eat" v-model="hobby"><br>
+            所属校区：
+            <select v-model="city">
+                <option value="">--请选择校区--</option>
+                <option value="beijing">北京</option>
+                <option value="shaihai">上海</option>
+                <option value="heilongjiang">黑龙江</option>
+                <option value="anhui">安徽</option>
+            </select><br>
+            其他信息：
+            <textarea v-model.lazy="other"></textarea><br>
+            <input type="checkbox" v-model="agree">阅读并接受<a href="http://www.baidu.com">用户协议</a><br>
+            <button>提交</button>
+        </form>    
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                account:'',
+                password:'',
+                age:'',
+                sex:'female',
+                hobby:[],
+                city:'',
+                other:'',
+                agree:''
+
+            },
+            methods: {
+                demo(){
+                    console.log(JSON.stringify(this._data));
+                }
+            },
+        })
+    </script>
+ </body>
+ </html>
