@@ -1,0 +1,77 @@
+<!-- 
+    过滤器:
+        定义：对要显示的数据进行特定格式化后再显示（适用于一些简单逻辑的处理
+        语法：
+            1.注册过滤器：Vue.filter(name,callback)或new Vue(filters:{})
+            2.使用过滤器：{{xxx | 过滤器名}} 或 v-bind:属性 = 'xxx | 过滤器名'
+        ps：
+            1.过滤器也可以接受额外参数，多个过滤器也可以串联
+            2.并没有改变原本的数据，是产生新的对应的数据
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过滤器</title>
+    <script src="./page/vue.js"></script>
+    <script src="./page/cdn.bootcdn.net_ajax_libs_dayjs_1.11.9_dayjs.min.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        <h2>显示格式化后的时间</h2>
+        <!-- 计算属性实现 -->
+        <h3>现在是：{{fmTime}}</h3>
+        <!-- methods实现 -->
+        <h3>现在是：{{getFmTime()}}</h3>
+        <!-- 过滤器 -->
+        <h3>现在是：{{time | timeFormater}}</h3>
+        <br>
+        <!-- 过滤器(传参) -->
+        <h3>现在是：{{time | timeFormater('YYYY_MM_DD') | mySlice}}</h3>
+
+    </div>
+    <div id="root2">
+        <h2>{{msg | mySlice}}</h2>
+    </div>
+
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        // 全局过滤器
+        Vue.filter('mySlice',function (value) {  
+            return value.slice(0,4)
+        })
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                time:1695627567183  //时间戳
+            },
+            computed:{
+                 fmTime(){
+                    return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss')
+                 }
+            },
+            methods: {
+                getFmTime(){
+                    return dayjs(this.time).format('YYYY-MM-DD HH:mm:ss')
+                }
+            },
+            filters:{
+                timeFormater(value,str='YYYY-MM-DD HH:mm:ss'){
+                    return dayjs(value).format(str)
+                },
+                // mySlice(value){
+                //     return value.slice(0,4)
+                // },
+            }
+        })
+        new Vue({
+            el:"#root2",
+            data:{
+                msg:'hello'
+            }
+        })
+    </script>
+ </body>
+ </html>
