@@ -1,0 +1,47 @@
+<!-- 
+    自定义指令-函数式
+        1.插值语法：
+            功能：用于解析标签体内容
+            写法：{{xxx}}  xxx是js表达式，其可以直接读取到data中的所有属性
+        2.指令语法：
+            功能：用于解析标签（包括：标签属性、标签体内容、绑定事件...
+            举例：v-bind:href="xxx" 或 简写为 :href="xxx"  xxx同样要写js表达式
+                 且可以直接读取到data中的所有属性
+            ps：Vue中有很多的指令，且形式都是v-???
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自定义指令-函数式</title>
+    <script src="../page/vue.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        <h2>当前的n值为：<span v-text="n"></span></h2>
+        <h2>放大10倍的n值为：<span v-big="n"></span></h2>
+        <button @click="n++">点我n+1</button>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                n:1,
+            },
+            directives:{
+                // big函数何时被调用：
+                // 1.指令与元素成功绑定时
+                // 2.指令所在的模板被重新解析时
+                big(element, binding){
+                    console.log('big');
+                    element.innerText = binding.value*10
+                }
+            }
+        })
+    </script>
+ </body>
+ </html>
