@@ -1,0 +1,56 @@
+<!-- 
+    更新流程
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新</title>
+    <script src="../page/vue.js"></script>
+ </head>
+ <body>
+    <div id="root">
+        <h2>当前的n值是：{{n}}</h2>
+        <button @click="add">点我n+1</button>
+    </div>
+    <script type="text/javascript">
+        Vue.config.productionTip = false
+        const vm = new Vue({
+            el:'#root',
+            // template:`
+            // <div>
+            //     <h2>当前的n值是：{{n}}</h2>
+            //     <button @click="add">点我n+1</button>
+            // </div>`,
+            data:{
+                n:1,
+            },
+            methods: {
+                add(){
+                    this.n++
+                }  
+            },
+            beforeCreate() {
+                console.log('beforeCreate');
+            },
+            created() {
+                console.log('created');
+            },
+            beforeMount() {
+                console.log('beforeMount');
+            },
+            mounted() {
+                console.log('mounted');
+            },
+            beforeUpdate() {
+                console.log('beforeUpdate');
+            },
+            updated() {
+                console.log('updated');
+            },
+        })
+    </script>
+ </body>
+ </html>
