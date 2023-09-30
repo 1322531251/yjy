@@ -4,3 +4,4 @@
 *.txt
 /vitest
 /ECharts
+/vue_test/node_modules
