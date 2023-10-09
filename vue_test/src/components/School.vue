@@ -2,9 +2,8 @@
 <template>
     <!-- 组件的结构 -->
     <div class="demo">
-        <h2>学校名称：{{schoolName}}</h2>
+        <h2 >学校名称：{{name}}</h2>
         <h2>学校地址：{{address}}</h2>
-        <button @click='showName'>点我提示学校名称</button>
     </div>
 </template>
 
@@ -14,21 +13,15 @@
         name:'School',
         data(){ 
             return{
-                schoolName:'黑科技',
+                name:'黑科技',
                 address:'黑龙江',
             }
         },
-        methods: {
-            showName(){
-                alert(this.schoolName) 
-            }
-        },
-
     }
     
 </script>
 
-<style>
+<style scoped>
     /* 组件的样式 */
     .demo{
         background-color: pink;
