@@ -1,11 +1,9 @@
 <!-- 单文件组件 -->
 <template>
     <!-- 组件的结构 -->
-    <div>
-        <div>
-            <h2>学生姓名：{{studentName}}</h2>
-            <h2>学生年龄：{{age}}</h2>
-        </div>
+    <div class="demo">
+        <h2 class="nameSize">学生姓名：{{name}}</h2>
+        <h2>学生性别：{{sex}}</h2>
     </div>
 </template>
 
@@ -15,12 +13,20 @@
         name:'Student',
         data(){
             return{
-                studentName:'小明',
-                age:18
+                name:'lili',
+                sex:'女',
             }
-        }
-
+        },
     }
     
 </script>
 
+<style lang="less">
+        .demo{
+            background-color: skyblue;
+            .nameSize{
+                font-size: 40px;
+            }
+    }
+</style>
+ 
