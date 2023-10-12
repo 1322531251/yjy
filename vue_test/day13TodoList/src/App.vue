@@ -3,7 +3,7 @@
     <div class="todo-container">
       <div class="todo-wrap">
         <UserHeader @addTodo="addTodo"/>
-        <UserList :todos="todos" :checkTodo="checkTodo" :deleteTodo="deleteTodo"/>
+        <UserList :todos="todos"/>
         <UserFooter :todos="todos" @checkAllTodo="checkAllTodo" @clearAllTodo="clearAllTodo"/>
       </div>
     </div>
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+  import pubsub from 'pubsub-js'
   import UserHeader from './components/UserHeader.vue';
   import UserList from './components/UserList.vue';
   import UserFooter from './components/UserFooter.vue';
@@ -39,9 +40,15 @@
         this.todos.forEach((todo) => {
           if(todo.id === id) todo.done = !todo.done
         });
+      },     
+      // 修改todo 
+      updateTodo(id,title){
+        this.todos.forEach((todo) => {
+          if(todo.id === id) todo.title = title
+        });
       },
       // 删除todo
-      deleteTodo(id){
+      deleteTodo(_,id){
         this.todos = this.todos.filter(todo => {
           return todo.id !== id 
         })
@@ -68,7 +75,20 @@
           localStorage.setItem('todos',JSON.stringify(value))
         }
       }
-    }
+    },
+    
+    mounted() {
+      this.$bus.$on('checkTodo',this.checkTodo)
+      this.$bus.$on('updateTodo',this.updateTodo)
+      this.pid = pubsub.subscribe('deleteTodo',this.deleteTodo)
+    },
+    
+    beforeDestroy() {
+      this.$bus.$off('checkTodo')
+      this.$bus.$off('updateTodo')
+      pubsub.unsubscribe(this.pid)
+
+    },
   }
 </script>
 
@@ -100,6 +120,13 @@
   .btn-danger:hover {
     color: #fff;
     background-color: #bd362f;
+  }
+
+  .btn-edit {
+    color: #fff;
+    background-color: green;
+    border: 1px solid rgb(6, 108, 6);
+    margin-right: 5px;
   }
 
   .btn:focus {
