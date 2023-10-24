@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue3-Reflect</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let person = {
+            name:'张三',
+            age:18
+        }
+
+
+        //模拟vue3中实现响应式
+        const p = new Proxy(person,{
+            //读取时调用
+            get(target,propName){
+                console.log(`读取${propName}属性`);
+                return Reflect.get(target,propName)
+            },
+            //修改/添加时调用
+            set(target,propName,value){
+                console.log(`修改${propName}属性`);
+                return Reflect.set(target,propName,value)
+            },
+            //删除时调用
+            deleteProperty(target,propName){
+                console.log(`删除${propName}属性`);
+                return Reflect.deleteProperty(target,propName)
+
+            }
+        }) 
+ 
+        let obj = {a:1,b:2}
+        //通过Object.defineProperty操作
+        //#region
+        // try{
+        //     Object.defineProperty('obj','c',{
+        //         get(){
+        //             return 3
+        //         }
+        //     })            
+        //     Object.defineProperty('obj','c',{
+        //         get(){
+        //             return 4
+        //         }
+        //     })
+        // }catch(error){
+        //     console.log(error);
+        // }
+        //#endregion
+
+        //通过Reflect.defineProperty操作
+        //#region 
+        // const x1 = Reflect.defineProperty('obj','c',{
+        //     get(){
+        //         return 3 
+        //     }
+        // })
+        // console.log(x1);
+        // const x2 = Reflect.defineProperty('obj','c',{
+        //     get(){
+        //         return 4 
+        //     }
+        // })
+        // console.log(x2);
+        //#endregion
+    </script>
+</body>
+</html>
