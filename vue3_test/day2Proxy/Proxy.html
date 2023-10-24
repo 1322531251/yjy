@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue3-Proxy</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let person = {
+            name:'张三',
+            age:18
+        }
+
+        //模拟vue3中实现响应式
+        const p = new Proxy(person,{
+            //读取时调用
+            get(target,propName){
+                console.log(`读取${propName}属性`);
+                return target[propName]
+            },
+            //修改/添加时调用
+            set(target,propName,value){
+                console.log(`修改${propName}属性`);
+                target[propName] = value
+            },
+            //删除时调用
+            deleteProperty(target,propName){
+                console.log(`删除${propName}属性`);
+                return delete target[propName]
+
+            }
+        }) 
+    </script>
+</body>
+</html>
