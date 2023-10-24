@@ -1,73 +1,70 @@
 <template>
+  <div>
   <h1>信息</h1>
-  <h2>姓名：{{name}}</h2>
-  <h2>年龄：{{age}}</h2>
-  <h2>性别：{{sex}}</h2>
-  <h2>a：{{a}}</h2>
-  <button @click="sayWelcome">说话（vue2</button>
-  <br><br>
-  <button @click="sayHi">说话（vue3</button>
-  <br><br>
-  <button @click="test1">test1测试在vue2的配置中读取vue3的数据和方法</button>
-  <br><br>
-  <button @click="test2">test2测试在vue3的setup配置中读取vue3的数据和方法</button>
+  <h2 v-show="person.name">姓名：{{person.name}}</h2>
+  <h2>年龄：{{person.age}}</h2>
+  <h2 v-show="person.sex">性别：{{person.sex}}</h2>
+  <h3>工作种类：{{person.job.type}}</h3>
+  <h3>工作薪水：{{person.job.salary}}</h3>
+  <h3>爱好：{{person.hobby}}</h3>
+  <h3>test:{{person.job.a.b.c}}</h3>
+  <button @click="changeInfo">修改信息</button>
+  <button @click="addSex">添加sex属性</button>
+  <button @click="deleteName">删除name属性</button>
+  </div>
 </template>
 
 <script>
-  // import {h} from 'vue'
+  import {reactive} from 'vue'
 
   export default {
     name: 'App',
-    data() {
-      return {
-        sex:'男',
-        a:100
-      }
-    },
-    methods: {
-      sayWelcome(){
-        alert('欢迎学习vue3')
-      },
-      test1(){
-        console.log(this.sex);
-        console.log(this.name);
-        console.log(this.age);
-        console.log(this.sayHi);
-      }
-    },
 
     //测试
     setup(){
       //数据
-      let name = '张三'
-      let age = 18
-      let a = 200
+      let person = reactive({
+        name:'王五',
+        age:18,
+        job:{
+          type:'前端工程师',
+          salary:'30k',
+          a:{
+            b:{
+              c:666
+            }
+          }
+        },
+        salary:'20k',
+        hobby:['抽烟','喝酒']
+      })
 
-      //方法
-      function sayHi(){
-        alert(`我叫${name}，我${age}岁，你好！`)
+      function changeInfo(){
+        person.name= 'lili'
+        person.age = 66
+        person.hobby[0] = '学习'
+
+        // console.log('更改',job);
       }
-      function test2(){
-        console.log(this.name);
-        console.log(this.age);
-        console.log(this.sex);
-        console.log(this.sayWelcome);
+
+      function addSex(){
+        person.sex = '女'
+      }
+
+      function deleteName(){
+        delete person.name
       }
 
       //返回一个对象（常用
       return{
-        name,
-        age,
-        a,
-        sayHi,
-        test2
-      }
+        person,
+        changeInfo,
+        addSex,
+        deleteName
 
-      //返回一个函数（渲染函数
-      return ()=>{
-        return h('h1','黑科技')
       }
     }
   }
+
 </script>
 
