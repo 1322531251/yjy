@@ -53,3 +53,90 @@
                     return delete target[propName]
                 }
             }) 
+
+## reactive对比ref
+    1.从定义数据角度对比：
+        ref用来定义：基本类型数据
+        reactive用来定义：对象（或数组）类型数据
+        ps：ref也可以用来定义对象（或数组）类型数据，它内部会自动通过reactive转为代理对象
+    2.从原理角度对比：
+        ref通过Object.defineProperty()的get和set来实现响应式（数据劫持）
+        reactive通过使用Proxy来实现响应式（数据劫持），并通过Reflect操作源对象内部的数据
+    3.从使用角度对比：
+        ref定义的数据：操作数据需要.value，读取数据时模板中直接读取不需要.value
+        reactive定义的数据：操作数据与读取数据：均不需要.value
+
+## setup的两个注意点
+    setup执行时机
+        在beforeCreate之前执行一次，this是undefined
+    setup参数
+        props：值为对象，包含：组件外部传递过来，且组件内部声明接受了的属性
+        context：上下文对象
+            attrs：值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性，相当于this.$attrs
+            slots：收到的插槽内容，相当于this.$slots
+            emit：分发自定义事件的函数，相当于this.$emit
+
+## 计算属性与监视
+###    1.computed函数
+            与vue2.x中computed配置功能一致
+                import {reactive,computed} from 'vue'
+                setup(){
+                    let person = reactive({
+                        firstName:'张',
+                        lastName:'三',
+                    })
+
+
+                    //计算属性
+                    // person.fullName = computed(()=>{
+                    //   return person.firstName + '-' + person.lastName
+                    // })
+
+                    person.fullName = computed({
+                        get(){
+                            return person.firstName + '-' + person.lastName
+                        },
+                        set(value){
+                            const nameArr = value.split('-')
+                            person.firstName = nameArr[0]
+                            person.lastName = nameArr[1]
+                        }
+                    })
+                },
+
+###    2.watch函数
+            与vue2.x中watch配置功能一致
+            ps：
+                监视reactive定义的响应式数据时：oldValue无法正确获取，强制开启了深度监视（deep配置失效
+                监视reactive定义的响应式数据中某个属性时：deep配置有效
+                    //1.监视ref定义的一个响应式数据
+                    // watch(sum,(newValue,oldValue)=>{
+                    //   console.log('sum变了',newValue,oldValue);
+                    // },{immediate:true})
+
+                    //2.监视ref定义的多个响应式数据
+                    // watch([sum,msg],(newValue,oldValue)=>{
+                    //   console.log('sum变了',newValue,oldValue);
+                    // },{immediate:true})
+
+                    //3.监视reactive定义的一个响应式数据
+                        // 1）ps：此处无法正确的获取oldValue
+                        // 2）ps：强制开启了深度监视（deep配置无效
+                    // watch(person,(newValue,oldValue)=>{
+                    //   console.log('person变化了',newValue,oldValue);
+                    // },{deep:false})//此处的deep配置无效
+
+                    //4.监视reactive定义的一个响应式数据中的某个属性
+                    // watch(()=>person.age,(newValue,oldValue)=>{
+                    //   console.log('person中的age变化了',newValue,oldValue);
+                    // })
+
+                    //5.监视reactive定义的一个响应式数据中的某些属性
+                    // watch([()=>person.age,()=>person.name],(newValue,oldValue)=>{
+                    //   console.log('person中的age/name变化了',newValue,oldValue);
+                    // })
+
+                    //特殊情况
+                    watch(()=>person.job,(newValue,oldValue)=>{
+                        console.log('person中的job变化了',newValue,oldValue);
+                    },{deep:true}) //此处由于监视的是reactive所定义的对象中的某个属性，所以deep配置有效
