@@ -140,3 +140,37 @@
                     watch(()=>person.job,(newValue,oldValue)=>{
                         console.log('person中的job变化了',newValue,oldValue);
                     },{deep:true}) //此处由于监视的是reactive所定义的对象中的某个属性，所以deep配置有效
+
+###    3.watchEffect函数
+            watch的套路是：既要指明监视的属性，也要指明监视的回调
+            watchEffect的套路是：不用指明监视哪个属性，监视的回调中用到哪个属性
+            watchEffect与computed：
+                但computed注意的计算出来的值（回调函数的返回值），所以必须要写返回值
+                而watchEffect更注重的是过程（回调函数的函数体），所以不用写返回值
+                
+            watchEffect(()=>{
+                const x1 = sum.value
+                const x2 = person.job.j1.salary
+                console.log('回调被执行了');
+            })
+
+## 生命周期
+    beforeCreate ===> setup()
+    created ===> setup()
+    beforeMount ===> onBeforeMount
+    mounted ===> onMounted
+    beforeUpdate ===> onBeforeUpdate
+    updated ===> onUpdated    
+    beforeUnmount ===> onBeforeUnmount
+    unmounted ===> onUnmounted
+
+## 自定义hook函数
+    本质是一个函数，把setup函数中使用的Composition API进行了封装
+    类似于Vue2.x中的mixin
+    自定义hook的优势：复用代码，让setup中的逻辑更加清楚易懂
+
+## toRef
+    作用：创建一个ref对象，其value值指向另一个对象中的某个属性
+    语法：const name = toRef(person,'name')
+    应用：要将响应式对象中的某个属性单独提供给外部使用
+    扩展：toRefs与toRef功能一致，但可以批量创建多个ref对象，语法：toRefs(person)
