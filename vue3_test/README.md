@@ -271,3 +271,67 @@
                 let car = inject('car')
                 return {car}
             }
+
+## 响应式数据的判断
+    isRef：检查一个值是否为一个ref对象
+    isReactive：检查一个对象是否是由reactive创建的响应式代理
+    isReadonly：检查一个对象是否是由readonly创建的只读代理
+    isProxy：检查一个对象是否是由reactive或者readonly方法创建的代理
+
+# Composition API的优势
+## Options API存在的问题
+    使用传统Options API中，新增或者修改一个需求，就需要分别在data，methods，computed重修改
+## Composition API的优势
+    我们可以更加优雅的组织我们的代码，函数，让相关功能的代码更加有序的组织在一起
+
+# 新的组件
+## Fragment
+    在vue2中，组件必须有一个根标签
+    在vue3中，组件可以没有根组件，内部会将多个标签包含在一个Fragment虚拟元素中
+    好处：减少标签层级，减小内存占用
+
+## Teleport
+    是一种能够将我们的组件html结构移动到指定位置的技术
+        <teleport to='body' >
+            <div v-if="isShow" class="mask"> 
+                <div class="dialog">
+                    <h3>一个弹窗</h3>
+                    <h4>内容</h4>
+                    <button @click="isShow = false">关闭弹窗</button>
+                </div>
+            </div>
+        </teleport>
+
+## Suspense
+    等待异步组件时渲染一些额外内容，让应用有更好的用户体验
+    ps:Promise需要和Suspense一同使用
+    使用步骤：
+        异步引入组件
+            import {defineAsyncComponent} from 'vue'
+            const Child = defineAsyncComponent(()=>import('./components/Child'))
+        使用Suspence包裹组件，并配置好defalut与fallback
+            <template>
+                <div class="app">
+                    <h3>app</h3>
+                    <Suspense>
+                    <template v-slot:default>
+                        <Child/>
+                    </template>
+                    <template v-slot:fallback>
+                        <h3>加载中...</h3>
+                    </template>
+                    </Suspense>
+                </div>
+            </template>
+
+# 其他
+## 1.全局API转移
+    vue3中将全局API，即Vue.xxx调整到应用实例（app）上
+<img src="./API.png">
+
+## 2.其他改变
+    data选项被声明为一个函数（防止组件在被复用时产生数据的关联关系，从而造成干扰）
+
+    移除keyCode作为v-on的修饰符，同时也不再支持config.keyCodes
+    移除v-on.native修饰符
+    移除过滤器（fillter
