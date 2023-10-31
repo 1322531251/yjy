@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>伪元素</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+    <!-- before after -->
+    <label class="block">
+        <span class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700">
+          Email
+        </span>
+        <input type="email" name="email" class="mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-700 rounded-md sm:text-sm focus:ring-1" placeholder="you@example.com" />
+    </label>
+    <hr>
+    <br>
+
+
+    <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+        所以，
+        <span class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+          <span class="relative text-white">爱</span>
+        </span>
+        一直都在。
+    </blockquote>
+
+    <blockquote class="text-2xl font-semibold italic text-center text-slate-900">
+        When you look
+        <span class="relative">
+          <span class="block absolute -inset-1 -skew-y-3 bg-pink-500" aria-hidden="true"></span>
+          <span class="relative text-white">annoyed</span>
+        </span>
+        all the time, people think that you're busy.
+    </blockquote>
+    <hr>
+    <br>
+
+    <!-- 占位符文本 placeholder -->
+    <label class="relative block">
+        <span class="sr-only">Search</span>
+        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+            >
+        </span>
+        <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-700 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
+    </label>
+    <hr>
+    <br>
+
+    <!-- 文件输入按钮 file -->
+
+    <form class="flex items-center space-x-6">
+        <div class="shrink-0">
+          <img class="h-16 w-16 object-cover rounded-full" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1361&q=80" alt="Current profile photo" />
+        </div>
+        <label class="block">
+          <span class="sr-only">Choose profile photo</span>
+          <input type="file" class="block w-full text-sm text-slate-500
+            file:mr-4 file:py-2 file:px-4
+            file:rounded-full file:border-solid
+            file:text-sm file:font-semibold
+            file:bg-violet-50 file:text-violet-700
+            hover:file:bg-violet-100
+          "/>
+        </label>
+    </form>
+    <hr>
+    <br>
+
+
+    <!-- 列表标记 marker -->
+    <h4>成分</h4>
+    <ul role="list" class="marker:text-sky-400 list-disc pl-5 space-y-3 text-slate-500">
+        <li>5 cups chopped Porcini mushrooms</li>
+        <li>1/2 cup of olive oil</li>
+        <li>3lb of celery</li>
+    </ul>
+    <hr>
+    <br>
+
+
+    <!-- 突出显示的文本 selection -->
+    <div class="selection:bg-fuchsia-300 selection:text-white">
+        <p>
+          So I started to walk into the water. I won't lie to you boys, I was
+          terrified. But I pressed on, and as I made my way past the breakers
+          a strange calm came over me. I don't know if it was divine intervention
+          or the kinship of all living things but I tell you Jerry at that moment,
+          I <em>was</em> a marine biologist.
+        </p>
+    </div>
+    <hr>
+    <br>
+
+    <!-- 首行与首字母 first-line  first-letter -->
+    <p class="first-line:uppercase first-line:tracking-widest
+    first-letter:text-5xl first-letter:font-bold first-letter:text-slate-900
+    first-letter:mr-3 first-letter:float-left
+    ">
+    Well, let me tell you something, funny boy. Y'know that little stamp, the one
+    that says "New York Public Library"? Well that may not mean anything to you,
+    but that means a lot to me. One whole hell of a lot.
+    </p>
+    <hr>
+    <br>
+
+</body>
+</html>
