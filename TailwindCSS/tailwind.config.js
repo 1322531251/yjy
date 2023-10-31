@@ -15,9 +15,11 @@ module.exports = {
         gray: colors.neutral,
       }
     },
+    supports: {
+      grid: 'display: grid',
+    },
   },
   plugins: [],
-  prefix: 'tw-',
   corePlugins: {
     preflight: false,
   },
