@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>自定义修饰符</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- & -->
+    <ul role="list">
+        <!-- 此任意修饰符仅在元素是第三个子元素时才选择该元素 -->
+          <li class="[&:nth-child(3)]:underline">{item}</li>
+          <!-- '&'任意变体可以与内置修饰符堆叠或相互堆叠 -->
+          <li class="lg:[&:nth-child(3)]:hover:underline">{item}</li>
+    </ul>
+    <br><br>
+
+    <!-- 如果选择器中需要空格，可以使用下划线_。
+        此任意修饰符选择已添加类的元素中的所有元素：'p' -->
+    <div class="[&_p]:mt-4">
+        <p>Lorem ipsum...</p>
+        <ul>
+          <li>
+            <p>Lorem ipsum...</p>
+          </li>
+          <!-- ... -->
+        </ul>
+    </div>
+    <br><br>
+
+    <div class="flex [@supports(display:grid)]:grid">
+        <h1>1</h1>
+        <h1>2</h1>
+        <h1>3</h1>
+    </div>
+    <br><br>
+
+    <!-- 将 @rules 和常规选择器修饰符组合在一起，
+        方法是将选择器修饰符包含在 @rule 后面的大括号内 -->
+    <button type="button" class="[@media(any-hover:hover){&:hover}]:opacity-20">
+        111
+    </button>
+</body>
+</html> 
