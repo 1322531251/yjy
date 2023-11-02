@@ -2,8 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+/* 添加自定义实用程序 */
 @layer utilities {
     .content-auto {
       content-visibility: auto;
     }
+}
+
+/* 添加组件类 */
+/* @layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.lg');
+    padding: theme('spacing.6');
+    box-shadow: theme('boxShadow.xl');
   }
+} */
+
+/* 添加始终包含的样式 不使用指令@layer */
+/* .card {
+
+} */
