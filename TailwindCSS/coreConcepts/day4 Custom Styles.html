@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 添加基本样式 -->
+<html lang="en" class="text-gray-900 bg-gray-100 font-serif">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>自定义样式</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- 添加自定义样式 -->
+    <div class="top-[117px] lg:top-[334px]">
+    </div>
+
+    <!-- 使用[]编写完全任意的CSS -->
+    <div class="[mask-type:luminance]">
+    </div>
+
+    <!-- 需要包含空格时， 使用_ -->
+    <div class="grid grid-cols-[1fr_500px_2fr]">
+    </div>
+
+    <!-- 在URL中空格无效时，会保留下划线而不转换为空格 -->
+    <div class="bg-[url('/what_a_rush.png')]">
+    </div>
+
+    <!-- 当空格与下划线都有效时，使用 \_ 来定义下划线，将不会转换为空格 -->
+    <div class="before:content-['hello\_world']">
+    </div>
+</body>
+</html>
