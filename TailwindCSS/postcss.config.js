@@ -11,6 +11,8 @@ module.exports = {
         features: { 'nesting-rules': false },
       },
       tailwindcss: {},
+      // 自定义配置路径
+      // tailwindcss: {config: './tailwindcss-config.js'},
       autoprefixer: {},
       ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
     },
