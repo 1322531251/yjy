@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    /*  如果使用现代空格分隔语法，则需要使用空格；如果使用 rgba 或 hsla 等传统函数，则需要使用逗号 */
+    :root {
+      /* For rgb(255 115 179 / <alpha-value>) */
+      --color-primary: 255 115 179;
+  
+      /* For hsl(198deg 93% 60% / <alpha-value>) */
+      --color-primary: 198deg 93% 60%;
+  
+      /* For rgba(255, 115, 179, <alpha-value>) */
+      --color-primary: 255, 115, 179;
+    }
+}
