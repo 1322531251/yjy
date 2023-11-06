@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 响应式断点 md lg -->
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+       
+    </div>
+    <hr>
+    <br>
+
+    <!-- 配色 -->
+    <div class="bg-white dark:bg-slate-900 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+        <div>
+          <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+          </span>
+        </div>
+        <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
+        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+          The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+        </p>
+    </div>
+    <hr>
+    <br>
+
+
+    <!-- Using `motion-reduce` can mean lots of "undoing" styles -->
+    <button class="hover:-translate-y-0.5 transition motion-reduce:hover:translate-y-0 motion-reduce:transition-none bg-pink-300">
+        Save changes
+    </button>
+    <br>
+    <br>
+    <!-- Using `motion-safe` is less code in these situations -->
+    <button class="motion-safe:hover:-translate-x-0.5 motion-safe:transition bg-blue-300">
+        Save changes
+    </button>
+    <hr>
+    <br>
+
+
+    <!-- prefers-contrast -->
+    <form>
+        <label class="block">
+          <span class="block text-sm font-medium text-slate-700">Social Security Number</span>
+          <input class="border-slate-200 placeholder-slate-300 contrast-more:border-slate-400 contrast-more:placeholder-slate-500" placeholder="00-000-000"/>
+          <p class="mt-2 opacity-50 contrast-more:opacity-100 text-slate-600 text-sm">
+            We need this to steal your identity.
+          </p>
+        </label>
+    </form>
+    <hr>
+    <br>
+
+
+
+    <!-- 视口方向 portrait landscape -->
+    <div>
+        <div class="portrait:hidden">
+            <h4>隐藏了</h4>
+        </div>
+        <div class="landscape:hidden">
+          <p>
+            This experience is designed to be viewed in landscape. Please rotate your
+            device to view the site.
+          </p>
+        </div>
+    </div>
+    <hr>
+    <br>
+
+
+    <!-- 打印样式 print-->
+    <div>
+        <article class="print:hidden">
+          <h1>My Secret Pizza Recipe</h1>
+          <p>This recipe is a secret, and must not be shared with anyone</p>
+          <!-- ... -->
+        </article>
+        <div class="hidden print:block">
+          Are you seriously trying to print this? It's secret!
+        </div>
+    </div>
+</body>
+</html> 
