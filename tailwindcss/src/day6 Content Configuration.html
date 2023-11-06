@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 类检测深入 -->
+    <div class="md:flex">
+        <div class="md:flex-shrink-0">
+          <img class="rounded-lg md:w-56" src="/img/shopping.jpg" alt="Woman paying for a purchase">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+          <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">
+            Marketing
+          </div>
+          <a href="/get-started" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">
+            Finding customers for your new business
+          </a>
+          <p class="mt-2 text-gray-600">
+            Getting a new business off the ground is a lot of hard work.
+            Here are five ideas you can use to find your first customers.
+          </p>
+        </div>
+      </div>
+
+      <!-- 动态类名 -->
+      <div class="{{ error ? 'text-red-600' : 'text-green-600' }}">
+        <h1>123</h1>
+      </div>      
+      <!-- 不要动态构造类名 -->
+      <!-- <div class="text-{{ error ? 'red' : 'green' }}-600">
+        <h1>123</h1>
+      </div> -->
+</body>
+</html>
