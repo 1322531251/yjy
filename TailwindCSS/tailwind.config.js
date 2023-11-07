@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+
+// 使用静态工具或动态工具
+// const plugin = require('tailwindcss/plugin')
+
+
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
@@ -6,8 +11,78 @@ module.exports = {
   },
   plugins: [],
 
-  // 内容：配置所有 HTML 模板、JavaScript 组件和任何其他包含 Tailwind 类名称的源文件的路径
-  // ps：应编写针对于项目根目录的路径
+
+// 静态工具
+// module.exports = {
+//   plugins: [
+//     plugin(function({ addUtilities }) {
+//       addUtilities({
+//         '.content-auto': {
+//           'content-visibility': 'auto',
+//         },
+//         '.content-hidden': {
+//           'content-visibility': 'hidden',
+//         },
+//         '.content-visible': {
+//           'content-visibility': 'visible',
+//         },
+//       })
+//     })
+//   ]
+// }
+
+
+// 动态工具
+// module.exports = {
+//   theme: {
+//     tabSize: {
+//       1: '1',
+//       2: '2',
+//       4: '4',
+//       8: '8',
+//     }
+//   },
+//   plugins: [
+//     plugin(function({ matchUtilities, theme }) {
+//       matchUtilities(
+//         {
+//           tab: (value) => ({
+//             tabSize: value
+//           }),
+//         },
+//         { values: theme('tabSize') }
+//       )
+//     }, {
+//         theme: {
+//           tabSize: {
+//             1: '1',
+//             2: '2',
+//             4: '4',
+//             8: '8',
+//           }
+//         }
+//       })
+//   ]
+// }
+
+// presets 选项允许指定一个不同的配置作为基础，从而轻松打包一组跨项目重用的自定义设置
+// module.exports = {
+//   presets: [
+//     require('@acmecorp/tailwind-base')   //如果禁用，则将 presets 设置为空数组
+//   ],
+  
+//   corePlugins: {  // 核心插件
+//     cursor: false
+//   }
+
+
+
+
+
+
+
+//   // 内容：配置所有 HTML 模板、JavaScript 组件和任何其他包含 Tailwind 类名称的源文件的路径
+//   // ps：应编写针对于项目根目录的路径
 //   content: {
 //     // 解析相对路径
 //     relative: true,
@@ -253,13 +328,14 @@ module.exports = {
 //   plugins: [
 //     // 如果您发现自己在项目中多次使用相同的任意修饰符，则可能值得使用 API 将其提取到插件中：addVariant
 //     plugin(function ({ addVariant }) {
-//       // Add a `third` variant, ie. `third:pb-0`
 //       // addVariant('third', '&:nth-child(3)')
 //     }),
+
+//     // 官方插件
+//     require('@tailwindcss/typography'),
 //     require('@tailwindcss/forms'),
 //     require('@tailwindcss/aspect-ratio'),
-//     require('@tailwindcss/typography'),
-//     require('tailwindcss-children'),
+//     require('@tailwindcss/container-queries'),
 //   ],
 
 //   // 核心插件
@@ -271,46 +347,46 @@ module.exports = {
 //     opacity:false,
 //   },
 
-  // 预设
-  // presets: [
-  //   require('@acmecorp/base-tailwind-config')
-  // ],
+//   // 预设
+//   presets: [
+//     require('@acmecorp/base-tailwind-config')
+//   ],
 
-  // 前缀
-  // prefix: 'tw-',
+//   // 前缀
+//   prefix: 'tw-',
 
-  // 重要
-  // important:true,
-  // 选择器策略
-  // important:'#app',
+//   // 重要
+//   important:true,
+//   // 选择器策略
+//   important:'#app',
 
-  // 重要修饰符
-  // 在开头添加 '!' 字符来使任何工具变得重要，'!' 始终位于工具名称的开头，在任何变体之后，但在任何前缀之前
+//   // 重要修饰符
+//   // 在开头添加 '!' 字符来使任何工具变得重要，'!' 始终位于工具名称的开头，在任何变体之后，但在任何前缀之前
 
-  // 分隔器：将修饰符（屏幕尺寸、hover、focus 等）与工具名称（text-center、items-end 等）分开。
-  // separator:'_',//默认使用冒号
-
-
+//   // 分隔器：将修饰符（屏幕尺寸、hover、focus 等）与工具名称（text-center、items-end 等）分开。
+//   separator:'_',//默认使用冒号
 
 
 
-  // 手动切换深色模式
-  // darkMode:'class',
-
-  // 自定义主题
-  // screens: {
-  //   'tablet': '640px',
-  //   // => @media (min-width: 640px) { ... }
-
-  //   'laptop': '1024px',
-  //   // => @media (min-width: 1024px) { ... }
-
-  //   'desktop': '1280px',
-  //   // => @media (min-width: 1280px) { ... }
-  // },
 
 
-  // 自定义样式
+//   // 手动切换深色模式
+//   darkMode:'class',
+
+//   // 自定义主题
+//   screens: {
+//     'tablet': '640px',
+//     // => @media (min-width: 640px) { ... }
+
+//     'laptop': '1024px',
+//     // => @media (min-width: 1024px) { ... }
+
+//     'desktop': '1280px',
+//     // => @media (min-width: 1280px) { ... }
+//   },
+
+
+//   // 自定义样式
 //   screens: {
 //     sm: '480px',
 //     md: '768px',
