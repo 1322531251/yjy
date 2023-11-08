@@ -65,6 +65,7 @@ module.exports = {
 //   ]
 // }
 
+
 // presets 选项允许指定一个不同的配置作为基础，从而轻松打包一组跨项目重用的自定义设置
 // module.exports = {
 //   presets: [
@@ -76,7 +77,11 @@ module.exports = {
 //   }
 
 
-
+// 禁用预检
+// module.exports = {
+//   corePlugins: {
+//     preflight: false,
+//   }
 
 
 
