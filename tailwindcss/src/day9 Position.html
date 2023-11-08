@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 静态定位元素 static -->
+    <div class="static ...">
+        <p>Static parent</p>
+        <div class="absolute bottom-0 left-0 ...">
+          <p>Absolute child</p>
+        </div>
+    </div>
+
+    <!-- 相对定位元素 relative -->
+    <div class="relative">
+        <p>Relative parent</p>
+        <div class="absolute bottom-0 left-0">
+            <p>Absolute child</p>
+        </div>
+    </div>
+
+    <!-- 绝对定位元素 absolute -->
+    <div class="static">
+        <div class="static"><p>static child</p></div>
+        <div class="inline-block"><p>static sibling</p></div>
+        <div class="absolute"><p>absolute child</p></div>
+        <div class="inline-block"><p>static sibling</p></div>
+    </div>
+
+    <!-- 固定定位 fixed -->
+    <div class="relative">
+        <div class="fixed">contacts</div>
+        <div>
+            <div>
+                <img src="" alt="">
+                <strong>andrew alfred</strong>
+            </div>
+            <div>
+                <img src="" alt="">
+                <strong>Debra Houston</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- 粘性定位 sticky -->
+    <div>
+        <div>
+          <div class="sticky top-0 ...">A</div>
+          <div>
+            <div>
+              <img src="..." />
+              <strong>Andrew Alfred</strong>
+            </div>
+            <div>
+              <img src="..." />
+              <strong>Aisha Houston</strong>
+            </div>
+            <!-- ... -->
+          </div>
+        </div>
+        <div>
+          <div class="sticky top-0">B</div>
+          <div>
+            <div>
+              <img src="..." />
+              <strong>Bob Alfred</strong>
+            </div>
+            <!-- ... -->
+          </div>
+        </div>
+        <!-- ... -->
+    </div>
+
+
+
+    <!-- Top / Right / Bottom / Left -->
+    <!-- 放置定位元素 -->
+    <!-- Pin to top left corner -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute left-0 top-0 h-16 w-16 ...">01</div>
+    </div>
+    
+    <!-- Span top edge -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-x-0 top-0 h-16 ...">02</div>
+    </div>
+    
+    <!-- Pin to top right corner -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute top-0 right-0 h-16 w-16 ...">03</div>
+    </div>
+    
+    <!-- Span left edge -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-y-0 left-0 w-16 ...">04</div>
+    </div>
+    
+    <!-- Fill entire parent -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-0 ...">05</div>
+    </div>
+    
+    <!-- Span right edge -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-y-0 right-0 w-16 ...">06</div>
+    </div>
+    
+    <!-- Pin to bottom left corner -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute bottom-0 left-0 h-16 w-16 ...">07</div>
+    </div>
+    
+    <!-- Span bottom edge -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute inset-x-0 bottom-0 h-16 ...">08</div>
+    </div>
+    
+    <!-- Pin to bottom right corner -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute bottom-0 right-0 h-16 w-16 ...">09</div>
+    </div>
+
+    <!-- 使用负值 -->
+    <div class="relative h-32 w-32 ...">
+        <div class="absolute h-14 w-14 -left-4 -top-4 ..."></div>
+    </div>
+
+    <!-- 使用逻辑属性 -->
+    <div dir="ltr">
+        <div class="relative h-32 w-32 ...">
+            <div class="absolute h-14 w-14 top-0 start-0 ..."></div>
+        </div>
+    <div>
+        
+    <div dir="rtl">
+        <div class="relative h-32 w-32 ...">
+            <div class="absolute h-14 w-14 top-0 start-0 ..."></div>
+        </div>
+    <div>
+</body>
+</html>
