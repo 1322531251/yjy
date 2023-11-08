@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 块和内联 block inline -->
+    <div>
+        在控制文本流时，使用 CSS 属性
+        <span class="inline">display: inline</span>
+        将导致元素内的文本正常换行。
+      
+        使用属性时 <span class="inline-block">display: inline-block</span>
+        将包装元素以防止其中的文本超出其父元素。
+      
+        最后，使用属性 <span class="block">display: block</span>
+        将元素放在自己的行上并填充其父元素。
+    </div>
+    <br>
+    <!-- 流根 flow-root -->
+    <div class="p-4">
+        <div class="flow-root ...">
+          <div class="my-4 ...">Well, let me tell you something, ...</div>
+        </div>
+        <div class="flow-root ...">
+          <div class="my-4 ...">Sure, go ahead, laugh if you want...</div>
+        </div>
+    </div>
+    <br>
+    <!-- 弹性(Flex) -->
+    <div class="flex items-center">
+        <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=80" class="self-center w-1 h-1 rounded-full mx-1">
+        <div>
+          <strong>Andrew Alfred</strong>
+          <span>Technical advisor</span>
+        </div>
+    </div>
+    <br>
+    <!-- 内联弹性(Inline Flex) -->
+    <p>
+        Today I spent most of the day researching ways to ...
+        <span class="inline-flex items-baseline">
+          <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=4&w=256&h=256&q=80" alt="" class="self-center w-5 h-5 rounded-full mx-1" />
+          <span>Kramer</span>
+        </span>
+        keeps telling me there is no way to make it work, that ...
+    </p>
+    <br>
+    <!-- 网格(Grid) -->
+    <div class="grid gap-4 grid-cols-3 grid-rows-3">
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">01</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">02</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">03</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">04</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">05</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">06</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">07</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">08</div>
+        <div class="p-4 bg-fuchsia-500 shadow-lg rounded-lg">09</div>
+    </div>
+    <br>
+    <!-- 内联网格(Inline Grid) -->
+    <span class="inline-grid grid-cols-3 gap-4 ">
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">01</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">02</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">03</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">04</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">05</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">06</span>
+    </span>
+    <span class="inline-grid grid-cols-3 gap-4 ">
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">01</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">02</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">03</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">04</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">05</span>
+        <span class="p-4 w-14 h-14 bg-sky-500 shadow-lg rounded-lg">06</span>
+    </span>
+    <br>
+    <!-- 内容(Contents) -->
+    <div class="flex ...">
+        <div class="flex-1 p-4 bg-purple-500 shadow-lg rounded-lg">01</div>
+        <div class="contents">
+          <div class="flex-1 p-4 bg-purple-500 shadow-lg rounded-lg">02</div>
+          <div class="flex-1 p-4 bg-purple-500 shadow-lg rounded-lg">03</div>
+        </div>
+        <div class="flex-1 p-4 bg-purple-500 shadow-lg rounded-lg">04</div>
+    </div>
+    <br>
+    <!-- 表格(Table) -->
+    <div class="table border-collapse table-auto w-full text-sm">
+        <div class="table-header-group">
+            <div class="table-row">
+              <div class="table-cell border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Song</div>
+              <div class="table-cell border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Artist</div>
+              <div class="table-cell border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Year</div>
+            </div>
+          </div>
+          <div class="table-row-group bg-white dark:bg-slate-800">
+            <div class="table-row">
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">The Sliding Mr. Bones (Next Stop, Pottersville)</div>
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">Malcolm Lockyer</div>
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">1961</div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">Witchy Woman</div>
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400">The Eagles</div>
+              <div class="table-cell border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400">1972</div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell border-b border-slate-200 dark:border-slate-600 p-4 pl-8 text-slate-500 dark:text-slate-400">Shining Star</div>
+              <div class="table-cell border-b border-slate-200 dark:border-slate-600 p-4 text-slate-500 dark:text-slate-400">Earth, Wind, and Fire</div>
+              <div class="table-cell border-b border-slate-200 dark:border-slate-600 p-4 pr-8 text-slate-500 dark:text-slate-400">1975</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- 隐藏(Hidden) -->
+    <div class="flex hover:inline-flex">
+        <div class="hidden p-4 w-14 h-14 bg-purple-500 shadow-lg rounded-lg">01</div>
+        <div class="p-4 w-14 h-14 bg-purple-500 shadow-lg rounded-lg">02</div>
+        <div class="p-4 w-14 h-14 bg-purple-500 shadow-lg rounded-lg">03</div>
+    </div>
+</body>
+</html>
