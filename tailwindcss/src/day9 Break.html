@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 中断之后 -->
+    <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-after-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+    </div>
+    <br><br>
+    <!-- 中断之前 -->
+    <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-before-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+    </div>
+    <br><br>
+    <!-- 中断之中 -->
+    <div class="columns-2">
+        <p>Well, let me tell you something, ...</p>
+        <p class="break-inside-avoid-column">Sure, go ahead, laugh...</p>
+        <p>Maybe we can live without...</p>
+        <p>Look. If you think this is...</p>
+    </div>
+    <br><br>
+    <!-- 盒子装饰中断 -->
+    <span class="box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ">
+        Hello<br />
+        World
+    </span>
+    <br>
+    <span class="box-decoration-clone hover:box-decoration-slice bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2 ">
+        Hello<br />
+        World
+    </span>
+</body>
+</html>
