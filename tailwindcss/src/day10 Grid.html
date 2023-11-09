@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 指定网格中的列 -->
+    <div class="grid grid-cols-4 gap-4">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+    </div>
+    <br><br>
+    <!-- 使用实用程序使元素跨越 n 列。col-span-{n} -->
+    <div class="grid grid-cols-3 gap-4">
+        <div class="w-100 h-50 bg-teal-500">01</div>
+        <div class="w-100 h-50 bg-teal-500">02</div>
+        <div class="w-100 h-50 bg-teal-500">03</div>
+        <div class="col-span-2 w-100 h-50 bg-teal-500">04</div>
+        <div class="w-100 h-50 bg-teal-500">05</div>
+        <div class="w-100 h-50 bg-teal-500">06</div>
+        <div class="col-span-2 w-100 h-50 bg-teal-500">07</div>
+    </div>
+    <br><br>
+    <!-- 开始和结束线 -->
+    <div class="grid grid-cols-6 gap-4">
+        <div class="col-start-2 col-span-4 w-100 h-50 bg-teal-500">01</div>
+        <div class="col-start-1 col-end-3 w-100 h-50 bg-teal-500">02</div>
+        <div class="col-end-7 col-span-2 w-100 h-50 bg-teal-500">03</div>
+        <div class="col-start-1 col-end-7 w-100 h-50 bg-teal-500">04</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+
+    <!-- grid-row -->
+    <!-- 使用实用程序创建具有 n 个大小相等的行的网格。grid-rows-{n} -->
+    <div class="grid grid-rows-4 grid-flow-col gap-4">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+    </div>
+    <br><br>
+    <!-- 使用实用程序使元素跨越 n 行。row-span-{n} -->
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+        <div class="row-span-3 w-100 h-50 bg-teal-500">01</div>
+        <div class="col-span-2 w-100 h-50 bg-teal-500">02</div>
+        <div class="row-span-2 col-span-2 w-100 h-50 bg-teal-500">03</div>
+    </div>
+    <br><br>
+    <!-- 开始和结束线 -->
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+        <div class="row-start-2 row-span-2 w-100 h-50 bg-teal-500">01</div>
+        <div class="row-end-3 row-span-2 w-100 h-50 bg-teal-500">02</div>
+        <div class="row-start-1 row-end-4 w-100 h-50 bg-teal-500">03</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+
+    <!-- 使用实用程序来控制自动放置算法对网格布局的工作方式。grid-flow-{keyword} -->
+    <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 ...">
+        <div class="col-span-2 w-100 h-50 bg-teal-500 mx-3 my-1">01</div>
+        <div class="col-span-2 w-100 h-50 bg-teal-500 mx-3 my-1">02</div>
+        <div class=" w-100 h-50 bg-teal-500 mx-3 my-1">03</div>
+        <div class=" w-100 h-50 bg-teal-500 mx-3 my-1">04</div>
+        <div class=" w-100 h-50 bg-teal-500 mx-3 my-1">05</div>
+    </div>
+    <br><br>
+    <!-- 网格自动列 -->
+    <!-- 使用实用程序可以控制隐式创建的网格列的大小。auto-cols-{size} -->
+    <div class="grid grid-flow-col auto-cols-max">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <br><br>
+    <!-- 网格自动行 -->
+    <!-- 使用实用程序可以控制隐式创建的网格行的大小。auto-rows-{size} -->
+    <div class="grid grid-flow-row auto-rows-max">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+</body>
+</html>
