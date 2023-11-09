@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 用于以与 DOM 中显示的顺序不同的顺序呈现 flex 和网格项。order-{order} -->
+    <div class="flex justify-between ...">
+        <div class="order-last">01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <!-- 使用负顺序值，请在类名前面加上短划线，以将其转换为负值 -->
+    <div class="-order-1">
+        <!-- ... -->
+    </div>
+</body>
+</html>
