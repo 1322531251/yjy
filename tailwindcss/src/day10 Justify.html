@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 根据容器主轴的起点对齐项：justify-start -->
+    <div class="flex justify-start ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 沿容器主轴中心的项对齐：justify-center -->
+    <div class="flex justify-center ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 根据容器主轴的末端对齐项：justify-end -->
+    <div class="flex justify-end ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于沿容器主轴对齐项，以便每个项之间的空间相等：justify-between -->
+    <div class="flex justify-between">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于沿容器主轴对齐项，以便每个项的每一侧都有相等的空间：justify-around -->
+    <div class="flex justify-around">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 空间均匀 justify-evenly -->
+    <div class="flex justify-evenly">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于允许内容项沿容器的主轴填充可用空间：justify-stretch -->
+    <div class="grid grid-flow-col justify-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+
+    <br><br>
+    <!-- 用于将内容项打包到其默认位置，就像justify-content未设置任何值一样：justify-normal -->
+    <div class="flex justify-normal ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于根据其内联轴的起点对网格项进行对齐：justify-items-start -->
+    <div class="grid justify-items-start ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于根据其内联轴的末尾对网格项进行对齐：justify-items-end -->
+    <div class="grid justify-items-end ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于沿其内联轴对齐网格项：justify-items-center -->
+    <div class="grid justify-items-center ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于沿其内联轴拉伸项目：justify-itens-stretch -->
+    <div class="grid justify-items-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于根据网格属性的值对齐项：justify-self-auto -->
+    <div class="grid justify-items-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1 justify-self-auto">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于将网格项与其内联轴的起点对齐：justify-self-start -->
+    <div class="grid justify-items-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1 justify-self-start">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于将网格项与其内联轴中心对齐：justify-self-center -->
+    <div class="grid justify-items-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1 justify-self-center">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+    <!-- 用于将网格项与其内联轴的末端对齐：justify-self-end -->
+    <div class="grid justify-items-stretch ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1 justify-self-end">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>    
+    <!-- 用于拉伸网格项以填充其内联轴上的网格区域：justify-self-stretch -->
+    <div class="grid justify-items-start ...">
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1 justify-self-stretch">02</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-purple-400 mx-3 my-1">06</div>
+    </div>
+    <br><br>
+</body>
+</html>
