@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 用于根据十字轴的起点在容器中打包行：content-start -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-start ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><br>
+    <!-- 用于将行打包在十字轴中心的容器中：content-center -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-center ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><br>    
+    <!-- 用于将行装在容器中，靠近十字轴末端：content-end -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-end ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 用于在容器中分布行，使每行之间的空间相等：content-between -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-between ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于在容器中分布行，使每行周围的空间相等：content-around -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-around ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于在容器中分布行，使每个项目周围的空间相等：content-evenly -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-evenly ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 用于允许内容项沿容器的横轴填充可用空间 -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-stretch ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br><br>    
+    <!-- 默认 -->
+    <div class="h-56 grid grid-cols-3 gap-4 content-normal ...">
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-blue-400 mx-3 my-1">05</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于拉伸项目以填充容器的十字轴：items-stretch -->
+    <div class="flex items-stretch ...">
+        <div class="py-4 w-50 h-50 bg-gray-500 mx-3 my-1">01</div>
+        <div class="py-12 w-50 h-50 bg-gray-500 mx-3 my-1">02</div>
+        <div class="py-8 w-50 h-50 bg-gray-500 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于将项与容器的十字轴的起点对齐：items-start -->
+    <div class="flex items-start ...">
+        <div class="py-4 w-50 h-50 bg-gray-500 mx-3 my-1">01</div>
+        <div class="py-12 w-50 h-50 bg-gray-500 mx-3 my-1">02</div>
+        <div class="py-8 w-50 h-50 bg-gray-500 mx-3 my-1">03</div>
+    </div>
+    <br><br>   
+    <!-- 用于将项与容器的十字轴的中心对齐：items-center -->
+    <div class="flex items-center ...">
+        <div class="py-4 w-50 h-50 bg-gray-500 mx-3 my-1">01</div>
+        <div class="py-12 w-50 h-50 bg-gray-500 mx-3 my-1">02</div>
+        <div class="py-8 w-50 h-50 bg-gray-500 mx-3 my-1">03</div>
+    </div>
+    <br><br>    
+    <!-- 用于将项与容器的十字轴的末端对齐：items-end -->
+    <div class="flex items-end ...">
+        <div class="py-4 w-50 h-50 bg-gray-500 mx-3 my-1">01</div>
+        <div class="py-12 w-50 h-50 bg-gray-500 mx-3 my-1">02</div>
+        <div class="py-8 w-50 h-50 bg-gray-500 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于沿容器的横轴对齐项，使其所有基线对齐：items-baseline -->
+    <div class="flex items-baseline ...">
+        <div class="py-4 w-50 h-50 bg-gray-500 mx-3 my-1">01</div>
+        <div class="py-12 w-50 h-50 bg-gray-500 mx-3 my-1">02</div>
+        <div class="py-8 w-50 h-50 bg-gray-500 mx-3 my-1">03</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于根据容器属性的值对齐项：self-auto -->
+    <div class="flex items-stretch ...">
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">01</div>
+        <div class="self-auto w-50 h-50 bg-yellow-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+    <!-- 用于将项与容器的交叉轴的起点对齐，而不考虑容器的值：self-start -->
+    <div class="flex items-stretch ...">
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">01</div>
+        <div class="self-start w-50 h-50 bg-yellow-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>    
+    <!-- 用于将项与容器的交叉轴的中心对齐，而不考虑容器的值：self-center -->
+    <div class="flex items-stretch ...">
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">01</div>
+        <div class="self-center w-50 h-50 bg-yellow-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>    
+    <!-- 用于将项与容器的交叉轴的末端对齐，而不考虑容器的值：self-end -->
+    <div class="flex items-stretch ...">
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">01</div>
+        <div class="self-end w-50 h-50 bg-yellow-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>    
+    <!-- 用于拉伸项目以填充容器的横轴，而不考虑容器的值：self-stretch -->
+    <div class="flex items-stretch ...">
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">01</div>
+        <div class="self-stretch w-50 h-50 bg-yellow-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-yellow-400 mx-3 my-1">03</div>
+    </div>
+    <br><br>
+</body>
+</html>
