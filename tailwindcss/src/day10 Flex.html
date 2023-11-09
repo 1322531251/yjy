@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <!-- 弹性基础 -->
+  <div class="flex flex-row">
+    <div class="basis-1/4">01</div>
+    <div class="basis-1/4">02</div>
+    <div class="basis-1/2">03</div>
+  </div>
+
+
+  <!-- 弯曲方向 -->
+  <!-- 行 -->
+  <div class="flex flex-row ...">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+  <!-- 行-反转 -->
+  <div class="flex flex-row-reverse ...">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+  <!-- 列 -->
+  <div class="flex flex-col ...">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+  <!-- 列反转 -->
+  <div class="flex flex-col-reverse ...">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+
+
+  <!-- 换行 -->
+  <div class="flex flex-wrap">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+  <!-- 不换行 -->
+  <div class="flex flex-nowrap">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+  <!-- 换行-反转 -->
+  <div class="flex flex-wrap-reverse">
+    <div>01</div>
+    <div>02</div>
+    <div>03</div>
+  </div>
+
+
+  <!-- 控制伸缩 -->
+  <!-- 允许 flex 项目收缩但不增长，同时考虑其初始大小：flex-initial -->
+  <div class="flex">
+    <div class="flex-none w-14 h-14">
+      01
+    </div>
+    <div class="flex-initial w-64 ...">
+      02
+    </div>
+    <div class="flex-initial w-32 ...">
+      03
+    </div>
+  </div>
+  <!-- 允许 flex 项根据需要增大和收缩，忽略其初始大小：flex-1 -->
+  <div class="flex">
+    <div class="flex-none ...">
+      01
+    </div>
+    <div class="flex-1 w-64 ...">
+      02
+    </div>
+    <div class="flex-1 w-32 ...">
+      03
+    </div>
+  </div>
+  <!-- 允许 flex 项目在考虑其初始大小的情况下进行扩展和收缩：flex-auto -->
+  <div class="flex ...">
+    <div class="flex-none ...">
+      01
+    </div>
+    <div class="flex-auto w-64 ...">
+      02
+    </div>
+    <div class="flex-auto w-32 ...">
+      03
+    </div>
+  </div>
+  <!-- 防止 flex 增大或缩小：flex-none -->
+  <div class="flex ...">
+    <div class="flex-none w-14 h-14 ...">
+      01
+    </div>
+    <div class="flex-none ...">
+      02
+    </div>
+    <div class="flex-1 ...">
+      03
+    </div>
+  </div>
+
+
+  <!-- Flex增长 grow -->
+  <!-- 允许弹性项目增长以填充任何可用空间：grow -->
+  <div class="flex ...">
+    <div class="flex-none w-14 h-14 ...">
+      01
+    </div>
+    <div class="grow h-14 ...">
+      02
+    </div>
+    <div class="flex-none w-14 h-14 ...">
+      03
+    </div>
+  </div>
+  <!-- 用于防止 flex 项目增长：grow-0 -->
+  <div class="flex ...">
+    <div class="grow h-14 ...">
+      01
+    </div>
+    <div class="grow-0 h-14 ...">
+      02
+    </div>
+    <div class="grow h-14 ...">
+      03
+    </div>
+  </div>
+
+
+  <!-- FLex收缩 shrink -->
+  <!-- 允许 Flex 项目收缩：shrink -->
+  <div class="flex ...">
+    <div class="flex-none w-14 h-14 ...">
+      01
+    </div>
+    <div class="shrink w-64 h-14 ...">
+      02
+    </div>
+    <div class="flex-none w-14 h-14 ...">
+      03
+    </div>
+  </div>
+  <!-- 防止 Flex 项目收缩：shrink-0 -->
+  <div class="flex ...">
+    <div class="flex-1 h-16 ...">
+      01
+    </div>
+    <div class="shrink-0 h-16 w-32 ...">
+      02
+    </div>
+    <div class="flex-1 h-16 ...">
+      03
+    </div>
+  </div>
+</body>
+</html>
