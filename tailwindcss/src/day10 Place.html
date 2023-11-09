@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+</head>
+<body>
+    <!-- 用于在块轴的中心打包：place-content-center -->
+    <div class="grid grid-cols-2 gap-4 place-content-center h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于在块轴的起点打包：place-content-start -->
+    <div class="grid grid-cols-2 gap-4 place-content-start h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于在块轴的末端打包：place-content-end -->
+    <div class="grid grid-cols-2 gap-4 place-content-end h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于沿块轴分布网格项，以便块轴上每行之间的间距相等：place-content-between -->
+    <div class="grid grid-cols-2 gap-4 place-content-between h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>  
+    <!-- 用于沿块轴分布网格项，以便块轴上每行周围的间距相等：place-content-around -->
+    <div class="grid grid-cols-2 gap-4 place-content-around h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于沿块轴分布网格项，使他们在块轴上均匀分布：place-content-evenly -->
+    <div class="grid grid-cols-2 gap-4 place-content-evenly h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br><hr><hr><br>    
+    <!-- 用于在块轴上沿其网格区域拉伸网格项：place-content-stretch -->
+    <div class="grid grid-cols-2 gap-4 place-content-stretch h-48 ...">
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-amber-400 mx-3 my-1">04</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于将网格项放置在两个轴上其网格区的起点上：place-items-start -->
+    <div class="grid grid-cols-3 gap-4 place-items-start ...">
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">06</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 用于将网格项放置在两个轴上其网格区的末尾上：place-items-end -->
+    <div class="grid grid-cols-3 gap-4 place-items-end h-56...">
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">06</div>
+    </div>
+    <br><hr><hr><br>
+     <!-- 用于将网格项放置在两个轴上其网格区的中心上：place-items-center -->
+     <div class="grid grid-cols-3 gap-4 place-items-center h-56...">
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">06</div>
+    </div>
+    <br><hr><hr><br>
+     <!-- 用于在两个轴上沿其网格区域拉伸：place-items-stretch -->
+     <div class="grid grid-cols-3 gap-4 place-items-stretch h-56...">
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">01</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">02</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">03</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">04</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">05</div>
+        <div class="w-50 h-50 bg-lime-500 mx-3 my-1">06</div>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <!-- 用于根据容器属性的值对齐项：place-self-auto -->
+    <div class="grid grid-cols-3 gap-4 ...">
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">01</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 place-self-auto ">02</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">03</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">04</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">05</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">06</div>
+    </div>   
+    <br><hr><hr><br> 
+    <!-- 用于将项目与两个轴上的起点对齐：place-self-start -->
+    <div class="grid grid-cols-3 gap-4 ...">
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">01</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 place-self-start ">02</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">03</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">04</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">05</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">06</div>
+    </div>   
+    <br><hr><hr><br>     
+    <!-- 用于将项目与两个轴上的中心对齐：place-self-center -->
+    <div class="grid grid-cols-3 gap-4 ...">
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">01</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 place-self-center ">02</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">03</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">04</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">05</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">06</div>
+    </div>   
+    <br><hr><hr><br> 
+    <!-- 用于将项目与两个轴上的末端对齐：place-self-end -->
+    <div class="grid grid-cols-3 gap-4 ...">
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">01</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 place-self-end ">02</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">03</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">04</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">05</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">06</div>
+    </div>   
+    <br><hr><hr><br> 
+    <!-- 用于在两个轴上拉伸项目：place-self-stretch -->
+    <div class="grid grid-cols-3 gap-4 ...">
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">01</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 place-self-stretch ">02</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">03</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">04</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">05</div>
+        <div class="w-50 h-50 bg-sky-600 mx-3 my-1 ">06</div>
+    </div>   
+    <br><hr><hr><br> 
+</body>
+</html>
