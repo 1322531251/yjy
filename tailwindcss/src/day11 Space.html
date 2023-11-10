@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <!-- 在子项之间添加水平间距 -->
+    <div class="flex space-x-4 ...">
+        <div class="w-32 h-32 bg-fuchsia-300 mx-3 my-1">01</div>
+        <div class="w-32 h-32 bg-fuchsia-300 mx-3 my-1">02</div>
+        <div class="w-32 h-32 bg-fuchsia-300 mx-3 my-1">03</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 在子项之间添加垂直间距 -->
+    <div class="flex flex-col space-y-4 ...">
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">01</div>
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">02</div>
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">03</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 颠倒子序 -->
+    <div class="flex flex-row-reverse space-x-4 space-x-reverse ...">
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">01</div>
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">02</div>
+        <div class="w-28 h-28 bg-violet-300 mx-3 my-1">03</div>
+    </div>
+    <br><hr><hr><br>
+    <!-- 局限性 -->
+    <div class="flow-root">
+        <div class="-m-2 flex flex-wrap">
+          <div class="m-2 w-28 h-28 bg-violet-300">01</div>
+          <div class="m-2 w-28 h-28 bg-violet-300">02</div>
+          <div class="m-2 w-28 h-28 bg-violet-300">03</div>
+        </div>
+    </div>
+</body>
+</html>
