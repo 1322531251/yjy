@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <!-- 在水平子项之间添加边框 -->
+    <div class="grid grid-cols-3 divide-x-2">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>   
+    <br>
+    <!-- 在垂直子项之间添加边框 -->
+    <div class="grid-flow-row grid-cols-3 divide-y-2 w-20">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <br>
+    <!-- 颠倒子序 -->
+    <div class="flex flex-col-reverse divide-y divide-y-reverse w-20">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <br><br><hr><hr><br><br>
+    <!-- 设置分隔颜色 -->
+    <div class="divide-y divide-blue-200 w-20">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <br>
+    <!-- 设置不透明度 -->
+    <div class="divide-y-4 divide-blue-200/50 w-20">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    <br><br><hr><hr><br><br>
+    <!-- 设置分割样式 -->
+    <div class="divide-y-4 divide-dashed w-20">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+</body>
+</html>
