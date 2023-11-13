@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <!-- 背景固定 -->
+    <div class="bg-fixed w-1000px h-666px" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&h=666&q=80)">背景固定</div>
+    <br>
+    <!-- 背景随之滚动 -->
+    <div class="bg-fixed w-1000px h-666px" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&h=666&q=80)">视口、背景随之滚动</div>
+    <br>
+    <!-- 用于使用视口滚动背景图像，但不能使用容器滚动背景图像 -->
+    <div class="bg-scroll w-1000px h-666px" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&h=666&q=80)">视口滚动 背景固定</div>
+    <br><br><hr><hr><br><br>
+    <!-- 设置背景剪辑 -->
+    <div class="bg-clip-border p-6 bg-violet-600 border-4 border-violet-300 border-dashed w-32"></div><br>
+    <div class="bg-clip-padding p-6 bg-violet-600 border-4 border-violet-300 border-dashed w-32"></div><br>
+    <div class="bg-clip-content p-6 bg-violet-600 border-4 border-violet-300 border-dashed w-32"></div>
+    <br>
+    <!-- 裁剪为文本 bg-clip-text -->
+    <div class="text-5xl font-extrabold ...">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+          Hello world
+        </span>
+    </div>
+    <br><br><hr><hr><br><br>
+    <!-- 设置背景颜色 -->
+    <button class="bg-indigo-500 ...">
+        Save changes
+    </button>
+    <br>
+    <!-- 更改透明度 -->
+    <button class="bg-sky-500/100 ...">A</button>
+    <button class="bg-sky-500/75 ...">B</button>
+    <button class="bg-sky-500/50 ...">C</button>
+    <br><br><hr><hr><br><br>
+    <!-- 设置背景原点 -->
+    <div class="bg-origin-border p-4 border-4 border-dashed w-52 h-52" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div><br>
+    <div class="bg-origin-padding p-4 border-4 border-dashed w-52 h-52" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div><br>
+    <div class="bg-origin-content p-4 border-4 border-dashed w-80 h-80" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div>
+    <br><br><hr><hr><br><br>
+    <!-- 背景位置 -->
+    <div class="bg-no-repeat bg-left-top w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-top w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-right-top w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-left w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-center w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-right w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-left-bottom w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-bottom w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <div class="bg-no-repeat bg-right-bottom w-52 h-52 " style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80);"></div>
+    <br><br><hr><hr><br><br>
+    <!-- 重复 -->
+    <div class="bg-repeat w-full h-52" style="background-image: url(https://www.tailwindcss.cn/img/background-pattern.svg)"></div><br>
+    <!-- 不重复 -->
+    <div class="bg-no-repeat w-full h-52" style="background-image: url(https://www.tailwindcss.cn/img/background-pattern.svg)"></div><br>
+    <!-- 仅水平重复 -->
+    <div class="bg-repeat-x w-full h-52" style="background-image: url(https://www.tailwindcss.cn/img/background-pattern.svg)"></div><br>
+    <!-- 仅垂直重复 -->
+    <div class="bg-repeat-y w-full h-52" style="background-image: url(https://www.tailwindcss.cn/img/background-pattern.svg)"></div>
+    <br><br><hr><hr><br><br>
+    <!-- 背景自身大小 -->
+    <div class="bg-auto bg-no-repeat bg-center w-52 h-52" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div><br>
+    <!-- 背景缩放 -->
+    <div class="bg-cover bg-no-repeat bg-center w-52 h-52" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div><br>
+    <!-- 背景包含 -->
+    <div class="bg-contain bg-no-repeat bg-center w-52 h-52" style="background-image: url(https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=320&h=320&q=80)"></div><br>
+    <br><br><hr><hr><br><br>
+    <!-- 线性梯度 -->
+    <div class="h-14 bg-gradient-to-r from-cyan-500 to-blue-500"></div><br>
+    <div class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500"></div><br>
+    <div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div><br>
+    <div class="h-14 bg-gradient-to-r from-purple-500 to-pink-500"></div><br>
+    <br><br><hr><hr><br><br>
+    <!-- 渐变色标 起始颜色 -->
+    <div class="bg-gradient-to-r from-indigo-500 h-14"></div><br>
+    <!-- 结束颜色 -->
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-14"></div><br>
+    <!-- 中间色 -->
+    <div class="bg-gradient-to-r from-cyan-500 via-purple-500 to-blue-500 h-14"></div><br>
+    <!-- 指定止损位置 -->
+    <div class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% h-14"></div><br>
+    <br><br><hr><hr><br><br>
+
+</body>
+</html>
