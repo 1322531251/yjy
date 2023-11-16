@@ -9,7 +9,13 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require(
+      '@tailwindcss/typography',
+      '@tailwindcss/forms',
+      '@tailwindcss/aspect-ratio',
+      '@tailwindcss/container-queries'),
+  ],
 
 
 // 静态工具
