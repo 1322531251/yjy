@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <!-- 设置滚动边距 scroll-m{side}-{size} -->
+    <div class="snap-x w-full flex gap-12 overflow-x-auto py-14">
+        <div class="scroll-ml-6 snap-start ">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" alt="">
+        </div>
+        <div class="scroll-ml-6 snap-start  ...">
+            <img src="https://images.unsplash.com/photo-1540206351-d6465b3ac5c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-start  ...">
+            <img src="https://images.unsplash.com/photo-1622890806166-111d7f6c7c97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-start  ...">
+            <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+        <div class="scroll-ml-6 snap-start  ...">
+            <img src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 使用负值 -->
+    <div class="-scroll-ml-6 snap-start"></div>
+    <!-- 使用逻辑属性 -->
+    <div class="ltr">
+        <div class="snap-x">
+            <div class="scroll-ms-6 snap-start">
+                <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+            </div>
+        </div>
+    </div>
+    <div class="rtl">
+        <div class="snap-x">
+            <div class="scroll-ms-6 snap-start">
+                <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+            </div>
+        </div>
+    </div>
+    <br><hr><br>
+    <!-- 设置滚动填充 scroll-m{side}-{size} -->
+    <div class="scroll-pl-6 snap-x">
+        <div class="snap-start">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 使用逻辑属性 -->
+    <div class="ltr">
+        <div class="scroll-ps-6 snap-x"></div>
+    </div>
+    <div class="rtl">
+        <div class="scroll-ps-6 snap-x"></div>
+    </div>
+    <br><hr><br>
+    <!-- 捕捉到中心 snap-center -->
+    <div class="snap-x">
+        <div class="snap-center">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 捕捉到起点 snap-start -->
+    <div class="snap-x">
+        <div class="snap-start">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 捕捉到末尾 snap-end -->
+    <div class="snap-x">
+        <div class="snap-end">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <br><hr><br>
+    <!-- 强制对齐位置停止 snap-always -->
+    <!-- 强制滚动捕捉 snap-mandatory -->
+    <div class="snap-x snap-mandatory">
+        <div class="snap-always snap-center">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 跳过捕捉位置停止 snap-normal  -->
+    <!-- 水平滚动捕捉 snap-x -->
+    <div class="snap-x">
+        <div class="snap-normal snap-center">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+    <!-- 邻近滚动捕捉 -->
+    <div class="snap-x snap-proximity">
+        <div class="snap-center">
+            <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80" />
+        </div>
+    </div>
+</body>
+</html>
