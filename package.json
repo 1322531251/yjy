@@ -1,6 +1,9 @@
 {
   "devDependencies": {
+    "@nuxtjs/proxy": "^2.1.0",
     "autoprefixer": "^10.4.16",
+    "less": "^3.13.1",
+    "less-loader": "^7.0.0",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
